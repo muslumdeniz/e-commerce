@@ -1,0 +1,9 @@
+@use "../variables/typography" as *;
+
+// .text-<size> sınıfları oluşturma
+@each $size, $values in $text-sizes {
+  .text-#{$size} {
+    font-size: nth($values, 1);
+    line-height: nth($values, 2);
+  }
+}

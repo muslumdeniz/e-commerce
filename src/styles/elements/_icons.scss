@@ -1,1708 +1,1721 @@
-// SVG Icons
-$icon-path: "../../assets/icons"; // SVG base path
-
-i.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+@font-face {
+  font-family: "keenicons-solid";
+  src: url("../../assets/solid/keenicons-solid.ttf") format("truetype"),
+    url("../../assets/solid/keenicons-solid.woff") format("woff"),
+    url("../../assets/solid/keenicons-solid.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-// Icons
-i.icon-24-support {
-  background-image: url("#{$icon-path}/24-support.svg");
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "keenicons-solid" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-flex;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  align-items: center;
 }
-i.icon-abstract-1 {
-  background-image: url("#{$icon-path}/abstract-1.svg");
+
+.icon-abstract-1.icon:before {
+  content: "\e900";
 }
-i.icon-abstract-2 {
-  background-image: url("#{$icon-path}/abstract-2.svg");
+.icon-abstract-2.icon:before {
+  content: "\e901";
 }
-i.icon-abstract-3 {
-  background-image: url("#{$icon-path}/abstract-3.svg");
+.icon-abstract-3.icon:before {
+  content: "\e902";
 }
-i.icon-abstract-4 {
-  background-image: url("#{$icon-path}/abstract-4.svg");
+.icon-abstract-4.icon:before {
+  content: "\e903";
 }
-i.icon-abstract-5 {
-  background-image: url("#{$icon-path}/abstract-5.svg");
+.icon-abstract-5.icon:before {
+  content: "\e904";
 }
-i.icon-abstract-6 {
-  background-image: url("#{$icon-path}/abstract-6.svg");
+.icon-abstract-6.icon:before {
+  content: "\e905";
 }
-i.icon-abstract-7 {
-  background-image: url("#{$icon-path}/abstract-7.svg");
+.icon-abstract-7.icon:before {
+  content: "\e906";
 }
-i.icon-abstract-8 {
-  background-image: url("#{$icon-path}/abstract-8.svg");
+.icon-abstract-8.icon:before {
+  content: "\e907";
 }
-i.icon-abstract-9 {
-  background-image: url("#{$icon-path}/abstract-9.svg");
+.icon-abstract-9.icon:before {
+  content: "\e908";
 }
-i.icon-abstract-10 {
-  background-image: url("#{$icon-path}/abstract-10.svg");
+.icon-abstract-10.icon:before {
+  content: "\e909";
 }
-i.icon-abstract-11 {
-  background-image: url("#{$icon-path}/abstract-11.svg");
+.icon-abstract-11.icon:before {
+  content: "\e90a";
 }
-i.icon-abstract-12 {
-  background-image: url("#{$icon-path}/abstract-12.svg");
+.icon-abstract-12.icon:before {
+  content: "\e90b";
 }
-i.icon-abstract-13 {
-  background-image: url("#{$icon-path}/abstract-13.svg");
+.icon-abstract-13.icon:before {
+  content: "\e90c";
 }
-i.icon-abstract-14 {
-  background-image: url("#{$icon-path}/abstract-14.svg");
+.icon-abstract-14.icon:before {
+  content: "\e90d";
 }
-i.icon-abstract-15 {
-  background-image: url("#{$icon-path}/abstract-15.svg");
+.icon-abstract-15.icon:before {
+  content: "\e90e";
 }
-i.icon-abstract-16 {
-  background-image: url("#{$icon-path}/abstract-16.svg");
+.icon-abstract-16.icon:before {
+  content: "\e90f";
 }
-i.icon-abstract-17 {
-  background-image: url("#{$icon-path}/abstract-17.svg");
+.icon-abstract-17.icon:before {
+  content: "\e910";
 }
-i.icon-abstract-18 {
-  background-image: url("#{$icon-path}/abstract-18.svg");
+.icon-abstract-18.icon:before {
+  content: "\e911";
 }
-i.icon-abstract-19 {
-  background-image: url("#{$icon-path}/abstract-19.svg");
+.icon-abstract-19.icon:before {
+  content: "\e912";
 }
-i.icon-abstract-20 {
-  background-image: url("#{$icon-path}/abstract-20.svg");
+.icon-abstract-20.icon:before {
+  content: "\e913";
 }
-i.icon-abstract-21 {
-  background-image: url("#{$icon-path}/abstract-21.svg");
+.icon-abstract-21.icon:before {
+  content: "\e914";
 }
-i.icon-abstract-22 {
-  background-image: url("#{$icon-path}/abstract-22.svg");
+.icon-abstract-22.icon:before {
+  content: "\e915";
 }
-i.icon-abstract-23 {
-  background-image: url("#{$icon-path}/abstract-23.svg");
+.icon-abstract-23.icon:before {
+  content: "\e916";
 }
-i.icon-abstract-24 {
-  background-image: url("#{$icon-path}/abstract-24.svg");
+.icon-abstract-24.icon:before {
+  content: "\e917";
 }
-i.icon-abstract-25 {
-  background-image: url("#{$icon-path}/abstract-25.svg");
+.icon-abstract-25.icon:before {
+  content: "\e918";
 }
-i.icon-abstract-26 {
-  background-image: url("#{$icon-path}/abstract-26.svg");
+.icon-abstract-26.icon:before {
+  content: "\e919";
 }
-i.icon-abstract-27 {
-  background-image: url("#{$icon-path}/abstract-27.svg");
+.icon-abstract-27.icon:before {
+  content: "\e91a";
 }
-i.icon-abstract-28 {
-  background-image: url("#{$icon-path}/abstract-28.svg");
+.icon-abstract-28.icon:before {
+  content: "\e91b";
 }
-i.icon-abstract-29 {
-  background-image: url("#{$icon-path}/abstract-29.svg");
+.icon-abstract-29.icon:before {
+  content: "\e91c";
 }
-i.icon-abstract-30 {
-  background-image: url("#{$icon-path}/abstract-30.svg");
+.icon-abstract-30.icon:before {
+  content: "\e91d";
 }
-i.icon-abstract-31 {
-  background-image: url("#{$icon-path}/abstract-31.svg");
+.icon-abstract-31.icon:before {
+  content: "\e91e";
 }
-i.icon-abstract-32 {
-  background-image: url("#{$icon-path}/abstract-32.svg");
+.icon-abstract-32.icon:before {
+  content: "\e91f";
 }
-i.icon-abstract-33 {
-  background-image: url("#{$icon-path}/abstract-33.svg");
+.icon-abstract-33.icon:before {
+  content: "\e920";
 }
-i.icon-abstract-34 {
-  background-image: url("#{$icon-path}/abstract-34.svg");
+.icon-abstract-34.icon:before {
+  content: "\e921";
 }
-i.icon-abstract-35 {
-  background-image: url("#{$icon-path}/abstract-35.svg");
+.icon-abstract-35.icon:before {
+  content: "\e922";
 }
-i.icon-abstract-36 {
-  background-image: url("#{$icon-path}/abstract-36.svg");
+.icon-abstract-36.icon:before {
+  content: "\e923";
 }
-i.icon-abstract-37 {
-  background-image: url("#{$icon-path}/abstract-37.svg");
+.icon-abstract-37.icon:before {
+  content: "\e924";
 }
-i.icon-abstract-38 {
-  background-image: url("#{$icon-path}/abstract-38.svg");
+.icon-abstract-38.icon:before {
+  content: "\e925";
 }
-i.icon-abstract-39 {
-  background-image: url("#{$icon-path}/abstract-39.svg");
+.icon-abstract-39.icon:before {
+  content: "\e926";
 }
-i.icon-abstract-40 {
-  background-image: url("#{$icon-path}/abstract-40.svg");
+.icon-abstract-40.icon:before {
+  content: "\e927";
 }
-i.icon-abstract-41 {
-  background-image: url("#{$icon-path}/abstract-41.svg");
+.icon-abstract-41.icon:before {
+  content: "\e928";
 }
-i.icon-abstract-42 {
-  background-image: url("#{$icon-path}/abstract-42.svg");
+.icon-abstract-42.icon:before {
+  content: "\e929";
 }
-i.icon-abstract-43 {
-  background-image: url("#{$icon-path}/abstract-43.svg");
+.icon-abstract-43.icon:before {
+  content: "\e92a";
 }
-i.icon-abstract-44 {
-  background-image: url("#{$icon-path}/abstract-44.svg");
+.icon-abstract-44.icon:before {
+  content: "\e92b";
 }
-i.icon-abstract-45 {
-  background-image: url("#{$icon-path}/abstract-45.svg");
+.icon-abstract-45.icon:before {
+  content: "\e92c";
 }
-i.icon-abstract-46 {
-  background-image: url("#{$icon-path}/abstract-46.svg");
+.icon-abstract-46.icon:before {
+  content: "\e92d";
 }
-i.icon-abstract-47 {
-  background-image: url("#{$icon-path}/abstract-47.svg");
+.icon-abstract-47.icon:before {
+  content: "\e92e";
 }
-i.icon-abstract-48 {
-  background-image: url("#{$icon-path}/abstract-48.svg");
+.icon-abstract-48.icon:before {
+  content: "\e92f";
 }
-i.icon-abstract-49 {
-  background-image: url("#{$icon-path}/abstract-49.svg");
+.icon-abstract-49.icon:before {
+  content: "\e930";
 }
-i.icon-abstract {
-  background-image: url("#{$icon-path}/abstract.svg");
+.icon-abstract.icon:before {
+  content: "\e931";
 }
-i.icon-add-files {
-  background-image: url("#{$icon-path}/add-files.svg");
+.icon-add-files.icon:before {
+  content: "\e932";
 }
-i.icon-add-folder {
-  background-image: url("#{$icon-path}/add-folder.svg");
+.icon-add-folder.icon:before {
+  content: "\e933";
 }
-i.icon-add-notepad {
-  background-image: url("#{$icon-path}/add-notepad.svg");
+.icon-add-notepad.icon:before {
+  content: "\e934";
 }
-i.icon-additem {
-  background-image: url("#{$icon-path}/additem.svg");
+.icon-additem.icon:before {
+  content: "\e935";
 }
-i.icon-address-book {
-  background-image: url("#{$icon-path}/address-book.svg");
+.icon-address-book.icon:before {
+  content: "\e936";
 }
-i.icon-airplane-square {
-  background-image: url("#{$icon-path}/airplane-square.svg");
+.icon-airplane-square.icon:before {
+  content: "\e937";
 }
-i.icon-airplane {
-  background-image: url("#{$icon-path}/airplane.svg");
+.icon-airplane.icon:before {
+  content: "\e938";
 }
-i.icon-airpod {
-  background-image: url("#{$icon-path}/airpod.svg");
+.icon-airpod.icon:before {
+  content: "\e939";
 }
-i.icon-android {
-  background-image: url("#{$icon-path}/android.svg");
+.icon-android.icon:before {
+  content: "\e93a";
 }
-i.icon-angular {
-  background-image: url("#{$icon-path}/angular.svg");
+.icon-angular.icon:before {
+  content: "\e93b";
 }
-i.icon-apple {
-  background-image: url("#{$icon-path}/apple.svg");
+.icon-apple.icon:before {
+  content: "\e93c";
 }
-i.icon-archive-tick {
-  background-image: url("#{$icon-path}/archive-tick.svg");
+.icon-archive-tick.icon:before {
+  content: "\e93d";
 }
-i.icon-archive {
-  background-image: url("#{$icon-path}/archive.svg");
+.icon-archive.icon:before {
+  content: "\e93e";
 }
-i.icon-arrow-circle-left {
-  background-image: url("#{$icon-path}/arrow-circle-left.svg");
+.icon-arrow-circle-left.icon:before {
+  content: "\e93f";
 }
-i.icon-arrow-circle-right {
-  background-image: url("#{$icon-path}/arrow-circle-right.svg");
+.icon-arrow-circle-right.icon:before {
+  content: "\e940";
 }
-i.icon-arrow-down-left {
-  background-image: url("#{$icon-path}/arrow-down-left.svg");
+.icon-arrow-down-left.icon:before {
+  content: "\e941";
 }
-i.icon-arrow-down-refraction {
-  background-image: url("#{$icon-path}/arrow-down-refraction.svg");
+.icon-arrow-down-refraction.icon:before {
+  content: "\e942";
 }
-i.icon-arrow-down-right {
-  background-image: url("#{$icon-path}/arrow-down-right.svg");
+.icon-arrow-down-right.icon:before {
+  content: "\e943";
 }
-i.icon-arrow-down {
-  background-image: url("#{$icon-path}/arrow-down.svg");
+.icon-arrow-down.icon:before {
+  content: "\e944";
 }
-i.icon-arrow-left {
-  background-image: url("#{$icon-path}/arrow-left.svg");
+.icon-arrow-left.icon:before {
+  content: "\e945";
 }
-i.icon-arrow-mix {
-  background-image: url("#{$icon-path}/arrow-mix.svg");
+.icon-arrow-mix.icon:before {
+  content: "\e946";
 }
-i.icon-arrow-right-left {
-  background-image: url("#{$icon-path}/arrow-right-left.svg");
+.icon-arrow-right-left.icon:before {
+  content: "\e947";
 }
-i.icon-arrow-right {
-  background-image: url("#{$icon-path}/arrow-right.svg");
+.icon-arrow-right.icon:before {
+  content: "\e948";
 }
-i.icon-arrow-two-diagonals {
-  background-image: url("#{$icon-path}/arrow-two-diagonals.svg");
+.icon-arrow-two-diagonals.icon:before {
+  content: "\e949";
 }
-i.icon-arrow-up-down {
-  background-image: url("#{$icon-path}/arrow-up-down.svg");
+.icon-arrow-up-down.icon:before {
+  content: "\e94a";
 }
-i.icon-arrow-up-left {
-  background-image: url("#{$icon-path}/arrow-up-left.svg");
+.icon-arrow-up-left.icon:before {
+  content: "\e94b";
 }
-i.icon-arrow-up-refraction {
-  background-image: url("#{$icon-path}/arrow-up-refraction.svg");
+.icon-arrow-up-refraction.icon:before {
+  content: "\e94c";
 }
-i.icon-arrow-up-right {
-  background-image: url("#{$icon-path}/arrow-up-right.svg");
+.icon-arrow-up-right.icon:before {
+  content: "\e94d";
 }
-i.icon-arrow-up {
-  background-image: url("#{$icon-path}/arrow-up.svg");
+.icon-arrow-up.icon:before {
+  content: "\e94e";
 }
-i.icon-arrow-zigzag {
-  background-image: url("#{$icon-path}/arrow-zigzag.svg");
+.icon-arrow-zigzag.icon:before {
+  content: "\e94f";
 }
-i.icon-arrows-circle {
-  background-image: url("#{$icon-path}/arrows-circle.svg");
+.icon-arrows-circle.icon:before {
+  content: "\e950";
 }
-i.icon-arrows-loop {
-  background-image: url("#{$icon-path}/arrows-loop.svg");
+.icon-arrows-loop.icon:before {
+  content: "\e951";
 }
-i.icon-artificial-intelligence {
-  background-image: url("#{$icon-path}/artificial-intelligence.svg");
+.icon-artificial-intelligence.icon:before {
+  content: "\e952";
 }
-i.icon-autobrightness {
-  background-image: url("#{$icon-path}/autobrightness.svg");
+.icon-autobrightness.icon:before {
+  content: "\e953";
 }
-i.icon-avalanche-avax {
-  background-image: url("#{$icon-path}/avalanche-avax.svg");
+.icon-avalanche-avax.icon:before {
+  content: "\e954";
 }
-i.icon-award {
-  background-image: url("#{$icon-path}/award.svg");
+.icon-award.icon:before {
+  content: "\e955";
 }
-i.icon-badge {
-  background-image: url("#{$icon-path}/badge.svg");
+.icon-badge.icon:before {
+  content: "\e956";
 }
-i.icon-bandage {
-  background-image: url("#{$icon-path}/bandage.svg");
+.icon-bandage.icon:before {
+  content: "\e957";
 }
-i.icon-bank {
-  background-image: url("#{$icon-path}/bank.svg");
+.icon-bank.icon:before {
+  content: "\e958";
 }
-i.icon-bar-chart {
-  background-image: url("#{$icon-path}/bar-chart.svg");
+.icon-bar-chart.icon:before {
+  content: "\e959";
 }
-i.icon-barcode {
-  background-image: url("#{$icon-path}/barcode.svg");
+.icon-barcode.icon:before {
+  content: "\e95a";
 }
-i.icon-basket-ok {
-  background-image: url("#{$icon-path}/basket-ok.svg");
+.icon-basket-ok.icon:before {
+  content: "\e95b";
 }
-i.icon-basket {
-  background-image: url("#{$icon-path}/basket.svg");
+.icon-basket.icon:before {
+  content: "\e95c";
 }
-i.icon-behance {
-  background-image: url("#{$icon-path}/behance.svg");
+.icon-behance.icon:before {
+  content: "\e95d";
 }
-i.icon-bill {
-  background-image: url("#{$icon-path}/bill.svg");
+.icon-bill.icon:before {
+  content: "\e95e";
 }
-i.icon-binance-usd-busd {
-  background-image: url("#{$icon-path}/binance-usd-busd.svg");
+.icon-binance-usd-busd.icon:before {
+  content: "\e95f";
 }
-i.icon-binance {
-  background-image: url("#{$icon-path}/binance.svg");
+.icon-binance.icon:before {
+  content: "\e960";
 }
-i.icon-bitcoin {
-  background-image: url("#{$icon-path}/bitcoin.svg");
+.icon-bitcoin.icon:before {
+  content: "\e961";
 }
-i.icon-black-down {
-  background-image: url("#{$icon-path}/black-down.svg");
+.icon-black-down.icon:before {
+  content: "\e962";
 }
-i.icon-black-left-line {
-  background-image: url("#{$icon-path}/black-left-line.svg");
+.icon-black-left-line.icon:before {
+  content: "\e963";
 }
-i.icon-black-left {
-  background-image: url("#{$icon-path}/black-left.svg");
+.icon-black-left.icon:before {
+  content: "\e964";
 }
-i.icon-black-right-line {
-  background-image: url("#{$icon-path}/black-right-line.svg");
+.icon-black-right-line.icon:before {
+  content: "\e965";
 }
-i.icon-black-right {
-  background-image: url("#{$icon-path}/black-right.svg");
+.icon-black-right.icon:before {
+  content: "\e966";
 }
-i.icon-black-up {
-  background-image: url("#{$icon-path}/black-up.svg");
+.icon-black-up.icon:before {
+  content: "\e967";
 }
-i.icon-bluetooth {
-  background-image: url("#{$icon-path}/bluetooth.svg");
+.icon-bluetooth.icon:before {
+  content: "\e968";
 }
-i.icon-book-open {
-  background-image: url("#{$icon-path}/book-open.svg");
+.icon-book-open.icon:before {
+  content: "\e969";
 }
-i.icon-book-square {
-  background-image: url("#{$icon-path}/book-square.svg");
+.icon-book-square.icon:before {
+  content: "\e96a";
 }
-i.icon-book {
-  background-image: url("#{$icon-path}/book.svg");
+.icon-book.icon:before {
+  content: "\e96b";
 }
-i.icon-bookmark-2 {
-  background-image: url("#{$icon-path}/bookmark-2.svg");
+.icon-bookmark-2.icon:before {
+  content: "\e96c";
 }
-i.icon-bookmark {
-  background-image: url("#{$icon-path}/bookmark.svg");
+.icon-bookmark.icon:before {
+  content: "\e96d";
 }
-i.icon-bootstrap {
-  background-image: url("#{$icon-path}/bootstrap.svg");
+.icon-bootstrap.icon:before {
+  content: "\e96e";
 }
-i.icon-briefcase {
-  background-image: url("#{$icon-path}/briefcase.svg");
+.icon-briefcase.icon:before {
+  content: "\e96f";
 }
-i.icon-brifecase-cros {
-  background-image: url("#{$icon-path}/brifecase-cros.svg");
+.icon-brifecase-cros.icon:before {
+  content: "\e970";
 }
-i.icon-brifecase-tick {
-  background-image: url("#{$icon-path}/brifecase-tick.svg");
+.icon-brifecase-tick.icon:before {
+  content: "\e971";
 }
-i.icon-brifecase-timer {
-  background-image: url("#{$icon-path}/brifecase-timer.svg");
+.icon-brifecase-timer.icon:before {
+  content: "\e972";
 }
-i.icon-brush {
-  background-image: url("#{$icon-path}/brush.svg");
+.icon-brush.icon:before {
+  content: "\e973";
 }
-i.icon-bucket-square {
-  background-image: url("#{$icon-path}/bucket-square.svg");
+.icon-bucket-square.icon:before {
+  content: "\e974";
 }
-i.icon-bucket {
-  background-image: url("#{$icon-path}/bucket.svg");
+.icon-bucket.icon:before {
+  content: "\e975";
 }
-i.icon-burger-menu-1 {
-  background-image: url("#{$icon-path}/burger-menu-1.svg");
+.icon-burger-menu-1.icon:before {
+  content: "\e976";
 }
-i.icon-burger-menu-2 {
-  background-image: url("#{$icon-path}/burger-menu-2.svg");
+.icon-burger-menu-2.icon:before {
+  content: "\e977";
 }
-i.icon-burger-menu-3 {
-  background-image: url("#{$icon-path}/burger-menu-3.svg");
+.icon-burger-menu-3.icon:before {
+  content: "\e978";
 }
-i.icon-burger-menu-4 {
-  background-image: url("#{$icon-path}/burger-menu-4.svg");
+.icon-burger-menu-4.icon:before {
+  content: "\e979";
 }
-i.icon-burger-menu-5 {
-  background-image: url("#{$icon-path}/burger-menu-5.svg");
+.icon-burger-menu-5.icon:before {
+  content: "\e97a";
 }
-i.icon-burger-menu-6 {
-  background-image: url("#{$icon-path}/burger-menu-6.svg");
+.icon-burger-menu-6.icon:before {
+  content: "\e97b";
 }
-i.icon-burger-menu {
-  background-image: url("#{$icon-path}/burger-menu.svg");
+.icon-burger-menu.icon:before {
+  content: "\e97c";
 }
-i.icon-bus {
-  background-image: url("#{$icon-path}/bus.svg");
+.icon-bus.icon:before {
+  content: "\e97d";
 }
-i.icon-calculator {
-  background-image: url("#{$icon-path}/calculator.svg");
+.icon-calculator.icon:before {
+  content: "\e97e";
 }
-i.icon-calculatoror {
-  background-image: url("#{$icon-path}/calculatoror.svg");
+.icon-calculatoror.icon:before {
+  content: "\e97f";
 }
-i.icon-calendar-2 {
-  background-image: url("#{$icon-path}/calendar-2.svg");
+.icon-calendar-2.icon:before {
+  content: "\e980";
 }
-i.icon-calendar-8 {
-  background-image: url("#{$icon-path}/calendar-8.svg");
+.icon-calendar-8.icon:before {
+  content: "\e981";
 }
-i.icon-calendar-add {
-  background-image: url("#{$icon-path}/calendar-add.svg");
+.icon-calendar-add.icon:before {
+  content: "\e982";
 }
-i.icon-calendar-edit {
-  background-image: url("#{$icon-path}/calendar-edit.svg");
+.icon-calendar-edit.icon:before {
+  content: "\e983";
 }
-i.icon-calendar-remove {
-  background-image: url("#{$icon-path}/calendar-remove.svg");
+.icon-calendar-remove.icon:before {
+  content: "\e984";
 }
-i.icon-calendar-search {
-  background-image: url("#{$icon-path}/calendar-search.svg");
+.icon-calendar-search.icon:before {
+  content: "\e985";
 }
-i.icon-calendar-tick {
-  background-image: url("#{$icon-path}/calendar-tick.svg");
+.icon-calendar-tick.icon:before {
+  content: "\e986";
 }
-i.icon-calendar {
-  background-image: url("#{$icon-path}/calendar.svg");
+.icon-calendar.icon:before {
+  content: "\e987";
 }
-i.icon-call {
-  background-image: url("#{$icon-path}/call.svg");
+.icon-call.icon:before {
+  content: "\e988";
 }
-i.icon-capsule {
-  background-image: url("#{$icon-path}/capsule.svg");
+.icon-capsule.icon:before {
+  content: "\e989";
 }
-i.icon-car {
-  background-image: url("#{$icon-path}/car.svg");
+.icon-car.icon:before {
+  content: "\e98a";
 }
-i.icon-category {
-  background-image: url("#{$icon-path}/category.svg");
+.icon-category.icon:before {
+  content: "\e98b";
 }
-i.icon-cd {
-  background-image: url("#{$icon-path}/cd.svg");
+.icon-cd.icon:before {
+  content: "\e98c";
 }
-i.icon-celsius-cel {
-  background-image: url("#{$icon-path}/celsius-cel.svg");
+.icon-celsius-cel.icon:before {
+  content: "\e98d";
 }
-i.icon-chart-line-down-2 {
-  background-image: url("#{$icon-path}/chart-line-down-2.svg");
+.icon-chart-line-down-2.icon:before {
+  content: "\e98e";
 }
-i.icon-chart-line-down {
-  background-image: url("#{$icon-path}/chart-line-down.svg");
+.icon-chart-line-down.icon:before {
+  content: "\e98f";
 }
-i.icon-chart-line-star {
-  background-image: url("#{$icon-path}/chart-line-star.svg");
+.icon-chart-line-star.icon:before {
+  content: "\e990";
 }
-i.icon-chart-line-up-2 {
-  background-image: url("#{$icon-path}/chart-line-up-2.svg");
+.icon-chart-line-up-2.icon:before {
+  content: "\e991";
 }
-i.icon-chart-line-up {
-  background-image: url("#{$icon-path}/chart-line-up.svg");
+.icon-chart-line-up.icon:before {
+  content: "\e992";
 }
-i.icon-chart-line {
-  background-image: url("#{$icon-path}/chart-line.svg");
+.icon-chart-line.icon:before {
+  content: "\e993";
 }
-i.icon-chart-pie-3 {
-  background-image: url("#{$icon-path}/chart-pie-3.svg");
+.icon-chart-pie-3.icon:before {
+  content: "\e994";
 }
-i.icon-chart-pie-4 {
-  background-image: url("#{$icon-path}/chart-pie-4.svg");
+.icon-chart-pie-4.icon:before {
+  content: "\e995";
 }
-i.icon-chart-pie-simple {
-  background-image: url("#{$icon-path}/chart-pie-simple.svg");
+.icon-chart-pie-simple.icon:before {
+  content: "\e996";
 }
-i.icon-chart-pie-too {
-  background-image: url("#{$icon-path}/chart-pie-too.svg");
+.icon-chart-pie-too.icon:before {
+  content: "\e997";
 }
-i.icon-chart-simple-2 {
-  background-image: url("#{$icon-path}/chart-simple-2.svg");
+.icon-chart-simple-2.icon:before {
+  content: "\e998";
 }
-i.icon-chart-simple-3 {
-  background-image: url("#{$icon-path}/chart-simple-3.svg");
+.icon-chart-simple-3.icon:before {
+  content: "\e999";
 }
-i.icon-chart-simple {
-  background-image: url("#{$icon-path}/chart-simple.svg");
+.icon-chart-simple.icon:before {
+  content: "\e99a";
 }
-i.icon-chart {
-  background-image: url("#{$icon-path}/chart.svg");
+.icon-chart.icon:before {
+  content: "\e99b";
 }
-i.icon-check-circle {
-  background-image: url("#{$icon-path}/check-circle.svg");
+.icon-check-circle.icon:before {
+  content: "\e99c";
 }
-i.icon-check-squared {
-  background-image: url("#{$icon-path}/check-squared.svg");
+.icon-check-squared.icon:before {
+  content: "\e99d";
 }
-i.icon-check {
-  background-image: url("#{$icon-path}/check.svg");
+.icon-check.icon:before {
+  content: "\e99e";
 }
-i.icon-cheque {
-  background-image: url("#{$icon-path}/cheque.svg");
+.icon-cheque.icon:before {
+  content: "\e99f";
 }
-i.icon-chrome {
-  background-image: url("#{$icon-path}/chrome.svg");
+.icon-chrome.icon:before {
+  content: "\e9a0";
 }
-i.icon-classmates {
-  background-image: url("#{$icon-path}/classmates.svg");
+.icon-classmates.icon:before {
+  content: "\e9a1";
 }
-i.icon-click {
-  background-image: url("#{$icon-path}/click.svg");
+.icon-click.icon:before {
+  content: "\e9a2";
 }
-i.icon-clipboard {
-  background-image: url("#{$icon-path}/clipboard.svg");
+.icon-clipboard.icon:before {
+  content: "\e9a3";
 }
-i.icon-cloud-add {
-  background-image: url("#{$icon-path}/cloud-add.svg");
+.icon-cloud-add.icon:before {
+  content: "\e9a4";
 }
-i.icon-cloud-change {
-  background-image: url("#{$icon-path}/cloud-change.svg");
+.icon-cloud-change.icon:before {
+  content: "\e9a5";
 }
-i.icon-cloud-download {
-  background-image: url("#{$icon-path}/cloud-download.svg");
+.icon-cloud-download.icon:before {
+  content: "\e9a6";
 }
-i.icon-cloud {
-  background-image: url("#{$icon-path}/cloud.svg");
+.icon-cloud.icon:before {
+  content: "\e9a7";
 }
-i.icon-code {
-  background-image: url("#{$icon-path}/code.svg");
+.icon-code.icon:before {
+  content: "\e9a8";
 }
-i.icon-coffee {
-  background-image: url("#{$icon-path}/coffee.svg");
+.icon-coffee.icon:before {
+  content: "\e9a9";
 }
-i.icon-color-swatch {
-  background-image: url("#{$icon-path}/color-swatch.svg");
+.icon-color-swatch.icon:before {
+  content: "\e9aa";
 }
-i.icon-colors-square {
-  background-image: url("#{$icon-path}/colors-square.svg");
+.icon-colors-square.icon:before {
+  content: "\e9ab";
 }
-i.icon-compass {
-  background-image: url("#{$icon-path}/compass.svg");
+.icon-compass.icon:before {
+  content: "\e9ac";
 }
-i.icon-copy-success {
-  background-image: url("#{$icon-path}/copy-success.svg");
+.icon-copy-success.icon:before {
+  content: "\e9ad";
 }
-i.icon-copy {
-  background-image: url("#{$icon-path}/copy.svg");
+.icon-copy.icon:before {
+  content: "\e9ae";
 }
-i.icon-courier-express {
-  background-image: url("#{$icon-path}/courier-express.svg");
+.icon-courier-express.icon:before {
+  content: "\e9af";
 }
-i.icon-courier {
-  background-image: url("#{$icon-path}/courier.svg");
+.icon-courier.icon:before {
+  content: "\e9b0";
 }
-i.icon-credit-cart {
-  background-image: url("#{$icon-path}/credit-cart.svg");
+.icon-credit-cart.icon:before {
+  content: "\e9b1";
 }
-i.icon-cross-circle {
-  background-image: url("#{$icon-path}/cross-circle.svg");
+.icon-cross-circle.icon:before {
+  content: "\e9b2";
 }
-i.icon-cross-square {
-  background-image: url("#{$icon-path}/cross-square.svg");
+.icon-cross-square.icon:before {
+  content: "\e9b3";
 }
-i.icon-cross {
-  background-image: url("#{$icon-path}/cross.svg");
+.icon-cross.icon:before {
+  content: "\e9b4";
 }
-i.icon-crown-2 {
-  background-image: url("#{$icon-path}/crown-2.svg");
+.icon-crown-2.icon:before {
+  content: "\e9b5";
 }
-i.icon-crown {
-  background-image: url("#{$icon-path}/crown.svg");
+.icon-crown.icon:before {
+  content: "\e9b6";
 }
-i.icon-css {
-  background-image: url("#{$icon-path}/css.svg");
+.icon-css.icon:before {
+  content: "\e9b7";
 }
-i.icon-cube-2 {
-  background-image: url("#{$icon-path}/cube-2.svg");
+.icon-cube-2.icon:before {
+  content: "\e9b8";
 }
-i.icon-cube-3 {
-  background-image: url("#{$icon-path}/cube-3.svg");
+.icon-cube-3.icon:before {
+  content: "\e9b9";
 }
-i.icon-cup {
-  background-image: url("#{$icon-path}/cup.svg");
+.icon-cup.icon:before {
+  content: "\e9ba";
 }
-i.icon-cursor {
-  background-image: url("#{$icon-path}/cursor.svg");
+.icon-cursor.icon:before {
+  content: "\e9bb";
 }
-i.icon-dash {
-  background-image: url("#{$icon-path}/dash.svg");
+.icon-dash.icon:before {
+  content: "\e9bc";
 }
-i.icon-data {
-  background-image: url("#{$icon-path}/data.svg");
+.icon-data.icon:before {
+  content: "\e9bd";
 }
-i.icon-delete-files {
-  background-image: url("#{$icon-path}/delete-files.svg");
+.icon-delete-files.icon:before {
+  content: "\e9be";
 }
-i.icon-delete-folder {
-  background-image: url("#{$icon-path}/delete-folder.svg");
+.icon-delete-folder.icon:before {
+  content: "\e9bf";
 }
-i.icon-delivery-2 {
-  background-image: url("#{$icon-path}/delivery-2.svg");
+.icon-delivery-2.icon:before {
+  content: "\e9c0";
 }
-i.icon-delivery-3 {
-  background-image: url("#{$icon-path}/delivery-3.svg");
+.icon-delivery-3.icon:before {
+  content: "\e9c1";
 }
-i.icon-delivery-door {
-  background-image: url("#{$icon-path}/delivery-door.svg");
+.icon-delivery-24.icon:before {
+  content: "\e9c2";
 }
-i.icon-delivery-geolocation {
-  background-image: url("#{$icon-path}/delivery-geolocation.svg");
+.icon-delivery-door.icon:before {
+  content: "\e9c3";
 }
-i.icon-delivery-time {
-  background-image: url("#{$icon-path}/delivery-time.svg");
+.icon-delivery-geolocation.icon:before {
+  content: "\e9c4";
 }
-i.icon-delivery {
-  background-image: url("#{$icon-path}/delivery.svg");
+.icon-delivery-time.icon:before {
+  content: "\e9c5";
 }
-i.icon-design-1 {
-  background-image: url("#{$icon-path}/design-1.svg");
+.icon-delivery.icon:before {
+  content: "\e9c6";
 }
-i.icon-design-2 {
-  background-image: url("#{$icon-path}/design-2.svg");
+.icon-design-1.icon:before {
+  content: "\e9c7";
 }
-i.icon-desktop-mobile {
-  background-image: url("#{$icon-path}/desktop-mobile.svg");
+.icon-design-2.icon:before {
+  content: "\e9c8";
 }
-i.icon-devices-2 {
-  background-image: url("#{$icon-path}/devices-2.svg");
+.icon-desktop-mobile.icon:before {
+  content: "\e9c9";
 }
-i.icon-devices {
-  background-image: url("#{$icon-path}/devices.svg");
+.icon-devices-2.icon:before {
+  content: "\e9ca";
 }
-i.icon-diamonds {
-  background-image: url("#{$icon-path}/diamonds.svg");
+.icon-devices.icon:before {
+  content: "\e9cb";
 }
-i.icon-directbox-default {
-  background-image: url("#{$icon-path}/directbox-default.svg");
+.icon-diamonds.icon:before {
+  content: "\e9cc";
 }
-i.icon-disconnect {
-  background-image: url("#{$icon-path}/disconnect.svg");
+.icon-directbox-default.icon:before {
+  content: "\e9cd";
 }
-i.icon-discount {
-  background-image: url("#{$icon-path}/discount.svg");
+.icon-disconnect.icon:before {
+  content: "\e9ce";
 }
-i.icon-disguise {
-  background-image: url("#{$icon-path}/disguise.svg");
+.icon-discount.icon:before {
+  content: "\e9cf";
 }
-i.icon-disk {
-  background-image: url("#{$icon-path}/disk.svg");
+.icon-disguise.icon:before {
+  content: "\e9d0";
 }
-i.icon-dislike {
-  background-image: url("#{$icon-path}/dislike.svg");
+.icon-disk.icon:before {
+  content: "\e9d1";
 }
-i.icon-dj {
-  background-image: url("#{$icon-path}/dj.svg");
+.icon-dislike.icon:before {
+  content: "\e9d2";
 }
-i.icon-document {
-  background-image: url("#{$icon-path}/document.svg");
+.icon-dj.icon:before {
+  content: "\e9d3";
 }
-i.icon-dollar {
-  background-image: url("#{$icon-path}/dollar.svg");
+.icon-document.icon:before {
+  content: "\e9d4";
 }
-i.icon-dots-circle-vertical {
-  background-image: url("#{$icon-path}/dots-circle-vertical.svg");
+.icon-double-check.icon:before {
+  content: "\e9d5";
 }
-i.icon-dots-circle {
-  background-image: url("#{$icon-path}/dots-circle.svg");
+.icon-dollar.icon:before {
+  content: "\e9d6";
 }
-i.icon-dots-horizontal {
-  background-image: url("#{$icon-path}/dots-horizontal.svg");
+.icon-dots-circle-vertical.icon:before {
+  content: "\e9d7";
 }
-i.icon-dots-square-vertical {
-  background-image: url("#{$icon-path}/dots-square-vertical.svg");
+.icon-dots-circle.icon:before {
+  content: "\e9d8";
 }
-i.icon-dots-square {
-  background-image: url("#{$icon-path}/dots-square.svg");
+.icon-dots-horizontal.icon:before {
+  content: "\e9d9";
 }
-i.icon-dots-vertical {
-  background-image: url("#{$icon-path}/dots-vertical.svg");
+.icon-dots-square-vertical.icon:before {
+  content: "\e9da";
 }
-i.icon-double-check-circle {
-  background-image: url("#{$icon-path}/double-check-circle.svg");
+.icon-dots-square.icon:before {
+  content: "\e9db";
 }
-i.icon-double-check {
-  background-image: url("#{$icon-path}/double-check.svg");
+.icon-dots-vertical.icon:before {
+  content: "\e9dc";
 }
-i.icon-double-down {
-  background-image: url("#{$icon-path}/double-down.svg");
+.icon-double-down.icon:before {
+  content: "\e9dd";
 }
-i.icon-double-left-arrow {
-  background-image: url("#{$icon-path}/double-left-arrow.svg");
+.icon-double-left-arrow.icon:before {
+  content: "\e9de";
 }
-i.icon-double-left {
-  background-image: url("#{$icon-path}/double-left.svg");
+.icon-double-left.icon:before {
+  content: "\e9df";
 }
-i.icon-double-right-arrow {
-  background-image: url("#{$icon-path}/double-right-arrow.svg");
+.icon-double-right-arrow.icon:before {
+  content: "\e9e0";
 }
-i.icon-double-right {
-  background-image: url("#{$icon-path}/double-right.svg");
+.icon-double-right.icon:before {
+  content: "\e9e1";
 }
-i.icon-double-up {
-  background-image: url("#{$icon-path}/double-up.svg");
+.icon-double-up.icon:before {
+  content: "\e9e2";
 }
-i.icon-down-square {
-  background-image: url("#{$icon-path}/down-square.svg");
+.icon-down-square.icon:before {
+  content: "\e9e3";
 }
-i.icon-down {
-  background-image: url("#{$icon-path}/down.svg");
+.icon-down.icon:before {
+  content: "\e9e4";
 }
-i.icon-dribbble {
-  background-image: url("#{$icon-path}/dribbble.svg");
+.icon-dribbble.icon:before {
+  content: "\e9e5";
 }
-i.icon-drop {
-  background-image: url("#{$icon-path}/drop.svg");
+.icon-drop.icon:before {
+  content: "\e9e6";
 }
-i.icon-dropbox {
-  background-image: url("#{$icon-path}/dropbox.svg");
+.icon-dropbox.icon:before {
+  content: "\e9e7";
 }
-i.icon-educare-ekt {
-  background-image: url("#{$icon-path}/educare-ekt.svg");
+.icon-duble-check-circle.icon:before {
+  content: "\e9e8";
 }
-i.icon-electricity {
-  background-image: url("#{$icon-path}/electricity.svg");
+.icon-educare-ekt.icon:before {
+  content: "\e9e9";
 }
-i.icon-electronic-clock {
-  background-image: url("#{$icon-path}/electronic-clock.svg");
+.icon-electricity.icon:before {
+  content: "\e9ea";
 }
-i.icon-element-1 {
-  background-image: url("#{$icon-path}/element-1.svg");
+.icon-electronic-clock.icon:before {
+  content: "\e9eb";
 }
-i.icon-element-2 {
-  background-image: url("#{$icon-path}/element-2.svg");
+.icon-element-1.icon:before {
+  content: "\e9ec";
 }
-i.icon-element-3 {
-  background-image: url("#{$icon-path}/element-3.svg");
+.icon-element-2.icon:before {
+  content: "\e9ed";
 }
-i.icon-element-4 {
-  background-image: url("#{$icon-path}/element-4.svg");
+.icon-element-3.icon:before {
+  content: "\e9ee";
 }
-i.icon-element-5 {
-  background-image: url("#{$icon-path}/element-5.svg");
+.icon-element-4.icon:before {
+  content: "\e9ef";
 }
-i.icon-element-6 {
-  background-image: url("#{$icon-path}/element-6.svg");
+.icon-element-5.icon:before {
+  content: "\e9f0";
 }
-i.icon-element-7 {
-  background-image: url("#{$icon-path}/element-7.svg");
+.icon-element-6.icon:before {
+  content: "\e9f1";
 }
-i.icon-element-8 {
-  background-image: url("#{$icon-path}/element-8.svg");
+.icon-element-7.icon:before {
+  content: "\e9f2";
 }
-i.icon-element-9 {
-  background-image: url("#{$icon-path}/element-9.svg");
+.icon-element-8.icon:before {
+  content: "\e9f3";
 }
-i.icon-element-10 {
-  background-image: url("#{$icon-path}/element-10.svg");
+.icon-element-9.icon:before {
+  content: "\e9f4";
 }
-i.icon-element-11 {
-  background-image: url("#{$icon-path}/element-11.svg");
+.icon-element-10.icon:before {
+  content: "\e9f5";
 }
-i.icon-element-12 {
-  background-image: url("#{$icon-path}/element-12.svg");
+.icon-element-11.icon:before {
+  content: "\e9f6";
 }
-i.icon-element-equal {
-  background-image: url("#{$icon-path}/element-equal.svg");
+.icon-element-12.icon:before {
+  content: "\e9f7";
 }
-i.icon-element-plus {
-  background-image: url("#{$icon-path}/element-plus.svg");
+.icon-element-equal.icon:before {
+  content: "\e9f8";
 }
-i.icon-emoji-happy {
-  background-image: url("#{$icon-path}/emoji-happy.svg");
+.icon-element-plus.icon:before {
+  content: "\e9f9";
 }
-i.icon-enjin-coin-enj {
-  background-image: url("#{$icon-path}/enjin-coin-enj.svg");
+.icon-emoji-happy.icon:before {
+  content: "\e9fa";
 }
-i.icon-ensure {
-  background-image: url("#{$icon-path}/ensure.svg");
+.icon-enjin-coin-enj.icon:before {
+  content: "\e9fb";
 }
-i.icon-entrance-left {
-  background-image: url("#{$icon-path}/entrance-left.svg");
+.icon-ensure.icon:before {
+  content: "\e9fc";
 }
-i.icon-entrance-right {
-  background-image: url("#{$icon-path}/entrance-right.svg");
+.icon-entrance-left.icon:before {
+  content: "\e9fd";
 }
-i.icon-eraser {
-  background-image: url("#{$icon-path}/eraser.svg");
+.icon-entrance-right.icon:before {
+  content: "\e9fe";
 }
-i.icon-euro {
-  background-image: url("#{$icon-path}/euro.svg");
+.icon-eraser.icon:before {
+  content: "\e9ff";
 }
-i.icon-exit-down {
-  background-image: url("#{$icon-path}/exit-down.svg");
+.icon-euro.icon:before {
+  content: "\ea00";
 }
-i.icon-exit-left {
-  background-image: url("#{$icon-path}/exit-left.svg");
+.icon-exit-down.icon:before {
+  content: "\ea01";
 }
-i.icon-exit-right-corner {
-  background-image: url("#{$icon-path}/exit-right-corner.svg");
+.icon-exit-left.icon:before {
+  content: "\ea02";
 }
-i.icon-exit-right {
-  background-image: url("#{$icon-path}/exit-right.svg");
+.icon-exit-right-corner.icon:before {
+  content: "\ea03";
 }
-i.icon-exit-up {
-  background-image: url("#{$icon-path}/exit-up.svg");
+.icon-exit-right.icon:before {
+  content: "\ea04";
 }
-i.icon-external-drive {
-  background-image: url("#{$icon-path}/external-drive.svg");
+.icon-exit-up.icon:before {
+  content: "\ea05";
 }
-i.icon-eye-slash {
-  background-image: url("#{$icon-path}/eye-slash.svg");
+.icon-external-drive.icon:before {
+  content: "\ea06";
 }
-i.icon-eye {
-  background-image: url("#{$icon-path}/eye.svg");
+.icon-eye-slash.icon:before {
+  content: "\ea07";
 }
-i.icon-face-id {
-  background-image: url("#{$icon-path}/face-id.svg");
+.icon-eye.icon:before {
+  content: "\ea08";
 }
-i.icon-facebook {
-  background-image: url("#{$icon-path}/facebook.svg");
+.icon-face-id.icon:before {
+  content: "\ea09";
 }
-i.icon-fasten {
-  background-image: url("#{$icon-path}/fasten.svg");
+.icon-facebook.icon:before {
+  content: "\ea0a";
 }
-i.icon-fatrows {
-  background-image: url("#{$icon-path}/fatrows.svg");
+.icon-fasten.icon:before {
+  content: "\ea0b";
 }
-i.icon-feather {
-  background-image: url("#{$icon-path}/feather.svg");
+.icon-fatrows.icon:before {
+  content: "\ea0c";
 }
-i.icon-figma {
-  background-image: url("#{$icon-path}/figma.svg");
+.icon-feather.icon:before {
+  content: "\ea0d";
 }
-i.icon-file-added {
-  background-image: url("#{$icon-path}/file-added.svg");
+.icon-figma.icon:before {
+  content: "\ea0e";
 }
-i.icon-file-deleted {
-  background-image: url("#{$icon-path}/file-deleted.svg");
+.icon-file-added.icon:before {
+  content: "\ea0f";
 }
-i.icon-file-down {
-  background-image: url("#{$icon-path}/file-down.svg");
+.icon-file-deleted.icon:before {
+  content: "\ea10";
 }
-i.icon-file-left {
-  background-image: url("#{$icon-path}/file-left.svg");
+.icon-file-down.icon:before {
+  content: "\ea11";
 }
-i.icon-file-right {
-  background-image: url("#{$icon-path}/file-right.svg");
+.icon-file-left.icon:before {
+  content: "\ea12";
 }
-i.icon-file-sheet {
-  background-image: url("#{$icon-path}/file-sheet.svg");
+.icon-file-right.icon:before {
+  content: "\ea13";
 }
-i.icon-file-up {
-  background-image: url("#{$icon-path}/file-up.svg");
+.icon-file-sheet.icon:before {
+  content: "\ea14";
 }
-i.icon-files {
-  background-image: url("#{$icon-path}/files.svg");
+.icon-file-up.icon:before {
+  content: "\ea15";
 }
-i.icon-filter-edit {
-  background-image: url("#{$icon-path}/filter-edit.svg");
+.icon-files.icon:before {
+  content: "\ea16";
 }
-i.icon-filter-search {
-  background-image: url("#{$icon-path}/filter-search.svg");
+.icon-filter-edit.icon:before {
+  content: "\ea17";
 }
-i.icon-filter-square {
-  background-image: url("#{$icon-path}/filter-square.svg");
+.icon-filter-search.icon:before {
+  content: "\ea18";
 }
-i.icon-filter-tablet {
-  background-image: url("#{$icon-path}/filter-tablet.svg");
+.icon-filter-square.icon:before {
+  content: "\ea19";
 }
-i.icon-filter-tick {
-  background-image: url("#{$icon-path}/filter-tick.svg");
+.icon-filter-tablet.icon:before {
+  content: "\ea1a";
 }
-i.icon-filter {
-  background-image: url("#{$icon-path}/filter.svg");
+.icon-filter-tick.icon:before {
+  content: "\ea1b";
 }
-i.icon-financial-schedule {
-  background-image: url("#{$icon-path}/financial-schedule.svg");
+.icon-filter.icon:before {
+  content: "\ea1c";
 }
-i.icon-fingerprint-scanning {
-  background-image: url("#{$icon-path}/fingerprint-scanning.svg");
+.icon-financial-schedule.icon:before {
+  content: "\ea1d";
 }
-i.icon-flag {
-  background-image: url("#{$icon-path}/flag.svg");
+.icon-fingerprint-scanning.icon:before {
+  content: "\ea1e";
 }
-i.icon-flash-circle {
-  background-image: url("#{$icon-path}/flash-circle.svg");
+.icon-flag.icon:before {
+  content: "\ea1f";
 }
-i.icon-flask {
-  background-image: url("#{$icon-path}/flask.svg");
+.icon-flash-circle.icon:before {
+  content: "\ea20";
 }
-i.icon-focus {
-  background-image: url("#{$icon-path}/focus.svg");
+.icon-flask.icon:before {
+  content: "\ea21";
 }
-i.icon-folder-added {
-  background-image: url("#{$icon-path}/folder-added.svg");
+.icon-focus.icon:before {
+  content: "\ea22";
 }
-i.icon-folder-down {
-  background-image: url("#{$icon-path}/folder-down.svg");
+.icon-folder-added.icon:before {
+  content: "\ea23";
 }
-i.icon-folder-up {
-  background-image: url("#{$icon-path}/folder-up.svg");
+.icon-folder-down.icon:before {
+  content: "\ea24";
 }
-i.icon-folder {
-  background-image: url("#{$icon-path}/folder.svg");
+.icon-folder-up.icon:before {
+  content: "\ea25";
 }
-i.icon-frame {
-  background-image: url("#{$icon-path}/frame.svg");
+.icon-folder.icon:before {
+  content: "\ea26";
 }
-i.icon-geolocation-home {
-  background-image: url("#{$icon-path}/geolocation-home.svg");
+.icon-frame.icon:before {
+  content: "\ea27";
 }
-i.icon-geolocation {
-  background-image: url("#{$icon-path}/geolocation.svg");
+.icon-geolocation-home.icon:before {
+  content: "\ea28";
 }
-i.icon-ghost {
-  background-image: url("#{$icon-path}/ghost.svg");
+.icon-geolocation.icon:before {
+  content: "\ea29";
 }
-i.icon-gift {
-  background-image: url("#{$icon-path}/gift.svg");
+.icon-ghost.icon:before {
+  content: "\ea2a";
 }
-i.icon-github {
-  background-image: url("#{$icon-path}/github.svg");
+.icon-gift.icon:before {
+  content: "\ea2b";
 }
-i.icon-glass {
-  background-image: url("#{$icon-path}/glass.svg");
+.icon-github.icon:before {
+  content: "\ea2c";
 }
-i.icon-google-play {
-  background-image: url("#{$icon-path}/google-play.svg");
+.icon-glass.icon:before {
+  content: "\ea2d";
 }
-i.icon-google {
-  background-image: url("#{$icon-path}/google.svg");
+.icon-google-play.icon:before {
+  content: "\ea2e";
 }
-i.icon-graph-2 {
-  background-image: url("#{$icon-path}/graph-2.svg");
+.icon-google.icon:before {
+  content: "\ea2f";
 }
-i.icon-graph-3 {
-  background-image: url("#{$icon-path}/graph-3.svg");
+.icon-graph-2.icon:before {
+  content: "\ea30";
 }
-i.icon-graph-4 {
-  background-image: url("#{$icon-path}/graph-4.svg");
+.icon-graph-3.icon:before {
+  content: "\ea31";
 }
-i.icon-graph-up {
-  background-image: url("#{$icon-path}/graph-up.svg");
+.icon-graph-4.icon:before {
+  content: "\ea32";
 }
-i.icon-graph {
-  background-image: url("#{$icon-path}/graph.svg");
+.icon-graph-up.icon:before {
+  content: "\ea33";
 }
-i.icon-grid-2 {
-  background-image: url("#{$icon-path}/grid-2.svg");
+.icon-graph.icon:before {
+  content: "\ea34";
 }
-i.icon-grid {
-  background-image: url("#{$icon-path}/grid.svg");
+.icon-grid-2.icon:before {
+  content: "\ea35";
 }
-i.icon-handcart {
-  background-image: url("#{$icon-path}/handcart.svg");
+.icon-grid.icon:before {
+  content: "\ea36";
 }
-i.icon-happyemoji {
-  background-image: url("#{$icon-path}/happyemoji.svg");
+.icon-handcart.icon:before {
+  content: "\ea37";
 }
-i.icon-heart-circle {
-  background-image: url("#{$icon-path}/heart-circle.svg");
+.icon-happyemoji.icon:before {
+  content: "\ea38";
 }
-i.icon-heart {
-  background-image: url("#{$icon-path}/heart.svg");
+.icon-heart-circle.icon:before {
+  content: "\ea39";
 }
-i.icon-home-1 {
-  background-image: url("#{$icon-path}/home-1.svg");
+.icon-heart.icon:before {
+  content: "\ea3a";
 }
-i.icon-home-2 {
-  background-image: url("#{$icon-path}/home-2.svg");
+.icon-home-1.icon:before {
+  content: "\ea3b";
 }
-i.icon-home-3 {
-  background-image: url("#{$icon-path}/home-3.svg");
+.icon-home-2.icon:before {
+  content: "\ea3c";
 }
-i.icon-home {
-  background-image: url("#{$icon-path}/home.svg");
+.icon-home-3.icon:before {
+  content: "\ea3d";
 }
-i.icon-html {
-  background-image: url("#{$icon-path}/html.svg");
+.icon-home.icon:before {
+  content: "\ea3e";
 }
-i.icon-icon {
-  background-image: url("#{$icon-path}/icon.svg");
+.icon-html.icon:before {
+  content: "\ea3f";
 }
-i.icon-illustrator {
-  background-image: url("#{$icon-path}/illustrator.svg");
+.icon-icon.icon:before {
+  content: "\ea40";
 }
-i.icon-information-1 {
-  background-image: url("#{$icon-path}/information-1.svg");
+.icon-illustrator.icon:before {
+  content: "\ea41";
 }
-i.icon-information-2 {
-  background-image: url("#{$icon-path}/information-2.svg");
+.icon-information-1.icon:before {
+  content: "\ea42";
 }
-i.icon-information-3 {
-  background-image: url("#{$icon-path}/information-3.svg");
+.icon-information-2.icon:before {
+  content: "\ea43";
 }
-i.icon-information-4 {
-  background-image: url("#{$icon-path}/information-4.svg");
+.icon-information-3.icon:before {
+  content: "\ea44";
 }
-i.icon-information {
-  background-image: url("#{$icon-path}/information.svg");
+.icon-information-4.icon:before {
+  content: "\ea45";
 }
-i.icon-instagram {
-  background-image: url("#{$icon-path}/instagram.svg");
+.icon-information.icon:before {
+  content: "\ea46";
 }
-i.icon-joystick {
-  background-image: url("#{$icon-path}/joystick.svg");
+.icon-instagram.icon:before {
+  content: "\ea47";
 }
-i.icon-js-2 {
-  background-image: url("#{$icon-path}/js-2.svg");
+.icon-joystick.icon:before {
+  content: "\ea48";
 }
-i.icon-js {
-  background-image: url("#{$icon-path}/js.svg");
+.icon-js-2.icon:before {
+  content: "\ea49";
 }
-i.icon-kanban {
-  background-image: url("#{$icon-path}/kanban.svg");
+.icon-js.icon:before {
+  content: "\ea4a";
 }
-i.icon-key-square {
-  background-image: url("#{$icon-path}/key-square.svg");
+.icon-kanban.icon:before {
+  content: "\ea4b";
 }
-i.icon-key {
-  background-image: url("#{$icon-path}/key.svg");
+.icon-key-square.icon:before {
+  content: "\ea4c";
 }
-i.icon-keyboard {
-  background-image: url("#{$icon-path}/keyboard.svg");
+.icon-key.icon:before {
+  content: "\ea4d";
 }
-i.icon-laptop {
-  background-image: url("#{$icon-path}/laptop.svg");
+.icon-keyboard.icon:before {
+  content: "\ea4e";
 }
-i.icon-Laravel {
-  background-image: url("#{$icon-path}/Laravel.svg");
+.icon-laptop.icon:before {
+  content: "\ea4f";
 }
-i.icon-left-square {
-  background-image: url("#{$icon-path}/left-square.svg");
+.icon-laravel.icon:before {
+  content: "\ea50";
 }
-i.icon-left {
-  background-image: url("#{$icon-path}/left.svg");
+.icon-left-square.icon:before {
+  content: "\ea51";
 }
-i.icon-like-2 {
-  background-image: url("#{$icon-path}/like-2.svg");
+.icon-left.icon:before {
+  content: "\ea52";
 }
-i.icon-like-folder {
-  background-image: url("#{$icon-path}/like-folder.svg");
+.icon-like-2.icon:before {
+  content: "\ea53";
 }
-i.icon-like-shapes {
-  background-image: url("#{$icon-path}/like-shapes.svg");
+.icon-like-folder.icon:before {
+  content: "\ea54";
 }
-i.icon-like-tag {
-  background-image: url("#{$icon-path}/like-tag.svg");
+.icon-like-shapes.icon:before {
+  content: "\ea55";
 }
-i.icon-like {
-  background-image: url("#{$icon-path}/like.svg");
+.icon-like-tag.icon:before {
+  content: "\ea56";
 }
-i.icon-loading {
-  background-image: url("#{$icon-path}/loading.svg");
+.icon-like.icon:before {
+  content: "\ea57";
 }
-i.icon-lock-2 {
-  background-image: url("#{$icon-path}/lock-2.svg");
+.icon-loading.icon:before {
+  content: "\ea58";
 }
-i.icon-lock-3 {
-  background-image: url("#{$icon-path}/lock-3.svg");
+.icon-lock-2.icon:before {
+  content: "\ea59";
 }
-i.icon-lock {
-  background-image: url("#{$icon-path}/lock.svg");
+.icon-lock-3.icon:before {
+  content: "\ea5a";
 }
-i.icon-logistic {
-  background-image: url("#{$icon-path}/logistic.svg");
+.icon-lock.icon:before {
+  content: "\ea5b";
 }
-i.icon-lots-shopping {
-  background-image: url("#{$icon-path}/lots-shopping.svg");
+.icon-logistic.icon:before {
+  content: "\ea5c";
 }
-i.icon-lovely {
-  background-image: url("#{$icon-path}/lovely.svg");
+.icon-lots-shopping.icon:before {
+  content: "\ea5d";
 }
-i.icon-lts {
-  background-image: url("#{$icon-path}/lts.svg");
+.icon-lovely.icon:before {
+  content: "\ea5e";
 }
-i.icon-magnifier {
-  background-image: url("#{$icon-path}/magnifier.svg");
+.icon-lts.icon:before {
+  content: "\ea5f";
 }
-i.icon-map {
-  background-image: url("#{$icon-path}/map.svg");
+.icon-magnifier.icon:before {
+  content: "\ea60";
 }
-i.icon-mask {
-  background-image: url("#{$icon-path}/mask.svg");
+.icon-map.icon:before {
+  content: "\ea61";
 }
-i.icon-maximize {
-  background-image: url("#{$icon-path}/maximize.svg");
+.icon-mask.icon:before {
+  content: "\ea62";
 }
-i.icon-medal-star {
-  background-image: url("#{$icon-path}/medal-star.svg");
+.icon-maximize.icon:before {
+  content: "\ea63";
 }
-i.icon-menu {
-  background-image: url("#{$icon-path}/menu.svg");
+.icon-medal-star.icon:before {
+  content: "\ea64";
 }
-i.icon-message-add {
-  background-image: url("#{$icon-path}/message-add.svg");
+.icon-menu.icon:before {
+  content: "\ea65";
 }
-i.icon-message-edit {
-  background-image: url("#{$icon-path}/message-edit.svg");
+.icon-message-add.icon:before {
+  content: "\ea66";
 }
-i.icon-message-minus {
-  background-image: url("#{$icon-path}/message-minus.svg");
+.icon-message-edit.icon:before {
+  content: "\ea67";
 }
-i.icon-message-notify {
-  background-image: url("#{$icon-path}/message-notify.svg");
+.icon-message-minus.icon:before {
+  content: "\ea68";
 }
-i.icon-message-programming {
-  background-image: url("#{$icon-path}/message-programming.svg");
+.icon-message-notify.icon:before {
+  content: "\ea69";
 }
-i.icon-message-question {
-  background-image: url("#{$icon-path}/message-question.svg");
+.icon-message-programming.icon:before {
+  content: "\ea6a";
 }
-i.icon-message-text-2 {
-  background-image: url("#{$icon-path}/message-text-2.svg");
+.icon-message-question.icon:before {
+  content: "\ea6b";
 }
-i.icon-message-text {
-  background-image: url("#{$icon-path}/message-text.svg");
+.icon-message-text-2.icon:before {
+  content: "\ea6c";
 }
-i.icon-messages {
-  background-image: url("#{$icon-path}/messages.svg");
+.icon-message-text.icon:before {
+  content: "\ea6d";
 }
-i.icon-microsoft {
-  background-image: url("#{$icon-path}/microsoft.svg");
+.icon-messages.icon:before {
+  content: "\ea6e";
 }
-i.icon-milk {
-  background-image: url("#{$icon-path}/milk.svg");
+.icon-microsoft.icon:before {
+  content: "\ea6f";
 }
-i.icon-minus-circle {
-  background-image: url("#{$icon-path}/minus-circle.svg");
+.icon-milk.icon:before {
+  content: "\ea70";
 }
-i.icon-minus-folder {
-  background-image: url("#{$icon-path}/minus-folder.svg");
+.icon-minus-circle.icon:before {
+  content: "\ea71";
 }
-i.icon-minus-squared {
-  background-image: url("#{$icon-path}/minus-squared.svg");
+.icon-minus-folder.icon:before {
+  content: "\ea72";
 }
-i.icon-minus {
-  background-image: url("#{$icon-path}/minus.svg");
+.icon-minus-squared.icon:before {
+  content: "\ea73";
 }
-i.icon-moon {
-  background-image: url("#{$icon-path}/moon.svg");
+.icon-minus.icon:before {
+  content: "\ea74";
 }
-i.icon-more-2 {
-  background-image: url("#{$icon-path}/more-2.svg");
+.icon-moon.icon:before {
+  content: "\ea75";
 }
-i.icon-mouse-circle {
-  background-image: url("#{$icon-path}/mouse-circle.svg");
+.icon-more-2.icon:before {
+  content: "\ea76";
 }
-i.icon-mouse-square {
-  background-image: url("#{$icon-path}/mouse-square.svg");
+.icon-mouse-circle.icon:before {
+  content: "\ea77";
 }
-i.icon-mouse {
-  background-image: url("#{$icon-path}/mouse.svg");
+.icon-mouse-square.icon:before {
+  content: "\ea78";
 }
-i.icon-nexo {
-  background-image: url("#{$icon-path}/nexo.svg");
+.icon-mouse.icon:before {
+  content: "\ea79";
 }
-i.icon-night-day {
-  background-image: url("#{$icon-path}/night-day.svg");
+.icon-nexo.icon:before {
+  content: "\ea7a";
 }
-i.icon-note-2 {
-  background-image: url("#{$icon-path}/note-2.svg");
+.icon-night-day.icon:before {
+  content: "\ea7b";
 }
-i.icon-note {
-  background-image: url("#{$icon-path}/note.svg");
+.icon-note-2.icon:before {
+  content: "\ea7c";
 }
-i.icon-notepad-bookmark {
-  background-image: url("#{$icon-path}/notepad-bookmark.svg");
+.icon-note.icon:before {
+  content: "\ea7d";
 }
-i.icon-notepad-edit {
-  background-image: url("#{$icon-path}/notepad-edit.svg");
+.icon-notepad-bookmark.icon:before {
+  content: "\ea7e";
 }
-i.icon-notepad {
-  background-image: url("#{$icon-path}/notepad.svg");
+.icon-notepad-edit.icon:before {
+  content: "\ea7f";
 }
-i.icon-notification-1 {
-  background-image: url("#{$icon-path}/notification-1.svg");
+.icon-notepad.icon:before {
+  content: "\ea80";
 }
-i.icon-notification-bing {
-  background-image: url("#{$icon-path}/notification-bing.svg");
+.icon-notification-1.icon:before {
+  content: "\ea81";
 }
-i.icon-notification-circle {
-  background-image: url("#{$icon-path}/notification-circle.svg");
+.icon-notification-bing.icon:before {
+  content: "\ea82";
 }
-i.icon-notification-favorite {
-  background-image: url("#{$icon-path}/notification-favorite.svg");
+.icon-notification-circle.icon:before {
+  content: "\ea83";
 }
-i.icon-notification-on {
-  background-image: url("#{$icon-path}/notification-on.svg");
+.icon-notification-favorite.icon:before {
+  content: "\ea84";
 }
-i.icon-notification-status {
-  background-image: url("#{$icon-path}/notification-status.svg");
+.icon-notification-on.icon:before {
+  content: "\ea85";
 }
-i.icon-notification {
-  background-image: url("#{$icon-path}/notification.svg");
+.icon-notification-status.icon:before {
+  content: "\ea86";
 }
-i.icon-ocean {
-  background-image: url("#{$icon-path}/ocean.svg");
+.icon-notification.icon:before {
+  content: "\ea87";
 }
-i.icon-office-bag {
-  background-image: url("#{$icon-path}/office-bag.svg");
+.icon-ocean.icon:before {
+  content: "\ea88";
 }
-i.icon-package {
-  background-image: url("#{$icon-path}/package.svg");
+.icon-office-bag.icon:before {
+  content: "\ea89";
 }
-i.icon-pad {
-  background-image: url("#{$icon-path}/pad.svg");
+.icon-package.icon:before {
+  content: "\ea8a";
 }
-i.icon-pails {
-  background-image: url("#{$icon-path}/pails.svg");
+.icon-pad.icon:before {
+  content: "\ea8b";
 }
-i.icon-paintbucket {
-  background-image: url("#{$icon-path}/paintbucket.svg");
+.icon-pails.icon:before {
+  content: "\ea8c";
 }
-i.icon-paper-clip {
-  background-image: url("#{$icon-path}/paper-clip.svg");
+.icon-paintbucket.icon:before {
+  content: "\ea8d";
 }
-i.icon-paper-plane {
-  background-image: url("#{$icon-path}/paper-plane.svg");
+.icon-paper-clip.icon:before {
+  content: "\ea8e";
 }
-i.icon-parcel-tracking {
-  background-image: url("#{$icon-path}/parcel-tracking.svg");
+.icon-paper-plane.icon:before {
+  content: "\ea8f";
 }
-i.icon-parcel {
-  background-image: url("#{$icon-path}/parcel.svg");
+.icon-parcel-tracking.icon:before {
+  content: "\ea90";
 }
-i.icon-password-check {
-  background-image: url("#{$icon-path}/password-check.svg");
+.icon-parcel.icon:before {
+  content: "\ea91";
 }
-i.icon-paypal {
-  background-image: url("#{$icon-path}/paypal.svg");
+.icon-password-check.icon:before {
+  content: "\ea92";
 }
-i.icon-pencil {
-  background-image: url("#{$icon-path}/pencil.svg");
+.icon-paypal.icon:before {
+  content: "\ea93";
 }
-i.icon-people {
-  background-image: url("#{$icon-path}/people.svg");
+.icon-pencil.icon:before {
+  content: "\ea94";
 }
-i.icon-percentage {
-  background-image: url("#{$icon-path}/percentage.svg");
+.icon-people.icon:before {
+  content: "\ea95";
 }
-i.icon-phone {
-  background-image: url("#{$icon-path}/phone.svg");
+.icon-percentage.icon:before {
+  content: "\ea96";
 }
-i.icon-photoshop {
-  background-image: url("#{$icon-path}/photoshop.svg");
+.icon-phone.icon:before {
+  content: "\ea97";
 }
-i.icon-picture {
-  background-image: url("#{$icon-path}/picture.svg");
+.icon-photoshop.icon:before {
+  content: "\ea98";
 }
-i.icon-pill {
-  background-image: url("#{$icon-path}/pill.svg");
+.icon-picture.icon:before {
+  content: "\ea99";
 }
-i.icon-pin {
-  background-image: url("#{$icon-path}/pin.svg");
+.icon-pill.icon:before {
+  content: "\ea9a";
 }
-i.icon-plus-circle {
-  background-image: url("#{$icon-path}/plus-circle.svg");
+.icon-pin.icon:before {
+  content: "\ea9b";
 }
-i.icon-plus-squared {
-  background-image: url("#{$icon-path}/plus-squared.svg");
+.icon-plus-circle.icon:before {
+  content: "\ea9c";
 }
-i.icon-plus {
-  background-image: url("#{$icon-path}/plus.svg");
+.icon-plus-squared.icon:before {
+  content: "\ea9d";
 }
-i.icon-pointers {
-  background-image: url("#{$icon-path}/pointers.svg");
+.icon-plus.icon:before {
+  content: "\ea9e";
 }
-i.icon-price-tag {
-  background-image: url("#{$icon-path}/price-tag.svg");
+.icon-pointers.icon:before {
+  content: "\ea9f";
 }
-i.icon-printer {
-  background-image: url("#{$icon-path}/printer.svg");
+.icon-price-tag.icon:before {
+  content: "\eaa0";
 }
-i.icon-profile-circle {
-  background-image: url("#{$icon-path}/profile-circle.svg");
+.icon-printer.icon:before {
+  content: "\eaa1";
 }
-i.icon-pulse {
-  background-image: url("#{$icon-path}/pulse.svg");
+.icon-profile-circle.icon:before {
+  content: "\eaa2";
 }
-i.icon-purchase {
-  background-image: url("#{$icon-path}/purchase.svg");
+.icon-pulse.icon:before {
+  content: "\eaa3";
 }
-i.icon-python {
-  background-image: url("#{$icon-path}/python.svg");
+.icon-purchase.icon:before {
+  content: "\eaa4";
 }
-i.icon-question-2 {
-  background-image: url("#{$icon-path}/question-2.svg");
+.icon-python.icon:before {
+  content: "\eaa5";
 }
-i.icon-question {
-  background-image: url("#{$icon-path}/question.svg");
+.icon-question-2.icon:before {
+  content: "\eaa6";
 }
-i.icon-questionnaire-tablet {
-  background-image: url("#{$icon-path}/questionnaire-tablet.svg");
+.icon-question.icon:before {
+  content: "\eaa7";
 }
-i.icon-ranking {
-  background-image: url("#{$icon-path}/ranking.svg");
+.icon-questionnaire-tablet.icon:before {
+  content: "\eaa8";
 }
-i.icon-react {
-  background-image: url("#{$icon-path}/react.svg");
+.icon-ranking.icon:before {
+  content: "\eaa9";
 }
-i.icon-receipt-square {
-  background-image: url("#{$icon-path}/receipt-square.svg");
+.icon-react.icon:before {
+  content: "\eaaa";
 }
-i.icon-rescue {
-  background-image: url("#{$icon-path}/rescue.svg");
+.icon-receipt-square.icon:before {
+  content: "\eaab";
 }
-i.icon-right-left {
-  background-image: url("#{$icon-path}/right-left.svg");
+.icon-rescue.icon:before {
+  content: "\eaac";
 }
-i.icon-right-square {
-  background-image: url("#{$icon-path}/right-square.svg");
+.icon-right-left.icon:before {
+  content: "\eaad";
 }
-i.icon-right {
-  background-image: url("#{$icon-path}/right.svg");
+.icon-right-square.icon:before {
+  content: "\eaae";
 }
-i.icon-rocket {
-  background-image: url("#{$icon-path}/rocket.svg");
+.icon-right.icon:before {
+  content: "\eaaf";
 }
-i.icon-route {
-  background-image: url("#{$icon-path}/route.svg");
+.icon-rocket.icon:before {
+  content: "\eab0";
 }
-i.icon-router {
-  background-image: url("#{$icon-path}/router.svg");
+.icon-route.icon:before {
+  content: "\eab1";
 }
-i.icon-row-horizontal {
-  background-image: url("#{$icon-path}/row-horizontal.svg");
+.icon-router.icon:before {
+  content: "\eab2";
 }
-i.icon-row-vertical {
-  background-image: url("#{$icon-path}/row-vertical.svg");
+.icon-row-horizontal.icon:before {
+  content: "\eab3";
 }
-i.icon-safe-home {
-  background-image: url("#{$icon-path}/safe-home.svg");
+.icon-row-vertical.icon:before {
+  content: "\eab4";
 }
-i.icon-satellite {
-  background-image: url("#{$icon-path}/satellite.svg");
+.icon-safe-home.icon:before {
+  content: "\eab5";
 }
-i.icon-save-2 {
-  background-image: url("#{$icon-path}/save-2.svg");
+.icon-satellite.icon:before {
+  content: "\eab6";
 }
-i.icon-save-deposit {
-  background-image: url("#{$icon-path}/save-deposit.svg");
+.icon-save-2.icon:before {
+  content: "\eab7";
 }
-i.icon-scan-barcode {
-  background-image: url("#{$icon-path}/scan-barcode.svg");
+.icon-save-deposit.icon:before {
+  content: "\eab8";
 }
-i.icon-screen {
-  background-image: url("#{$icon-path}/screen.svg");
+.icon-scan-barcode.icon:before {
+  content: "\eab9";
 }
-i.icon-scroll {
-  background-image: url("#{$icon-path}/scroll.svg");
+.icon-screen.icon:before {
+  content: "\eaba";
 }
-i.icon-search-list {
-  background-image: url("#{$icon-path}/search-list.svg");
+.icon-scroll.icon:before {
+  content: "\eabb";
 }
-i.icon-security-user {
-  background-image: url("#{$icon-path}/security-user.svg");
+.icon-search-list.icon:before {
+  content: "\eabc";
 }
-i.icon-setting-2 {
-  background-image: url("#{$icon-path}/setting-2.svg");
+.icon-security-user.icon:before {
+  content: "\eabd";
 }
-i.icon-setting-3 {
-  background-image: url("#{$icon-path}/setting-3.svg");
+.icon-setting-2.icon:before {
+  content: "\eabe";
 }
-i.icon-setting-4 {
-  background-image: url("#{$icon-path}/setting-4.svg");
+.icon-setting-3.icon:before {
+  content: "\eabf";
 }
-i.icon-setting {
-  background-image: url("#{$icon-path}/setting.svg");
+.icon-setting-4.icon:before {
+  content: "\eac0";
 }
-i.icon-share {
-  background-image: url("#{$icon-path}/share.svg");
+.icon-setting.icon:before {
+  content: "\eac1";
 }
-i.icon-shield-cross {
-  background-image: url("#{$icon-path}/shield-cross.svg");
+.icon-share.icon:before {
+  content: "\eac2";
 }
-i.icon-shield-search {
-  background-image: url("#{$icon-path}/shield-search.svg");
+.icon-shield-cross.icon:before {
+  content: "\eac3";
 }
-i.icon-shield-slash {
-  background-image: url("#{$icon-path}/shield-slash.svg");
+.icon-shield-search.icon:before {
+  content: "\eac4";
 }
-i.icon-shield-tick {
-  background-image: url("#{$icon-path}/shield-tick.svg");
+.icon-shield-slash.icon:before {
+  content: "\eac5";
 }
-i.icon-shield {
-  background-image: url("#{$icon-path}/shield.svg");
+.icon-shield-tick.icon:before {
+  content: "\eac6";
 }
-i.icon-ship {
-  background-image: url("#{$icon-path}/ship.svg");
+.icon-shield.icon:before {
+  content: "\eac7";
 }
-i.icon-shop {
-  background-image: url("#{$icon-path}/shop.svg");
+.icon-ship.icon:before {
+  content: "\eac8";
 }
-i.icon-simcard-2 {
-  background-image: url("#{$icon-path}/simcard-2.svg");
+.icon-shop.icon:before {
+  content: "\eac9";
 }
-i.icon-simcard {
-  background-image: url("#{$icon-path}/simcard.svg");
+.icon-simcard-2.icon:before {
+  content: "\eaca";
 }
-i.icon-size {
-  background-image: url("#{$icon-path}/size.svg");
+.icon-simcard.icon:before {
+  content: "\eacb";
 }
-i.icon-slack {
-  background-image: url("#{$icon-path}/slack.svg");
+.icon-size.icon:before {
+  content: "\eacc";
 }
-i.icon-slider-horizontal-2 {
-  background-image: url("#{$icon-path}/slider-horizontal-2.svg");
+.icon-slack.icon:before {
+  content: "\eacd";
 }
-i.icon-slider-horizontal {
-  background-image: url("#{$icon-path}/slider-horizontal.svg");
+.icon-slider-horizontal-2.icon:before {
+  content: "\eace";
 }
-i.icon-slider-vertica {
-  background-image: url("#{$icon-path}/slider-vertica.svg");
+.icon-slider-horizontal.icon:before {
+  content: "\eacf";
 }
-i.icon-slider-vertical {
-  background-image: url("#{$icon-path}/slider-vertical.svg");
+.icon-slider-vertica.icon:before {
+  content: "\ead0";
 }
-i.icon-slider {
-  background-image: url("#{$icon-path}/slider.svg");
+.icon-slider-vertical.icon:before {
+  content: "\ead1";
 }
-i.icon-sms {
-  background-image: url("#{$icon-path}/sms.svg");
+.icon-slider.icon:before {
+  content: "\ead2";
 }
-i.icon-snapchat {
-  background-image: url("#{$icon-path}/snapchat.svg");
+.icon-sms.icon:before {
+  content: "\ead3";
 }
-i.icon-social-media {
-  background-image: url("#{$icon-path}/social-media.svg");
+.icon-snapchat.icon:before {
+  content: "\ead4";
 }
-i.icon-soft-2 {
-  background-image: url("#{$icon-path}/soft-2.svg");
+.icon-social-media.icon:before {
+  content: "\ead5";
 }
-i.icon-soft-3 {
-  background-image: url("#{$icon-path}/soft-3.svg");
+.icon-soft-2.icon:before {
+  content: "\ead6";
 }
-i.icon-soft {
-  background-image: url("#{$icon-path}/soft.svg");
+.icon-soft-3.icon:before {
+  content: "\ead7";
 }
-i.icon-some-files {
-  background-image: url("#{$icon-path}/some-files.svg");
+.icon-soft.icon:before {
+  content: "\ead8";
 }
-i.icon-sort {
-  background-image: url("#{$icon-path}/sort.svg");
+.icon-some-files.icon:before {
+  content: "\ead9";
 }
-i.icon-speaker {
-  background-image: url("#{$icon-path}/speaker.svg");
+.icon-sort.icon:before {
+  content: "\eada";
 }
-i.icon-spotify {
-  background-image: url("#{$icon-path}/spotify.svg");
+.icon-speaker.icon:before {
+  content: "\eadb";
 }
-i.icon-spring-framework {
-  background-image: url("#{$icon-path}/spring-framework.svg");
+.icon-spotify.icon:before {
+  content: "\eadc";
 }
-i.icon-square-brackets {
-  background-image: url("#{$icon-path}/square-brackets.svg");
+.icon-spring-framework.icon:before {
+  content: "\eadd";
 }
-i.icon-star {
-  background-image: url("#{$icon-path}/star.svg");
+.icon-square-brackets.icon:before {
+  content: "\eade";
 }
-i.icon-status {
-  background-image: url("#{$icon-path}/status.svg");
+.icon-star.icon:before {
+  content: "\eadf";
 }
-i.icon-subtitle {
-  background-image: url("#{$icon-path}/subtitle.svg");
+.icon-status.icon:before {
+  content: "\eae0";
 }
-i.icon-sun {
-  background-image: url("#{$icon-path}/sun.svg");
+.icon-subtitle.icon:before {
+  content: "\eae1";
 }
-i.icon-support {
-  background-image: url("#{$icon-path}/support.svg");
+.icon-sun.icon:before {
+  content: "\eae2";
 }
-i.icon-switch {
-  background-image: url("#{$icon-path}/switch.svg");
+.icon-support.icon:before {
+  content: "\eae3";
 }
-i.icon-syringe {
-  background-image: url("#{$icon-path}/syringe.svg");
+.icon-switch.icon:before {
+  content: "\eae4";
 }
-i.icon-tab-tablet {
-  background-image: url("#{$icon-path}/tab-tablet.svg");
+.icon-syringe.icon:before {
+  content: "\eae5";
 }
-i.icon-tablet-delete {
-  background-image: url("#{$icon-path}/tablet-delete.svg");
+.icon-tab-tablet.icon:before {
+  content: "\eae6";
 }
-i.icon-tablet-down {
-  background-image: url("#{$icon-path}/tablet-down.svg");
+.icon-tablet-delete.icon:before {
+  content: "\eae7";
 }
-i.icon-tablet-ok {
-  background-image: url("#{$icon-path}/tablet-ok.svg");
+.icon-tablet-down.icon:before {
+  content: "\eae8";
 }
-i.icon-tablet-text-down {
-  background-image: url("#{$icon-path}/tablet-text-down.svg");
+.icon-tablet-ok.icon:before {
+  content: "\eae9";
 }
-i.icon-tablet-text-up {
-  background-image: url("#{$icon-path}/tablet-text-up.svg");
+.icon-tablet-text-down.icon:before {
+  content: "\eaea";
 }
-i.icon-tablet-up {
-  background-image: url("#{$icon-path}/tablet-up.svg");
+.icon-tablet-text-up.icon:before {
+  content: "\eaeb";
 }
-i.icon-tablet {
-  background-image: url("#{$icon-path}/tablet.svg");
+.icon-tablet-up.icon:before {
+  content: "\eaec";
 }
-i.icon-tag-cross {
-  background-image: url("#{$icon-path}/tag-cross.svg");
+.icon-tablet.icon:before {
+  content: "\eaed";
 }
-i.icon-tag {
-  background-image: url("#{$icon-path}/tag.svg");
+.icon-tag-cross.icon:before {
+  content: "\eaee";
 }
-i.icon-teacher {
-  background-image: url("#{$icon-path}/teacher.svg");
+.icon-tag.icon:before {
+  content: "\eaef";
 }
-i.icon-technology-1 {
-  background-image: url("#{$icon-path}/technology-1.svg");
+.icon-teacher.icon:before {
+  content: "\eaf0";
 }
-i.icon-technology-2 {
-  background-image: url("#{$icon-path}/technology-2.svg");
+.icon-technology-1.icon:before {
+  content: "\eaf1";
 }
-i.icon-technology-3 {
-  background-image: url("#{$icon-path}/technology-3.svg");
+.icon-technology-2.icon:before {
+  content: "\eaf2";
 }
-i.icon-technology-4 {
-  background-image: url("#{$icon-path}/technology-4.svg");
+.icon-technology-3.icon:before {
+  content: "\eaf3";
 }
-i.icon-telephone-geolocation {
-  background-image: url("#{$icon-path}/telephone-geolocation.svg");
+.icon-technology-4.icon:before {
+  content: "\eaf4";
 }
-i.icon-test-tubes {
-  background-image: url("#{$icon-path}/test-tubes.svg");
+.icon-telephone-geolocation.icon:before {
+  content: "\eaf5";
 }
-i.icon-text-bold {
-  background-image: url("#{$icon-path}/text-bold.svg");
+.icon-test-tubes.icon:before {
+  content: "\eaf6";
 }
-i.icon-text-circle {
-  background-image: url("#{$icon-path}/text-circle.svg");
+.icon-text-bold.icon:before {
+  content: "\eaf7";
 }
-i.icon-text-italic {
-  background-image: url("#{$icon-path}/text-italic.svg");
+.icon-text-circle.icon:before {
+  content: "\eaf8";
 }
-i.icon-text-number {
-  background-image: url("#{$icon-path}/text-number.svg");
+.icon-text-italic.icon:before {
+  content: "\eaf9";
 }
-i.icon-text-strikethrough {
-  background-image: url("#{$icon-path}/text-strikethrough.svg");
+.icon-text-number.icon:before {
+  content: "\eafa";
 }
-i.icon-text-underline {
-  background-image: url("#{$icon-path}/text-underline.svg");
+.icon-text-strikethrough.icon:before {
+  content: "\eafb";
 }
-i.icon-text {
-  background-image: url("#{$icon-path}/text.svg");
+.icon-text-underline.icon:before {
+  content: "\eafc";
 }
-i.icon-textalign-center {
-  background-image: url("#{$icon-path}/textalign-center.svg");
+.icon-text.icon:before {
+  content: "\eafd";
 }
-i.icon-textalign-justifycenter {
-  background-image: url("#{$icon-path}/textalign-justifycenter.svg");
+.icon-textalign-center.icon:before {
+  content: "\eafe";
 }
-i.icon-textalign-left {
-  background-image: url("#{$icon-path}/textalign-left.svg");
+.icon-textalign-justifycenter.icon:before {
+  content: "\eaff";
 }
-i.icon-textalign-right {
-  background-image: url("#{$icon-path}/textalign-right.svg");
+.icon-textalign-left.icon:before {
+  content: "\eb00";
 }
-i.icon-thermometer {
-  background-image: url("#{$icon-path}/thermometer.svg");
+.icon-textalign-right.icon:before {
+  content: "\eb01";
 }
-i.icon-theta-theta {
-  background-image: url("#{$icon-path}/theta-theta.svg");
+.icon-thermometer.icon:before {
+  content: "\eb02";
 }
-i.icon-tiktok {
-  background-image: url("#{$icon-path}/tiktok.svg");
+.icon-theta-theta.icon:before {
+  content: "\eb03";
 }
-i.icon-time {
-  background-image: url("#{$icon-path}/time.svg");
+.icon-tiktok.icon:before {
+  content: "\eb04";
 }
-i.icon-timer {
-  background-image: url("#{$icon-path}/timer.svg");
+.icon-time.icon:before {
+  content: "\eb05";
 }
-i.icon-to-left {
-  background-image: url("#{$icon-path}/to-left.svg");
+.icon-timer.icon:before {
+  content: "\eb06";
 }
-i.icon-to-right {
-  background-image: url("#{$icon-path}/to-right.svg");
+.icon-to-left.icon:before {
+  content: "\eb07";
 }
-i.icon-toggle-off-circle {
-  background-image: url("#{$icon-path}/toggle-off-circle.svg");
+.icon-to-right.icon:before {
+  content: "\eb08";
 }
-i.icon-toggle-off {
-  background-image: url("#{$icon-path}/toggle-off.svg");
+.icon-toggle-off-circle.icon:before {
+  content: "\eb09";
 }
-i.icon-toggle-on-circle {
-  background-image: url("#{$icon-path}/toggle-on-circle.svg");
+.icon-toggle-off.icon:before {
+  content: "\eb0a";
 }
-i.icon-toggle-on {
-  background-image: url("#{$icon-path}/toggle-on.svg");
+.icon-toggle-on-circle.icon:before {
+  content: "\eb0b";
 }
-i.icon-trash-square {
-  background-image: url("#{$icon-path}/trash-square.svg");
+.icon-toggle-on.icon:before {
+  content: "\eb0c";
 }
-i.icon-trash {
-  background-image: url("#{$icon-path}/trash.svg");
+.icon-trash-square.icon:before {
+  content: "\eb0d";
 }
-i.icon-tree {
-  background-image: url("#{$icon-path}/tree.svg");
+.icon-trash.icon:before {
+  content: "\eb0e";
 }
-i.icon-trello {
-  background-image: url("#{$icon-path}/trello.svg");
+.icon-tree.icon:before {
+  content: "\eb0f";
 }
-i.icon-ts {
-  background-image: url("#{$icon-path}/ts.svg");
+.icon-trello.icon:before {
+  content: "\eb10";
 }
-i.icon-twitch {
-  background-image: url("#{$icon-path}/twitch.svg");
+.icon-ts.icon:before {
+  content: "\eb11";
 }
-i.icon-twitter {
-  background-image: url("#{$icon-path}/twitter.svg");
+.icon-twitch.icon:before {
+  content: "\eb12";
 }
-i.icon-two-credit-cart {
-  background-image: url("#{$icon-path}/two-credit-cart.svg");
+.icon-twitter.icon:before {
+  content: "\eb13";
 }
-i.icon-underlining {
-  background-image: url("#{$icon-path}/underlining.svg");
+.icon-two-credit-cart.icon:before {
+  content: "\eb14";
 }
-i.icon-up-diagonal {
-  background-image: url("#{$icon-path}/up-diagonal.svg");
+.icon-underlining.icon:before {
+  content: "\eb15";
 }
-i.icon-up-down {
-  background-image: url("#{$icon-path}/up-down.svg");
+.icon-up-diagonal.icon:before {
+  content: "\eb16";
 }
-i.icon-up-square {
-  background-image: url("#{$icon-path}/up-square.svg");
+.icon-up-down.icon:before {
+  content: "\eb17";
 }
-i.icon-up {
-  background-image: url("#{$icon-path}/up.svg");
+.icon-up-square.icon:before {
+  content: "\eb18";
 }
-i.icon-update-file {
-  background-image: url("#{$icon-path}/update-file.svg");
+.icon-up.icon:before {
+  content: "\eb19";
 }
-i.icon-update-folder {
-  background-image: url("#{$icon-path}/update-folder.svg");
+.icon-update-file.icon:before {
+  content: "\eb1a";
 }
-i.icon-user-edit {
-  background-image: url("#{$icon-path}/user-edit.svg");
+.icon-update-folder.icon:before {
+  content: "\eb1b";
 }
-i.icon-user-square {
-  background-image: url("#{$icon-path}/user-square.svg");
+.icon-user-edit.icon:before {
+  content: "\eb1c";
 }
-i.icon-user-tick {
-  background-image: url("#{$icon-path}/user-tick.svg");
+.icon-user-square.icon:before {
+  content: "\eb1d";
 }
-i.icon-user {
-  background-image: url("#{$icon-path}/user.svg");
+.icon-user-tick.icon:before {
+  content: "\eb1e";
 }
-i.icon-users {
-  background-image: url("#{$icon-path}/users.svg");
+.icon-user.icon:before {
+  content: "\eb1f";
 }
-i.icon-verify {
-  background-image: url("#{$icon-path}/verify.svg");
+.icon-users.icon:before {
+  content: "\eb20";
 }
-i.icon-vibe-vibe {
-  background-image: url("#{$icon-path}/vibe-vibe.svg");
+.icon-verify.icon:before {
+  content: "\eb21";
 }
-i.icon-virus {
-  background-image: url("#{$icon-path}/virus.svg");
+.icon-vibe-vibe.icon:before {
+  content: "\eb22";
 }
-i.icon-vue {
-  background-image: url("#{$icon-path}/vue.svg");
+.icon-virus.icon:before {
+  content: "\eb23";
 }
-i.icon-vuesax {
-  background-image: url("#{$icon-path}/vuesax.svg");
+.icon-vue.icon:before {
+  content: "\eb24";
 }
-i.icon-wallet {
-  background-image: url("#{$icon-path}/wallet.svg");
+.icon-vuesax.icon:before {
+  content: "\eb25";
 }
-i.icon-wanchain-wan {
-  background-image: url("#{$icon-path}/wanchain-wan.svg");
+.icon-wallet.icon:before {
+  content: "\eb26";
 }
-i.icon-watch {
-  background-image: url("#{$icon-path}/watch.svg");
+.icon-wanchain-wan.icon:before {
+  content: "\eb27";
 }
-i.icon-whatsapp {
-  background-image: url("#{$icon-path}/whatsapp.svg");
+.icon-watch.icon:before {
+  content: "\eb28";
 }
-i.icon-wifi-home {
-  background-image: url("#{$icon-path}/wifi-home.svg");
+.icon-whatsapp.icon:before {
+  content: "\eb29";
 }
-i.icon-wifi-square {
-  background-image: url("#{$icon-path}/wifi-square.svg");
+.icon-wifi-home.icon:before {
+  content: "\eb2a";
 }
-i.icon-wifi {
-  background-image: url("#{$icon-path}/wifi.svg");
+.icon-wifi-square.icon:before {
+  content: "\eb2b";
 }
-i.icon-wireframe {
-  background-image: url("#{$icon-path}/wireframe.svg");
+.icon-wifi.icon:before {
+  content: "\eb2c";
 }
-i.icon-wlan {
-  background-image: url("#{$icon-path}/wlan.svg");
+.icon-wireframe.icon:before {
+  content: "\eb2d";
 }
-i.icon-wrench {
-  background-image: url("#{$icon-path}/wrench.svg");
+.icon-wlan.icon:before {
+  content: "\eb2e";
 }
-i.icon-xaomi {
-  background-image: url("#{$icon-path}/xaomi.svg");
+.icon-wrench.icon:before {
+  content: "\eb2f";
 }
-i.icon-xd {
-  background-image: url("#{$icon-path}/xd.svg");
+.icon-xaomi.icon:before {
+  content: "\eb30";
 }
-i.icon-xmr {
-  background-image: url("#{$icon-path}/xmr.svg");
+.icon-xd.icon:before {
+  content: "\eb31";
 }
-i.icon-yii {
-  background-image: url("#{$icon-path}/yii.svg");
+.icon-xmr.icon:before {
+  content: "\eb32";
 }
-i.icon-youtube {
-  background-image: url("#{$icon-path}/youtube.svg");
+.icon-yii.icon:before {
+  content: "\eb33";
+}
+.icon-youtube.icon:before {
+  content: "\eb34";
 }
