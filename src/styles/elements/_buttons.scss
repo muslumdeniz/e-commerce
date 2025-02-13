@@ -14,7 +14,7 @@
   // Style
   display: flex;
   background-color: $primary-color;
-  padding: map-get($spacing, 6) map-get($spacing, 10);
+  padding: map-get($spacing, 8) map-get($spacing, 16);
   border-radius: map-get($rounded, md);
   gap: map-get($spacing, 5);
 
@@ -36,7 +36,14 @@
     color: $primary-color;
     border: map-get($spacing, px) solid $primary-color;
   }
-  &.btn-icon {
+  &.btn-icon,
+  &.btn-only-icon {
+    i {
+      font-size: map-get($spacing, 8);
+    }
+  }
+  &.btn-only-icon {
+    padding: map-get($spacing, 8) map-get($spacing, 8);
   }
   &.btn-rounded {
     border-radius: map-get($rounded, full);
