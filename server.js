@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(basePath, "/index.html"));
 });
 
-// About
+// UI
 app.get("/ui", (req, res) => {
   res.sendFile(path.join(basePath, "/ui.html"));
 });
