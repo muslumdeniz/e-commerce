@@ -13,10 +13,12 @@
 
   // Style
   display: flex;
+  align-items: center;
   background-color: $primary-color;
   padding: map-get($spacing, 8) map-get($spacing, 16);
   border-radius: map-get($rounded, md);
   gap: map-get($spacing, 5);
+  border: map-get($spacing, px) solid $primary-color;
 
   // Typography
   font-weight: 700;
@@ -26,7 +28,12 @@
 
   // Sizes
   &.btn-small {
+    padding: map-get($spacing, 5) map-get($spacing, 10);
   }
+  &.btn-small.btn-only-icon {
+    padding: map-get($spacing, 5) map-get($spacing, 5);
+  }
+
   &.btn-large {
   }
 
@@ -34,7 +41,6 @@
   &.btn-outline {
     background-color: transparent;
     color: $primary-color;
-    border: map-get($spacing, px) solid $primary-color;
   }
   &.btn-icon,
   &.btn-only-icon {

@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
 });
 
 // About
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(basePath, "/about.html"));
+app.get("/ui", (req, res) => {
+  res.sendFile(path.join(basePath, "/ui.html"));
 });
 
 // Sunucuyu başlat
