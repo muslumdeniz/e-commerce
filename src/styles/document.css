@@ -1,3 +1,7 @@
+body {
+  background-color: #ededed;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -9,15 +13,16 @@
 .ui-card {
   margin-top: 20px;
   padding: 10px;
-  border: 1px solid #f7f6f6;
+  border: 1px solid #7b61ff;
   border-radius: 12px;
 }
 
 .ui-content {
   padding: 20px;
-  background: #f7f6f6;
-  border-radius: 2px;
+  border: 1px solid #7b61ff;
+  border-radius: 6px;
   display: flex;
+  margin-bottom: 20px;
   gap: 20px;
 }
 
@@ -27,5 +32,5 @@ h3,
 h4,
 h5,
 h6 {
-  color: #323232;
+  color: #7b61ff;
 }

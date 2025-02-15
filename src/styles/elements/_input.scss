@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "../variables/rounded" as *;
+@use "../variables/colors" as *;
+@use "../variables/spacing" as *;
+
+.input {
+  // Normalize
+  input {
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+    height: map.get($spacing, 24);
+    font-weight: 200;
+  }
+
+  // Style
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: map.get($spacing, 24);
+  background-color: $form-element-bg-color;
+  border: map.get($spacing, px) solid $form-element-border-color;
+  border-radius: map.get($rounded, md);
+  padding: 0 map.get($spacing, 10);
+
+  &.input-icon {
+    padding: 0 map.get($spacing, 8);
+    color: #737373;
+  }
+}

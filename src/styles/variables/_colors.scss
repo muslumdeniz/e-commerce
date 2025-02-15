@@ -77,13 +77,10 @@ $dark-bg-color: hwb(228 15% 74%) !default;
 $light-bg-color: #fff !default;
 $light-gray-color: #fafafa !default;
 $gray-color: #ececec !default;
+$form-element-bg-color: #f9f9f9 !default;
+$form-element-border-color: #e6e6e6 !default;
 
 // Text Colors
 $text-primary-color: #252b42 !default;
 $text-secondary-color: #737373 !default;
 $text-muted-color: #bdbdbd !default;
-
-// Faded Variants
-$faded-primary-color: #b2e3ff !default;
-$faded-secondary-color: #b9eaa8 !default;
-$faded-tertiary-color: #ffdcd1 !default;
