@@ -1,7 +1,9 @@
+@use "sass:map";
 @use "../variables/colors" as *;
 @use "../variables/rounded" as *;
 @use "../variables/spacing" as *;
 @use "../variables/typography" as *;
+@use "../variables/animations" as *;
 
 /*
 
@@ -15,43 +17,75 @@
   display: flex;
   align-items: center;
   background-color: $primary-color;
-  padding: map-get($spacing, 8) map-get($spacing, 16);
-  border-radius: map-get($rounded, md);
-  gap: map-get($spacing, 5);
-  border: map-get($spacing, px) solid $primary-color;
+  padding: map.get($spacing, 8) map.get($spacing, 16);
+  border-radius: map.get($rounded, md);
+  gap: map.get($spacing, 5);
+  border: map.get($spacing, px) solid $primary-color;
+  cursor: pointer;
+  transition: $duration;
 
   // Typography
   font-weight: 700;
-  font-size: map-get($text-sizes, sm, 1);
-  line-height: map-get($text-sizes, sm, 2);
-  color: $light-background;
+  font-size: map.get($text-sizes, sm);
+  line-height: map.get($text-line-height, sm);
+  color: $light-bg-color;
+
+  // Actions
+  &:hover {
+    background-color: $primary-color-400;
+    border-color: $primary-color-400;
+  }
+  &:active {
+    background-color: $primary-color-600;
+    border-color: $primary-color-600;
+  }
 
   // Sizes
   &.btn-small {
-    padding: map-get($spacing, 5) map-get($spacing, 10);
+    padding: map.get($spacing, 5) map.get($spacing, 10);
   }
   &.btn-small.btn-only-icon {
-    padding: map-get($spacing, 5) map-get($spacing, 5);
+    padding: map.get($spacing, 5) map.get($spacing, 6);
   }
 
   &.btn-large {
+    padding: map.get($spacing, 8) map.get($spacing, 20);
+    font-size: map.get($text-sizes, 2xl);
+    line-height: map.get($text-line-height, 2xl);
+
+    i {
+      font-size: map.get($spacing, 8);
+    }
+  }
+  &.btn-large.btn-only-icon {
+    padding: map.get($spacing, 10) map.get($spacing, 12);
   }
 
   // Variants
   &.btn-outline {
     background-color: transparent;
     color: $primary-color;
+
+    // Action
+    &:hover {
+      color: $primary-color-400;
+      border-color: $primary-color-400;
+    }
+    &:active {
+      color: $primary-color-600;
+      border-color: $primary-color-600;
+    }
   }
   &.btn-icon,
   &.btn-only-icon {
     i {
-      font-size: map-get($spacing, 8);
+      font-size: map.get($spacing, 8);
     }
   }
   &.btn-only-icon {
-    padding: map-get($spacing, 8) map-get($spacing, 8);
+    padding: map.get($spacing, 8) map.get($spacing, 9);
   }
   &.btn-rounded {
-    border-radius: map-get($rounded, full);
+    border-radius: map.get($rounded, full);
   }
 }
