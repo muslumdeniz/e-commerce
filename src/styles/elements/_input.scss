@@ -2,7 +2,9 @@
 @use "../variables/rounded" as *;
 @use "../variables/colors" as *;
 @use "../variables/spacing" as *;
+@use "../variables/animations" as *;
 
+// .input, .select, .textarea {}
 .input {
   // Normalize
   input {
@@ -19,7 +21,6 @@
   gap: 12px;
   align-items: center;
   height: map.get($spacing, 24);
-  background-color: $form-element-bg-color;
   border: map.get($spacing, px) solid $form-element-border-color;
   border-radius: map.get($rounded, md);
   padding: 0 map.get($spacing, 10);
@@ -28,7 +29,8 @@
     padding: 0 map.get($spacing, 8);
     color: #737373;
   }
-  &.input-large {
+  &.input-large,
+  &.input-large input {
     height: map.get($spacing, 44);
   }
 }
@@ -39,10 +41,10 @@
   gap: 12px;
   align-items: center;
   height: map.get($spacing, 24);
-  background-color: $form-element-bg-color;
   border: map.get($spacing, px) solid $form-element-border-color;
   border-radius: map.get($rounded, md);
   padding: 0 map.get($spacing, 10);
+  cursor: pointer;
 
   select {
     appearance: none; /* Tarayıcı stilini kaldır */
@@ -56,6 +58,7 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
+    cursor: pointer;
   }
 
   &::after {
@@ -81,11 +84,56 @@
   resize: none;
 
   // Style
+  border: map.get($spacing, px) solid $form-element-border-color;
+  border-radius: map.get($rounded, md);
+  padding: map.get($spacing, 8) map.get($spacing, 10);
   height: map.get($spacing, 244);
   font-weight: 200;
-  background-color: $form-element-bg-color;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 13px;
 
-  &.large-textarea {
-    height: map.get($spacing, 44);
+  label {
+    color: #737373;
+    line-height: map.get($spacing, 14);
+  }
+  input {
+    transition: $duration;
+    appearance: none;
+    background-color: $light-bg-color;
+    border: map.get($spacing, px) solid $form-element-border-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: map.get($spacing, 14);
+    height: map.get($spacing, 14);
+    border-radius: map.get($rounded, md);
+    cursor: pointer;
+
+    &:before {
+      font-family: "keenicons-solid";
+      content: "\e99e";
+      color: $light-bg-color;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+    }
+
+    &:checked {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+    &:disabled {
+      cursor: no-drop;
+      border-color: $form-element-border-color;
+      background-color: $form-element-border-color;
+      &::before {
+        color: $form-element-border-color;
+      }
+    }
   }
 }
