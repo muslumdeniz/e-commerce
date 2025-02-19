@@ -137,3 +137,42 @@
     }
   }
 }
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  label {
+    color: #737373;
+    line-height: map.get($spacing, 14);
+  }
+  input {
+    margin: 0;
+    transition: $duration;
+    appearance: none;
+    background-color: $light-bg-color;
+    border: map.get($spacing, px) solid $form-element-border-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: map.get($spacing, 12);
+    height: map.get($spacing, 12);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+    }
+
+    &:checked {
+      border-color: $primary-color;
+      border-width: map.get($spacing, 3);
+    }
+    &:disabled {
+      cursor: no-drop;
+      border-color: $form-element-border-color;
+      background-color: $form-element-border-color;
+    }
+  }
+}
