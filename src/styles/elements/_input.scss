@@ -157,7 +157,7 @@
     align-items: center;
     width: map.get($spacing, 12);
     height: map.get($spacing, 12);
-    border-radius: 50%;
+    border-radius: map.get($rounded, full);
     cursor: pointer;
 
     &:hover,
@@ -173,6 +173,61 @@
       cursor: no-drop;
       border-color: $form-element-border-color;
       background-color: $form-element-border-color;
+    }
+  }
+}
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  label {
+    color: #737373;
+    line-height: map.get($spacing, 14);
+  }
+  input {
+    transition: $duration;
+    appearance: none;
+    position: relative;
+    border: map.get($spacing, px) solid $form-element-border-color;
+    width: map.get($spacing, 24);
+    height: map.get($spacing, 14);
+    border-radius: map.get($rounded, full);
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: map.get($spacing, 1);
+      left: map.get($spacing, 1);
+      border: map.get($spacing, px) solid $form-element-border-color;
+      border-radius: map.get($rounded, full);
+      background-color: $gray-color;
+      width: map.get($spacing, 10);
+      height: map.get($spacing, 10);
+      transition: $duration;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+    }
+
+    &:checked {
+      background-color: $primary-color;
+      border-color: $primary-color;
+
+      &::before {
+        left: map.get($spacing, 11);
+      }
+    }
+    &:disabled {
+      cursor: no-drop;
+      border-color: $form-element-border-color;
+      background-color: $form-element-border-color;
+      &::before {
+        color: $form-element-border-color;
+      }
     }
   }
 }
