@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "svgr": "svgr ./public/icons -d ./src/components/icons/components --typescript --no-dimensions --replace-attr-values  \"#000={props.color}=\"",
+    "generate-icons-index": "node ./scripts/generate-icons-index.cjs",
+    "build-icons": "npm run svgr && npm run generate-icons-index"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@svgr/cli": "^8.1.0",
     "@tailwindcss/postcss": "^4.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
