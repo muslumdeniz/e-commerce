@@ -1,9 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Input } from './index';
+import { Input } from "./index";
 
 const meta = {
   component: Input,
+  argTypes: {
+    placeholder: {
+      control: "text",
+    },
+  },
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -11,5 +16,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {}
+  args: {},
 };

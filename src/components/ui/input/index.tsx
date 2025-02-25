@@ -6,27 +6,39 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   name?: string;
   icon?: IconTypes;
   inputSize?: "base" | "lg";
+  info?: string;
 };
 
-export const Input = ({ label, name, inputSize = "base", ...props }: Props) => {
+export const Input = ({
+  label,
+  name,
+  info,
+  inputSize = "base",
+  ...props
+}: Props) => {
   const inputVariant = {
     size: {
-      base: "h-12 py-0 px-5",
+      base: "h-12",
       lg: "h-24",
     },
   };
   return (
-    <div className="flex gap-3 items-center">
-      {label && <label htmlFor={name}>{label}</label>}
+    <div className="flex flex-col  gap-1.5 ">
+      {label && (
+        <label className=" text-lg text-text-primary  " htmlFor={name}>
+          {label}
+        </label>
+      )}
       <input
         className={classNames(
-          "border border-px border-form-element-border rounded-md bg-transparent text-base font-extralight text-text-secondary",
+          "border border-px border-form-element-border px-5 rounded-md  bg-transparent text-base font-extralight text-text-secondary",
           inputVariant.size[inputSize]
         )}
         type="text"
         name={name}
         {...props}
       />
+      {info && <p className="text-text-secondary text-xs  ">{info}</p>}
     </div>
   );
 };
