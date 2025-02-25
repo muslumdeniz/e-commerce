@@ -1,0 +1,14 @@
+import { Meta, IconGallery, IconItem } from "@storybook/blocks";
+
+import IconExample from "./";
+import { icons } from "./stories.ts";
+
+# All Icons
+
+<IconGallery>
+  {icons.map((icon) => (
+    <IconItem name={icon}>
+      <IconExample name={icon} />
+    </IconItem>
+  ))}
+</IconGallery>

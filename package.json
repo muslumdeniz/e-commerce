@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "svgr": "svgr ./public/icons -d ./src/components/icons/components --typescript --no-dimensions --replace-attr-values  \"#000={props.color}=\"",
+    "svgr": "svgr ./public/icons -d ./src/components/ui/icons/all --typescript --no-dimensions --replace-attr-values  \"#000={props.color}=\"",
     "generate-icons-index": "node ./scripts/generate-icons-index.cjs",
     "build-icons": "npm run svgr && npm run generate-icons-index",
     "storybook": "storybook dev -p 6006",

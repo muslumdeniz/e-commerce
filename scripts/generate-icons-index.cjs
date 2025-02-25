@@ -1,14 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-const iconsDir = path.resolve(__dirname, "../src/components/icons/components");
+const iconsDir = path.resolve(__dirname, "../src/components/ui/icons/all");
 const outputFilePath = path.resolve(
   __dirname,
-  "../src/components/icons/index.tsx"
+  "../src/components/ui/icons/index.tsx"
 );
 const outputTypesFilePath = path.resolve(
   __dirname,
-  "../src/components/icons/_model.ts"
+  "../src/components/ui/icons/_model.ts"
 );
 
 const icons = fs
@@ -18,7 +18,7 @@ const icons = fs
 
 const iconTypes = icons.map((icon) => `'${icon}'`).join(" | ");
 const imports = `
-import * as AllIcons from './components';
+import * as AllIcons from './all';
 import {IconProps} from './_model';`;
 const cases = icons
   .map(

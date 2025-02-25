@@ -1,6 +1,6 @@
 
 
-import * as AllIcons from './components';
+import * as AllIcons from './all';
 import {IconProps} from './_model';
 const Icons: React.FC<IconProps> = ({
   name,
