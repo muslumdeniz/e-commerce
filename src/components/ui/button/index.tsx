@@ -40,7 +40,7 @@ const Button = ({
     size: {
       icon: {
         sm: "p-4",
-        base: "py-4",
+        base: "p-4",
         lg: "p-4 text-2xl",
       },
       label: {
