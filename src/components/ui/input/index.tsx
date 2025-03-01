@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Icons from "../icons";
 import { IconTypes } from "../icons/_model";
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -7,12 +8,15 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   icon?: IconTypes;
   inputSize?: "base" | "lg";
   info?: string;
+  error?: string;
 };
 
-export const Input = ({
+const Input = ({
   label,
   name,
+  icon,
   info,
+  error,
   inputSize = "base",
   ...props
 }: Props) => {
@@ -23,22 +27,37 @@ export const Input = ({
     },
   };
   return (
-    <div className="flex flex-col  gap-1.5 ">
+    <fieldset className="flex flex-col  gap-1.5 ">
       {label && (
         <label className=" text-lg text-text-primary  " htmlFor={name}>
           {label}
         </label>
       )}
-      <input
+      <label
         className={classNames(
-          "border border-px border-form-element-border px-5 rounded-md  bg-transparent text-base font-extralight text-text-secondary",
+          "flex gap-3 items-center border border-px border-form-element-border px-5 rounded-md bg-transparent",
           inputVariant.size[inputSize]
         )}
-        type="text"
-        name={name}
-        {...props}
-      />
-      {info && <p className="text-text-secondary text-xs  ">{info}</p>}
-    </div>
+      >
+        {icon && (
+          <Icons className="text-text-secondary" name={icon} size={16} />
+        )}
+        <input
+          className="flex-[1] h-full text-base font-extralight text-text-secondary"
+          type="text"
+          name={name}
+          {...props}
+        />
+      </label>
+      {(info || error) && (
+        <p
+          className={`text-xs ${error ? "text-danger" : "text-text-secondary"}`}
+        >
+          {error || info}
+        </p>
+      )}
+    </fieldset>
   );
 };
+
+export { Input };
