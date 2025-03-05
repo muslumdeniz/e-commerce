@@ -5,21 +5,23 @@ import Icons from "../icons";
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   label: string;
   icon?: IconTypes;
+  error?: boolean;
 };
 
-export const Checkbox: React.FC<Props> = ({ label, icon, ...props }) => {
+export const Checkbox: React.FC<Props> = ({ label, icon, error, ...props }) => {
   return (
     <fieldset className="flex gap-3.5 relative">
       <input
         className={classNames(
           // Default
-          "peer appearance-none border border-px border-form-element-border rounded-md w-6 h-6 cursor-pointer transition-all",
+          "peer appearance-none border border-px rounded-md w-6 h-6 cursor-pointer transition-all",
           // Active
           "checked:bg-primary checked:border-primary",
-          // Hover
-          "hover:border-primary",
           // Disabled
-          "disabled:border-none disabled:bg-form-element-disabled-bg disabled:cursor-not-allowed"
+          "disabled:border-none disabled:bg-form-element-disabled-bg disabled:cursor-not-allowed",
+          error
+            ? "border-danger"
+            : "border-form-element-border hover:border-primary"
         )}
         type="checkbox"
         {...props}
