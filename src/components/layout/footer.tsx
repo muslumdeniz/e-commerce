@@ -1,10 +1,10 @@
 type Props = {};
 export const Footer = ({}: Props) => {
   return (
-    <nav>
+    <footer className="container">
       <div>
         <div>Footer</div>
       </div>
-    </nav>
+    </footer>
   );
 };

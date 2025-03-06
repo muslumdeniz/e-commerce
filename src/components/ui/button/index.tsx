@@ -30,7 +30,7 @@ const Button = ({
   children,
   ...props
 }: Props) => {
-  const iconSize = size === "lg" ? 12 : 12;
+  const iconSize = size === "lg" ? 18 : size === "base" ? 16 : 12;
   const buttonVariant = {
     //
     variant: {
