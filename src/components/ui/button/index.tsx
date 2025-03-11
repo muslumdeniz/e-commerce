@@ -16,6 +16,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     | "warning"
     | "danger";
   isRounded?: boolean;
+  isIconButton?: boolean;
   className?: string;
 };
 const Button = ({
@@ -26,6 +27,7 @@ const Button = ({
   size = "base",
   color = "primary",
   isRounded,
+  isIconButton,
   className,
   children,
   ...props
@@ -86,10 +88,11 @@ const Button = ({
   return (
     <button
       className={classNames(
-        "flex items-center gap-2.5  cursor-pointer transition-all font-medium text-sm",
+        "flex items-center  cursor-pointer transition-all font-medium text-sm",
         buttonVariant.variant[variant],
-        buttonVariant.size[label ? "label" : "icon"][size],
+        buttonVariant.size[!isIconButton && label ? "label" : "icon"][size],
         buttonVariant.color[color][variant],
+        isIconButton ? "gap-1 border-none" : "gap-2.5",
         isRounded ? "rounded-full" : "rounded-md",
         className
       )}
