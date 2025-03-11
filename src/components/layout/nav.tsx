@@ -19,13 +19,13 @@ export const Nav = ({}: Props) => {
 
   return (
     <nav className="container">
-      <div className="flex items-center justify-between min-h-19.5">
+      <div className="flex items-center gap-18 min-h-19.5">
         <Image
           src="https://www.mavi.com/medias/logoyeni120.svg?context=bWFzdGVyfG1hdmljZG5pbWFnZXN8MTM2NXxpbWFnZS9zdmcreG1sfGFEWXlMMmhrWVM4eE1USXhNakF3TmprME9EZzVOQzlzYjJkdmVXVnVhVEV5TUM1emRtY3wyYTA5OGI4ZDRhZGFiZDhkODQzZDg0ZDUxM2FhYjY4NGUwZDRhZThiZmRhYjZmN2VkYjg4Mzc1NGU0YmViNjUw"
           alt="logo"
           className="w-20 h-10"
         />
-        <div className="flex items-center gap-6">
+        <div className="flex flex-1 justify-between items-center gap-6">
           <div className="flex items-center gap-3.5">
             {links.map((link, key) => (
               <Link
