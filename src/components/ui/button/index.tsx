@@ -36,7 +36,7 @@ const Button = ({
   const buttonVariant = {
     //
     variant: {
-      primary: "text-light-bg  border border-px",
+      primary: "text-light-bg",
       outline: "bg-transparent border border-px ",
     },
     size: {
@@ -88,7 +88,7 @@ const Button = ({
   return (
     <button
       className={classNames(
-        "flex items-center  cursor-pointer transition-all font-medium text-sm",
+        "flex items-center cursor-pointer transition-all font-medium text-sm h-fit",
         buttonVariant.variant[variant],
         buttonVariant.size[!isIconButton && label ? "label" : "icon"][size],
         buttonVariant.color[color][variant],

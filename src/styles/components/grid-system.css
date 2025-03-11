@@ -1,0 +1,5 @@
+@layer components {
+  .row {
+    @apply grid grid-cols-12 gap-8;
+  }
+}

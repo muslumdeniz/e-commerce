@@ -1,22 +1,12 @@
 import Link from "next/link";
 import { Image } from "../ui/image";
-import classNames from "classnames";
 import Icons from "../ui/icons";
 import { Button } from "../ui/button";
+import { Links } from "@/constants/links";
 
 type Props = {};
-{
-}
-export const Nav = ({}: Props) => {
-  const links = [
-    { href: "/", label: "Home" },
-    { href: "#", label: "Shop" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Blog" },
-    { href: "#", label: "Contact" },
-    { href: "#", label: "Pages" },
-  ];
 
+export const Nav = ({}: Props) => {
   return (
     <nav className="container">
       <div className="flex items-center gap-18 min-h-19.5">
@@ -27,12 +17,8 @@ export const Nav = ({}: Props) => {
         />
         <div className="flex flex-1 justify-between items-center gap-6">
           <div className="flex items-center gap-3.5">
-            {links.map((link, key) => (
-              <Link
-                className="text-sm font-bold hover:text-primary transition-colors h-6 gap-1.5 flex items-center text-text-secondary"
-                key={key}
-                href={link.href}
-              >
+            {Links.map((link, key) => (
+              <Link className="link" key={key} href={link.href}>
                 {link.label}
               </Link>
             ))}

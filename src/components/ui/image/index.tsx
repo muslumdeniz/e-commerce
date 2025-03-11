@@ -21,7 +21,10 @@ export const Image: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <div className={classNames("aspect-square relative", className)} {...props}>
+    <div
+      className={classNames("aspect-square relative z-10", className)}
+      {...props}
+    >
       <NextImage
         className={classNames("-z-10", imageClass)}
         src={src}

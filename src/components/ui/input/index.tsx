@@ -9,6 +9,7 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   inputSize?: "base" | "lg";
   info?: string;
   error?: string;
+  className?: string;
 };
 
 const Input = ({
@@ -18,6 +19,7 @@ const Input = ({
   info,
   error,
   inputSize = "base",
+  className,
   ...props
 }: Props) => {
   const inputVariant = {
@@ -36,7 +38,8 @@ const Input = ({
       <label
         className={classNames(
           "flex gap-3 items-center border border-px border-form-element-border px-5 rounded-md bg-transparent",
-          inputVariant.size[inputSize]
+          inputVariant.size[inputSize],
+          className
         )}
       >
         {icon && (
