@@ -9,9 +9,7 @@ const SvgArrowDownLeft = (props: SVGProps<SVGSVGElement>) => (
   >
     <path
       fill={props.color}
-      fillRule="evenodd"
-      d="M19.324 4.676c.435.435.435 1.14 0 1.575L8.152 17.423H16.6a1.114 1.114 0 1 1 0 2.227H5.464a1.114 1.114 0 0 1-1.114-1.114V7.4a1.114 1.114 0 1 1 2.227 0v8.448L17.75 4.676a1.114 1.114 0 0 1 1.575 0"
-      clipRule="evenodd"
+      d="M17.85 16.2a1 1 0 0 1-1 1h-8.4a1 1 0 0 1 0-2h6l-6.7-6.69a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0l6.69 6.68v-6a1 1 0 0 1 2 0z"
     />
   </svg>
 );

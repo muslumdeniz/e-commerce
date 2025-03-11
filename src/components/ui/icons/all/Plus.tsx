@@ -9,15 +9,7 @@ const SvgPlus = (props: SVGProps<SVGSVGElement>) => (
   >
     <path
       fill={props.color}
-      fillRule="evenodd"
-      d="M3 12c0-.635.466-1.15 1.04-1.15h15.92c.574 0 1.04.515 1.04 1.15s-.466 1.15-1.04 1.15H4.04C3.466 13.15 3 12.635 3 12"
-      clipRule="evenodd"
-    />
-    <path
-      fill={props.color}
-      fillRule="evenodd"
-      d="M12 21c-.635 0-1.15-.466-1.15-1.04V4.04c0-.574.515-1.04 1.15-1.04s1.15.466 1.15 1.04v15.92c0 .574-.515 1.04-1.15 1.04"
-      clipRule="evenodd"
+      d="M18 11h-5V6a1 1 0 0 0-2 0v5H6a1 1 0 0 0 0 2h5v5a1 1 0 0 0 2 0v-5h5a1 1 0 0 0 0-2"
     />
   </svg>
 );

@@ -9,9 +9,7 @@ const SvgMinus = (props: SVGProps<SVGSVGElement>) => (
   >
     <path
       fill={props.color}
-      fillRule="evenodd"
-      d="M3.25 12c0-.635.453-1.15 1.011-1.15H19.74c.558 0 1.011.515 1.011 1.15s-.453 1.15-1.011 1.15H4.26c-.558 0-1.011-.515-1.011-1.15"
-      clipRule="evenodd"
+      d="M18 10.94 6 11a1 1 0 0 0 0 2l12-.06a1 1 0 0 0 0-2"
     />
   </svg>
 );

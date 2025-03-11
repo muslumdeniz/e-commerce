@@ -121,6 +121,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.AddressBook width={size} height={size} color={color} {...props} />;
     case 'Airplane':
       return <AllIcons.Airplane width={size} height={size} color={color} {...props} />;
+    case 'Airplane1':
+      return <AllIcons.Airplane1 width={size} height={size} color={color} {...props} />;
     case 'AirplaneSquare':
       return <AllIcons.AirplaneSquare width={size} height={size} color={color} {...props} />;
     case 'Airpod':
@@ -139,6 +141,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.ArrowCircleLeft width={size} height={size} color={color} {...props} />;
     case 'ArrowCircleRight':
       return <AllIcons.ArrowCircleRight width={size} height={size} color={color} {...props} />;
+    case 'ArrowDiagonal':
+      return <AllIcons.ArrowDiagonal width={size} height={size} color={color} {...props} />;
     case 'ArrowDown':
       return <AllIcons.ArrowDown width={size} height={size} color={color} {...props} />;
     case 'ArrowDownLeft':
@@ -187,8 +191,6 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Bandage width={size} height={size} color={color} {...props} />;
     case 'Bank':
       return <AllIcons.Bank width={size} height={size} color={color} {...props} />;
-    case 'BarChart':
-      return <AllIcons.BarChart width={size} height={size} color={color} {...props} />;
     case 'Barcode':
       return <AllIcons.Barcode width={size} height={size} color={color} {...props} />;
     case 'Basket':
@@ -287,6 +289,10 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Capsule width={size} height={size} color={color} {...props} />;
     case 'Car':
       return <AllIcons.Car width={size} height={size} color={color} {...props} />;
+    case 'Car2':
+      return <AllIcons.Car2 width={size} height={size} color={color} {...props} />;
+    case 'Car3':
+      return <AllIcons.Car3 width={size} height={size} color={color} {...props} />;
     case 'Category':
       return <AllIcons.Category width={size} height={size} color={color} {...props} />;
     case 'Cd':
@@ -323,6 +329,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.ChartSimple3 width={size} height={size} color={color} {...props} />;
     case 'Check':
       return <AllIcons.Check width={size} height={size} color={color} {...props} />;
+    case 'Check1':
+      return <AllIcons.Check1 width={size} height={size} color={color} {...props} />;
     case 'CheckCircle':
       return <AllIcons.CheckCircle width={size} height={size} color={color} {...props} />;
     case 'CheckSquared':
@@ -383,8 +391,6 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Cube3 width={size} height={size} color={color} {...props} />;
     case 'Cup':
       return <AllIcons.Cup width={size} height={size} color={color} {...props} />;
-    case 'Cursor':
-      return <AllIcons.Cursor width={size} height={size} color={color} {...props} />;
     case 'Dash':
       return <AllIcons.Dash width={size} height={size} color={color} {...props} />;
     case 'Data':
@@ -393,10 +399,12 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.DeleteFiles width={size} height={size} color={color} {...props} />;
     case 'DeleteFolder':
       return <AllIcons.DeleteFolder width={size} height={size} color={color} {...props} />;
-    case 'Delivery':
-      return <AllIcons.Delivery width={size} height={size} color={color} {...props} />;
+    case 'Deliveri':
+      return <AllIcons.Deliveri width={size} height={size} color={color} {...props} />;
     case 'Delivery2':
       return <AllIcons.Delivery2 width={size} height={size} color={color} {...props} />;
+    case 'Delivery24':
+      return <AllIcons.Delivery24 width={size} height={size} color={color} {...props} />;
     case 'Delivery3':
       return <AllIcons.Delivery3 width={size} height={size} color={color} {...props} />;
     case 'DeliveryDoor':
@@ -409,8 +417,6 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Design1 width={size} height={size} color={color} {...props} />;
     case 'Design2':
       return <AllIcons.Design2 width={size} height={size} color={color} {...props} />;
-    case 'DesktopMobile':
-      return <AllIcons.DesktopMobile width={size} height={size} color={color} {...props} />;
     case 'Devices':
       return <AllIcons.Devices width={size} height={size} color={color} {...props} />;
     case 'Devices2':
@@ -423,8 +429,6 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Disconnect width={size} height={size} color={color} {...props} />;
     case 'Discount':
       return <AllIcons.Discount width={size} height={size} color={color} {...props} />;
-    case 'Disguise':
-      return <AllIcons.Disguise width={size} height={size} color={color} {...props} />;
     case 'Disk':
       return <AllIcons.Disk width={size} height={size} color={color} {...props} />;
     case 'Dislike':
@@ -433,6 +437,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Dj width={size} height={size} color={color} {...props} />;
     case 'Document':
       return <AllIcons.Document width={size} height={size} color={color} {...props} />;
+    case 'DodleCheck':
+      return <AllIcons.DodleCheck width={size} height={size} color={color} {...props} />;
     case 'Dollar':
       return <AllIcons.Dollar width={size} height={size} color={color} {...props} />;
     case 'DotsCircle':
@@ -447,24 +453,14 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.DotsSquareVertical width={size} height={size} color={color} {...props} />;
     case 'DotsVertical':
       return <AllIcons.DotsVertical width={size} height={size} color={color} {...props} />;
-    case 'DoubleCheck':
-      return <AllIcons.DoubleCheck width={size} height={size} color={color} {...props} />;
-    case 'DoubleCheckCircle':
-      return <AllIcons.DoubleCheckCircle width={size} height={size} color={color} {...props} />;
-    case 'DoubleDown':
-      return <AllIcons.DoubleDown width={size} height={size} color={color} {...props} />;
-    case 'DoubleLeft':
-      return <AllIcons.DoubleLeft width={size} height={size} color={color} {...props} />;
     case 'DoubleLeftArrow':
       return <AllIcons.DoubleLeftArrow width={size} height={size} color={color} {...props} />;
-    case 'DoubleRight':
-      return <AllIcons.DoubleRight width={size} height={size} color={color} {...props} />;
     case 'DoubleRightArrow':
       return <AllIcons.DoubleRightArrow width={size} height={size} color={color} {...props} />;
-    case 'DoubleUp':
-      return <AllIcons.DoubleUp width={size} height={size} color={color} {...props} />;
     case 'Down':
       return <AllIcons.Down width={size} height={size} color={color} {...props} />;
+    case 'Down1':
+      return <AllIcons.Down1 width={size} height={size} color={color} {...props} />;
     case 'DownSquare':
       return <AllIcons.DownSquare width={size} height={size} color={color} {...props} />;
     case 'Dribbble':
@@ -473,6 +469,16 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Drop width={size} height={size} color={color} {...props} />;
     case 'Dropbox':
       return <AllIcons.Dropbox width={size} height={size} color={color} {...props} />;
+    case 'DubleCheckCircle':
+      return <AllIcons.DubleCheckCircle width={size} height={size} color={color} {...props} />;
+    case 'DubleDown':
+      return <AllIcons.DubleDown width={size} height={size} color={color} {...props} />;
+    case 'DubleLeft':
+      return <AllIcons.DubleLeft width={size} height={size} color={color} {...props} />;
+    case 'DubleRight':
+      return <AllIcons.DubleRight width={size} height={size} color={color} {...props} />;
+    case 'DubleUp':
+      return <AllIcons.DubleUp width={size} height={size} color={color} {...props} />;
     case 'EducareEkt':
       return <AllIcons.EducareEkt width={size} height={size} color={color} {...props} />;
     case 'Electricity':
@@ -511,10 +517,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.EmojiHappy width={size} height={size} color={color} {...props} />;
     case 'EnjinCoinEnj':
       return <AllIcons.EnjinCoinEnj width={size} height={size} color={color} {...props} />;
-    case 'Ensure':
-      return <AllIcons.Ensure width={size} height={size} color={color} {...props} />;
-    case 'EntranceLeft':
-      return <AllIcons.EntranceLeft width={size} height={size} color={color} {...props} />;
+    case 'EntranceEft':
+      return <AllIcons.EntranceEft width={size} height={size} color={color} {...props} />;
     case 'EntranceRight':
       return <AllIcons.EntranceRight width={size} height={size} color={color} {...props} />;
     case 'Eraser':
@@ -599,6 +603,12 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.FolderUp width={size} height={size} color={color} {...props} />;
     case 'Frame':
       return <AllIcons.Frame width={size} height={size} color={color} {...props} />;
+    case 'Frame1':
+      return <AllIcons.Frame1 width={size} height={size} color={color} {...props} />;
+    case 'Frame2':
+      return <AllIcons.Frame2 width={size} height={size} color={color} {...props} />;
+    case 'Gear':
+      return <AllIcons.Gear width={size} height={size} color={color} {...props} />;
     case 'Geolocation':
       return <AllIcons.Geolocation width={size} height={size} color={color} {...props} />;
     case 'GeolocationHome':
@@ -689,8 +699,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Like width={size} height={size} color={color} {...props} />;
     case 'Like2':
       return <AllIcons.Like2 width={size} height={size} color={color} {...props} />;
-    case 'LikeFolder':
-      return <AllIcons.LikeFolder width={size} height={size} color={color} {...props} />;
+    case 'LikeLolder':
+      return <AllIcons.LikeLolder width={size} height={size} color={color} {...props} />;
     case 'LikeShapes':
       return <AllIcons.LikeShapes width={size} height={size} color={color} {...props} />;
     case 'LikeTag':
@@ -717,6 +727,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Map width={size} height={size} color={color} {...props} />;
     case 'Mask':
       return <AllIcons.Mask width={size} height={size} color={color} {...props} />;
+    case 'Mask1':
+      return <AllIcons.Mask1 width={size} height={size} color={color} {...props} />;
     case 'Maximize':
       return <AllIcons.Maximize width={size} height={size} color={color} {...props} />;
     case 'MedalStar':
@@ -729,8 +741,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.MessageEdit width={size} height={size} color={color} {...props} />;
     case 'MessageMinus':
       return <AllIcons.MessageMinus width={size} height={size} color={color} {...props} />;
-    case 'MessageNotify':
-      return <AllIcons.MessageNotify width={size} height={size} color={color} {...props} />;
+    case 'MessageNotif':
+      return <AllIcons.MessageNotif width={size} height={size} color={color} {...props} />;
     case 'MessageProgramming':
       return <AllIcons.MessageProgramming width={size} height={size} color={color} {...props} />;
     case 'MessageQuestion':
@@ -753,12 +765,16 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.MinusFolder width={size} height={size} color={color} {...props} />;
     case 'MinusSquared':
       return <AllIcons.MinusSquared width={size} height={size} color={color} {...props} />;
+    case 'MonitorMobbile':
+      return <AllIcons.MonitorMobbile width={size} height={size} color={color} {...props} />;
     case 'Moon':
       return <AllIcons.Moon width={size} height={size} color={color} {...props} />;
     case 'More2':
       return <AllIcons.More2 width={size} height={size} color={color} {...props} />;
     case 'Mouse':
       return <AllIcons.Mouse width={size} height={size} color={color} {...props} />;
+    case 'Mouse1':
+      return <AllIcons.Mouse1 width={size} height={size} color={color} {...props} />;
     case 'MouseCircle':
       return <AllIcons.MouseCircle width={size} height={size} color={color} {...props} />;
     case 'MouseSquare':
@@ -783,30 +799,26 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Notification1 width={size} height={size} color={color} {...props} />;
     case 'NotificationBing':
       return <AllIcons.NotificationBing width={size} height={size} color={color} {...props} />;
-    case 'NotificationCircle':
-      return <AllIcons.NotificationCircle width={size} height={size} color={color} {...props} />;
+    case 'NotificationCircl':
+      return <AllIcons.NotificationCircl width={size} height={size} color={color} {...props} />;
     case 'NotificationFavorite':
       return <AllIcons.NotificationFavorite width={size} height={size} color={color} {...props} />;
     case 'NotificationOn':
       return <AllIcons.NotificationOn width={size} height={size} color={color} {...props} />;
-    case 'NotificationStatus':
-      return <AllIcons.NotificationStatus width={size} height={size} color={color} {...props} />;
+    case 'NotificationStatu':
+      return <AllIcons.NotificationStatu width={size} height={size} color={color} {...props} />;
     case 'Ocean':
       return <AllIcons.Ocean width={size} height={size} color={color} {...props} />;
     case 'OfficeBag':
       return <AllIcons.OfficeBag width={size} height={size} color={color} {...props} />;
     case 'Package':
       return <AllIcons.Package width={size} height={size} color={color} {...props} />;
-    case 'Pad':
-      return <AllIcons.Pad width={size} height={size} color={color} {...props} />;
     case 'Pails':
       return <AllIcons.Pails width={size} height={size} color={color} {...props} />;
     case 'Paintbucket':
       return <AllIcons.Paintbucket width={size} height={size} color={color} {...props} />;
     case 'PaperClip':
       return <AllIcons.PaperClip width={size} height={size} color={color} {...props} />;
-    case 'PaperPlane':
-      return <AllIcons.PaperPlane width={size} height={size} color={color} {...props} />;
     case 'Parcel':
       return <AllIcons.Parcel width={size} height={size} color={color} {...props} />;
     case 'ParcelTracking':
@@ -815,8 +827,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.PasswordCheck width={size} height={size} color={color} {...props} />;
     case 'Paypal':
       return <AllIcons.Paypal width={size} height={size} color={color} {...props} />;
-    case 'Pencil':
-      return <AllIcons.Pencil width={size} height={size} color={color} {...props} />;
+    case 'Pencxil':
+      return <AllIcons.Pencxil width={size} height={size} color={color} {...props} />;
     case 'People':
       return <AllIcons.People width={size} height={size} color={color} {...props} />;
     case 'Percentage':
@@ -843,6 +855,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.PriceTag width={size} height={size} color={color} {...props} />;
     case 'Printer':
       return <AllIcons.Printer width={size} height={size} color={color} {...props} />;
+    case 'Profile2User':
+      return <AllIcons.Profile2User width={size} height={size} color={color} {...props} />;
     case 'ProfileCircle':
       return <AllIcons.ProfileCircle width={size} height={size} color={color} {...props} />;
     case 'Pulse':
@@ -891,6 +905,10 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.SaveDeposit width={size} height={size} color={color} {...props} />;
     case 'ScanBarcode':
       return <AllIcons.ScanBarcode width={size} height={size} color={color} {...props} />;
+    case 'Scooter':
+      return <AllIcons.Scooter width={size} height={size} color={color} {...props} />;
+    case 'Scooter2':
+      return <AllIcons.Scooter2 width={size} height={size} color={color} {...props} />;
     case 'Screen':
       return <AllIcons.Screen width={size} height={size} color={color} {...props} />;
     case 'Scroll':
@@ -973,8 +991,6 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Subtitle width={size} height={size} color={color} {...props} />;
     case 'Sun':
       return <AllIcons.Sun width={size} height={size} color={color} {...props} />;
-    case 'Support':
-      return <AllIcons.Support width={size} height={size} color={color} {...props} />;
     case 'Support24':
       return <AllIcons.Support24 width={size} height={size} color={color} {...props} />;
     case 'Switch':
@@ -985,10 +1001,10 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.TabTablet width={size} height={size} color={color} {...props} />;
     case 'Tablet':
       return <AllIcons.Tablet width={size} height={size} color={color} {...props} />;
+    case 'Tablet1':
+      return <AllIcons.Tablet1 width={size} height={size} color={color} {...props} />;
     case 'TabletDelete':
       return <AllIcons.TabletDelete width={size} height={size} color={color} {...props} />;
-    case 'TabletDown':
-      return <AllIcons.TabletDown width={size} height={size} color={color} {...props} />;
     case 'TabletOk':
       return <AllIcons.TabletOk width={size} height={size} color={color} {...props} />;
     case 'TabletTextDown':
@@ -1059,14 +1075,20 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.ToggleOn width={size} height={size} color={color} {...props} />;
     case 'ToggleOnCircle':
       return <AllIcons.ToggleOnCircle width={size} height={size} color={color} {...props} />;
-    case 'Trash':
-      return <AllIcons.Trash width={size} height={size} color={color} {...props} />;
-    case 'TrashSquare':
-      return <AllIcons.TrashSquare width={size} height={size} color={color} {...props} />;
+    case 'Trailer':
+      return <AllIcons.Trailer width={size} height={size} color={color} {...props} />;
     case 'Tree':
       return <AllIcons.Tree width={size} height={size} color={color} {...props} />;
     case 'Trello':
       return <AllIcons.Trello width={size} height={size} color={color} {...props} />;
+    case 'Triangle':
+      return <AllIcons.Triangle width={size} height={size} color={color} {...props} />;
+    case 'Truck':
+      return <AllIcons.Truck width={size} height={size} color={color} {...props} />;
+    case 'Trush':
+      return <AllIcons.Trush width={size} height={size} color={color} {...props} />;
+    case 'TrushSquare':
+      return <AllIcons.TrushSquare width={size} height={size} color={color} {...props} />;
     case 'Ts':
       return <AllIcons.Ts width={size} height={size} color={color} {...props} />;
     case 'Twitch':
@@ -1079,8 +1101,6 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Underlining width={size} height={size} color={color} {...props} />;
     case 'Up':
       return <AllIcons.Up width={size} height={size} color={color} {...props} />;
-    case 'UpDiagonal':
-      return <AllIcons.UpDiagonal width={size} height={size} color={color} {...props} />;
     case 'UpDown':
       return <AllIcons.UpDown width={size} height={size} color={color} {...props} />;
     case 'UpSquare':
@@ -1097,8 +1117,6 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.UserSquare width={size} height={size} color={color} {...props} />;
     case 'UserTick':
       return <AllIcons.UserTick width={size} height={size} color={color} {...props} />;
-    case 'Users':
-      return <AllIcons.Users width={size} height={size} color={color} {...props} />;
     case 'Verify':
       return <AllIcons.Verify width={size} height={size} color={color} {...props} />;
     case 'VibeVibe':
@@ -1117,16 +1135,14 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.Watch width={size} height={size} color={color} {...props} />;
     case 'Whatsapp':
       return <AllIcons.Whatsapp width={size} height={size} color={color} {...props} />;
-    case 'Wifi':
-      return <AllIcons.Wifi width={size} height={size} color={color} {...props} />;
+    case 'WiFi':
+      return <AllIcons.WiFi width={size} height={size} color={color} {...props} />;
+    case 'WiFi1':
+      return <AllIcons.WiFi1 width={size} height={size} color={color} {...props} />;
     case 'WifiHome':
       return <AllIcons.WifiHome width={size} height={size} color={color} {...props} />;
     case 'WifiSquare':
       return <AllIcons.WifiSquare width={size} height={size} color={color} {...props} />;
-    case 'Wireframe':
-      return <AllIcons.Wireframe width={size} height={size} color={color} {...props} />;
-    case 'Wlan':
-      return <AllIcons.Wlan width={size} height={size} color={color} {...props} />;
     case 'Wrench':
       return <AllIcons.Wrench width={size} height={size} color={color} {...props} />;
     case 'Xaomi':
