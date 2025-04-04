@@ -1,11 +1,9 @@
-@layer components {
-  .container {
-    @apply mx-auto;
-  }
-  .section-lg {
-    @apply py-20;
-  }
-  .section-md {
-    @apply py-10.5;
-  }
+@utility container {
+  @apply mx-auto;
+}
+@utility section-lg {
+  @apply py-20;
+}
+@utility section-md {
+  @apply py-10.5;
 }

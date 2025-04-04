@@ -1,21 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ui/cards/product-card";
-import Link from "next/link";
 
 type Props = {};
 
-const HighlightProducts = ({}: Props) => {
+const Products = ({}: Props) => {
   return (
-    <section className="container">
-      <div className="flex flex-col gap-2.5 items-center mb-14">
-        <h3 className="text-text-secondary font-normal">Featured Products</h3>
-        <h2 className="uppercase text-2xl text-text-primary font-bold">
-          Bestseller Products
-        </h2>
-        <p className="text-text-secondary font-normal">
-          Problems trying to resolve the conflict between
-        </p>
-      </div>
+    <div className="container">
+      buraya kategoriler gelecek
       <div className="row ">
         <div className="col-span-2">
           <ProductCard
@@ -161,18 +151,10 @@ const HighlightProducts = ({}: Props) => {
             className="h-full"
           />
         </div>
-        <div className="col-span-12">
-          <Link href="/products">
-            <Button
-              variant="outline"
-              label="Load More Products"
-              className="uppercase mx-auto"
-            />
-          </Link>
-        </div>
+        <div className="col-span-12">pagınatıon eklenecek buraya</div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export { HighlightProducts };
+export { Products };

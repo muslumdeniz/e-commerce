@@ -22,7 +22,7 @@ export const Image: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className={classNames("aspect-square relative z-10", className)}
+      className={classNames(" aspect-square relative z-10", className)}
       {...props}
     >
       <NextImage
