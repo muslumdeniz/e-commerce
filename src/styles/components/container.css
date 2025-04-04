@@ -2,4 +2,10 @@
   .container {
     @apply mx-auto;
   }
+  .section-lg {
+    @apply py-20;
+  }
+  .section-md {
+    @apply py-10.5;
+  }
 }

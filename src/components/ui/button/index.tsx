@@ -12,6 +12,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     | "primary"
     | "secondary"
     | "tertiary"
+    | "light"
     | "success"
     | "warning"
     | "danger";
@@ -66,6 +67,10 @@ const Button = ({
         primary: "bg-tertiary hover:bg-tertiary-400 active:bg-tertiary-600",
         outline:
           "text-tertiary border-tertiary hover:border-tertiary-400 active:border-tertiary-600",
+      },
+      light: {
+        primary: "bg-light-bg text-tertiary",
+        outline: "text-light-bg border-light-bg",
       },
       success: {
         primary: "bg-success hover:bg-success-400 active:bg-success-600",

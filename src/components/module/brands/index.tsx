@@ -56,7 +56,7 @@ const Brands = ({}: Props) => {
   return (
     <section className="container">
       <div className="row">
-        {tempBrands.slice(0, 11).map((brand, key) => (
+        {tempBrands.slice(0, 5).map((brand, key) => (
           <div key={key} className="col-span-2">
             <Image imageClass="scale-50" src={brand.src} alt={brand.alt} />
           </div>

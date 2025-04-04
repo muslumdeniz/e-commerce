@@ -5,7 +5,7 @@ type Props = {};
 
 const Hero = ({}: Props) => {
   return (
-    <header className="container">
+    <header className="container section-md">
       <div className="bg-gradient-to-r from-primary-200 to-success-50 rounded-3xl">
         <div className="row">
           <div className="col-span-6 pl-24">
