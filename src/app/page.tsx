@@ -1,5 +1,5 @@
 import { Brands } from "@/components/module/brands";
-import { FeaturedProduct } from "@/components/module/featured-product";
+import { Services } from "@/components/module/services";
 import { Hero } from "@/components/module/hero";
 import { HighlightProducts } from "@/components/module/highlight-products";
 import { Highlights } from "@/components/module/highlights";
@@ -14,7 +14,7 @@ export default function Home() {
       <Highlights />
       <HighlightProducts />
       <ShortAbout />
-      <FeaturedProduct />
+      <Services />
       <Post />
     </>
   );
