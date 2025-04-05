@@ -19,7 +19,9 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   isRounded?: boolean;
   isIconButton?: boolean;
   className?: string;
+  iconSize?: number;
 };
+
 const Button = ({
   label,
   prefixIcon,
@@ -30,12 +32,14 @@ const Button = ({
   isRounded,
   isIconButton,
   className,
+  iconSize,
   children,
   ...props
 }: Props) => {
-  const iconSize = size === "lg" ? 18 : size === "base" ? 16 : 12;
+  const calculatedIconSize =
+    iconSize ?? (size === "lg" ? 18 : size === "base" ? 16 : 12);
+
   const buttonVariant = {
-    //
     variant: {
       primary: "text-light-bg",
       outline: "bg-transparent border border-px ",
@@ -103,10 +107,11 @@ const Button = ({
       )}
       {...props}
     >
-      {prefixIcon && <Icons name={prefixIcon} size={iconSize} />}
+      {prefixIcon && <Icons name={prefixIcon} size={calculatedIconSize} />}
       {label}
-      {suffixIcon && <Icons name={suffixIcon} size={iconSize} />}
+      {suffixIcon && <Icons name={suffixIcon} size={calculatedIconSize} />}
     </button>
   );
 };
+
 export { Button };
