@@ -15,7 +15,8 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     | "light"
     | "success"
     | "warning"
-    | "danger";
+    | "danger"
+    | "light-gray";
   isRounded?: boolean;
   isIconButton?: boolean;
   className?: string;
@@ -90,6 +91,11 @@ const Button = ({
         primary: "bg-danger hover:bg-danger-400 active:bg-danger-600",
         outline:
           "text-danger border-danger hover:border-danger-400 active:border-danger-600",
+      },
+      "light-gray": {
+        primary: "bg-light-gray2 hover:bg-light-gray2 active:bg-light-gray2",
+        outline:
+          "text-text-color border-light-gray2 hover:border-light-gray2 active:border-light-gray2",
       },
     },
   };

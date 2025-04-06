@@ -3,6 +3,7 @@ import { Image } from "../ui/image";
 import Icons from "../ui/icons";
 import { Button } from "../ui/button";
 import { Links } from "@/constants/links";
+import classNames from "classnames";
 
 type Props = {};
 
@@ -18,7 +19,14 @@ export const Nav = ({}: Props) => {
         <div className="flex flex-1 justify-between items-center gap-6">
           <div className="flex items-center gap-3.5">
             {Links.map((link, key) => (
-              <Link className="link" key={key} href={link.href}>
+              <Link
+                className={classNames(
+                  "link",
+                  link.isNew && "text-danger-500 font-medium italic underline"
+                )}
+                key={key}
+                href={link.href}
+              >
                 {link.label}
               </Link>
             ))}

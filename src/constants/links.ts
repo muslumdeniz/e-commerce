@@ -7,11 +7,11 @@ type SocialLinkType = {
 
 export const Links = [
   { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "#", label: "About" },
-  { href: "#", label: "Blog" },
-  { href: "#", label: "Contact" },
-  { href: "#", label: "Pages" },
+  { href: "/men", label: "Men" },
+  { href: "/women", label: "Women" },
+  { href: "/children", label: "Children" },
+  { href: "/new-collection", label: "New Collection", isNew: true },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Socials: SocialLinkType[] = [
