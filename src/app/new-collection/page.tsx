@@ -1,6 +1,7 @@
 import { Featured } from "@/components/module/featured";
 import { InnerCard } from "@/components/module/inner-cards";
 import { InnerHero } from "@/components/module/inner-hero";
+import { ProductDescription } from "@/components/module/product-description";
 import { SubPageHero } from "@/components/module/sub-page-hero";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <InnerHero />
       <InnerCard />
       <Featured />
+      <ProductDescription />
     </>
   );
 }
