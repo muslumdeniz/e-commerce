@@ -34,14 +34,14 @@ export const Nav = ({}: Props) => {
           <div className="flex items-center">
             <div className="flex items-center gap-1.5 px-4">
               <Link
-                href="#"
+                href="/login"
                 className="flex items-center gap-1.5 text-sm font-bold text-primary"
               >
                 <Icons name="User" size={16} />
                 Login
               </Link>
               <span className="text-sm font-bold text-primary">/</span>
-              <Link href="#" className="text-sm font-bold text-primary">
+              <Link href="/register" className="text-sm font-bold text-primary">
                 Register
               </Link>
             </div>
