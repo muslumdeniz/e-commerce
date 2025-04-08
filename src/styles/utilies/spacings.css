@@ -1,0 +1,36 @@
+@theme {
+  /* Width Screens */
+  --w-screen-10: 10vw;
+  --w-screen-20: 20vw;
+  --w-screen-25: 25vw;
+  --w-screen-30: 30vw;
+  --w-screen-40: 40vw;
+  --w-screen-50: 50vw;
+  --w-screen-60: 60vw;
+  --w-screen-70: 70vw;
+  --w-screen-75: 75vw;
+  --w-screen-80: 80vw;
+  --w-screen-90: 90vw;
+
+  /* Height Screens */
+  --h-screen-10: 10vh;
+  --h-screen-20: 20vh;
+  --h-screen-25: 25vh;
+  --h-screen-30: 30vh;
+  --h-screen-40: 40vh;
+  --h-screen-50: 50vh;
+  --h-screen-60: 60vh;
+  --h-screen-70: 70vh;
+  --h-screen-75: 75vh;
+  --h-screen-80: 80vh;
+  --h-screen-90: 90vh;
+}
+
+@utility w-screen-* {
+  /* prettier-ignore */
+  width: --value(--w-screen-*);
+}
+@utility h-screen-* {
+  /* prettier-ignore */
+  height: --value(--h-screen-*);
+}

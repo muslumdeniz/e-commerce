@@ -1,8 +1,8 @@
 import { Featured } from "@/components/module/featured";
+import { FeedBackSection } from "@/components/module/feedbacksection/inex";
 import { InnerCard } from "@/components/module/inner-cards";
 import { InnerHero } from "@/components/module/inner-hero";
 import { ProductDescription } from "@/components/module/product-description";
-import { SubPageHero } from "@/components/module/sub-page-hero";
 
 export default function Home() {
   const breadcrumb = [
@@ -12,17 +12,17 @@ export default function Home() {
     },
 
     {
-      label: "new",
+      label: "New Collection",
     },
   ];
 
   return (
     <>
-      <SubPageHero title="new" breadcrumb={breadcrumb} />
-      <InnerHero />
+      <InnerHero breadcrumb={breadcrumb} />
       <InnerCard />
       <Featured />
       <ProductDescription />
+      <FeedBackSection />
     </>
   );
 }

@@ -1,14 +1,18 @@
 import { Image } from "@/components/ui/image";
-import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { IBreadcrumb } from "@/core/_breadcrumb";
 
-type Props = {};
+type Props = {
+  breadcrumb: IBreadcrumb[];
+};
 
-const InnerHero = ({}: Props) => {
+const InnerHero = ({ breadcrumb }: Props) => {
   return (
     <header className="container section-md">
-      <div className="bg-gradient-to-rrounded-3xl">
+      <div className="bg-gradient-to-r rounded-3xl">
+        <Breadcrumb list={breadcrumb} />
         <div className="row">
-          <div className="col-span-6 pl-24">
+          <div className="col-span-6">
             <div className="flex flex-col h-full justify-center gap-8">
               <span className="text-text-primary text-base font-bold ">
                 WHAT WE DO

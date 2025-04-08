@@ -4,9 +4,9 @@ type Props = {};
 
 const InnerCard = ({}: Props) => {
   return (
-    <section className=" section-md">
+    <section className="section-md">
       <div className="container">
-        <div className="row flex justify-center gap-8">
+        <div className="row">
           <div className="col-span-6">
             <StyleCard src="/media/cards/style-card-1.jpg" alt="Style 1" />
           </div>

@@ -5,23 +5,23 @@ type Props = {};
 const ProductDescription = ({}: Props) => {
   return (
     <div className="container section-lg">
-      <div className="flex justify-center gap-16 ">
-        <div className="w-96">
-          <p className="font-normal text-sm text-danger mb-6">
-            Problems trying
-          </p>
-          <h3 className="font-bold text-2xl text-text-primary mb-20">
+      <div className="row">
+        <div className="col-span-4 col-start-3">
+          <p className="font-normal text-sm text-danger">Problems trying</p>
+          <h3 className="font-bold text-2xl text-text-primary">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint.
           </h3>
+        </div>
+        <div className="col-span-4 col-start-3">
           <Image
             src="/media/short-about/description-1.png"
             alt="Description 1"
-            className="w-96 h-[450px]"
+            className="!aspect-[38/45]"
           />
         </div>
-        <div className="w-[353px] pt-32">
-          <div className="flex justify-center mb-12 gap-16">
+        <div className="col-span-4">
+          <div className="flex justify-center mb-12 -mt-9.5 gap-16">
             <Image
               src="/media/short-about/description-2.png"
               alt="Description 2"
