@@ -1,5 +1,9 @@
-export interface ISession {}
-export interface IUser {}
+import { IUser } from "./_user";
+
+export interface ISession {
+  jwt: string | null;
+  user: IUser | null;
+}
 
 export type LoginBody = {
   username: string;
