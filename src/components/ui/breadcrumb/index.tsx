@@ -1,14 +1,19 @@
 import Link from "next/link";
 import Icons from "../icons";
 import { IBreadcrumb } from "@/core/_breadcrumb";
+import { HTMLAttributes } from "react";
+import classNames from "classnames";
 
-type Props = {
+type Props = HTMLAttributes<HTMLDivElement> & {
   list?: IBreadcrumb[];
 };
 
-const Breadcrumb = ({ list }: Props) => {
+const Breadcrumb = ({ list, className, ...props }: Props) => {
   return (
-    <div className="flex items-center gap-2 ml-auto">
+    <div
+      className={classNames("flex items-center gap-2 ml-auto", className)}
+      {...props}
+    >
       {list?.map((item, key) => (
         <div key={key} className="flex items-center">
           {item.href ? (
