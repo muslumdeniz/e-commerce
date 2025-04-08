@@ -2,10 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useAuth } from "@/contexts/auth-provider";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Login = () => {
+  const { login } = useAuth();
+
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("User name is required!"),
     password: Yup.string().required("Password name is required!"),
@@ -17,7 +20,7 @@ const Login = () => {
       username: "",
       password: "",
     },
-    onSubmit: (values) => {},
+    onSubmit: login,
   });
 
   return (
