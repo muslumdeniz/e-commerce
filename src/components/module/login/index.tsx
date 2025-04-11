@@ -41,7 +41,12 @@ const Login = () => {
         value={formik.values.password}
         error={formik.errors.password}
       />
-      <Button label="Submit" type="submit" />
+      <Button
+        className="justify-center"
+        label="Submit"
+        suffixIcon="EntranceLeft"
+        type="submit"
+      />
     </form>
   );
 };

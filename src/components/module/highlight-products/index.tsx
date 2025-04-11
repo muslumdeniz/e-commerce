@@ -1,3 +1,4 @@
+import api from "@/api";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ui/cards/product-card";
 import Link from "next/link";
@@ -5,6 +6,9 @@ import Link from "next/link";
 type Props = {};
 
 const HighlightProducts = ({}: Props) => {
+  const getProduct = async () => {
+    const res = await api.get("/auth/local");
+  };
   return (
     <section className="section-lg">
       <div className="container">

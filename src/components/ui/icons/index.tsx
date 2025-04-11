@@ -519,6 +519,8 @@ const Icons: React.FC<IconProps> = ({
       return <AllIcons.EnjinCoinEnj width={size} height={size} color={color} {...props} />;
     case 'EntranceEft':
       return <AllIcons.EntranceEft width={size} height={size} color={color} {...props} />;
+    case 'EntranceLeft':
+      return <AllIcons.EntranceLeft width={size} height={size} color={color} {...props} />;
     case 'EntranceRight':
       return <AllIcons.EntranceRight width={size} height={size} color={color} {...props} />;
     case 'Eraser':

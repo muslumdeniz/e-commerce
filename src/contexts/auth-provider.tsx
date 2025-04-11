@@ -1,10 +1,12 @@
 import api from "@/api";
-import { ISession, LoginBody } from "@/core/_auth";
+import { ISession, LoginBody, RegisterBody } from "@/core/_auth";
+import { IUser } from "@/core/_user";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 type AuthContextType = {
   session: ISession;
   login: (userData: LoginBody) => void;
+  register: (userData: RegisterBody) => void;
   logout: () => void;
 };
 
@@ -28,16 +30,37 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const logout = () => {
+    api.defaults.headers.Authorization = null;
     setSession({
       jwt: null,
       user: null,
     });
   };
 
-  // const register = (userData) => {};
+  const register = async (userData: RegisterBody) => {
+    try {
+      const res = await api.post<ISession>("/auth/local/register", {
+        username: userData.username,
+        email: userData.email,
+        password: userData.password,
+      });
+
+      api.defaults.headers.Authorization = `Bearer ${res.data.jwt}`;
+      setSession(res.data);
+
+      const userRes = await api.put<IUser>(
+        `/users/${res.data.user?.id}`,
+        userData
+      );
+      setSession((prev) => ({
+        jwt: prev.jwt,
+        user: userRes.data,
+      }));
+    } catch (error) {}
+  };
 
   return (
-    <AuthContext.Provider value={{ session, login, logout }}>
+    <AuthContext.Provider value={{ session, login, logout, register }}>
       {children}
     </AuthContext.Provider>
   );

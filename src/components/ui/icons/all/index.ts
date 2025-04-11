@@ -252,7 +252,7 @@ export { default as ElementEqual } from "./ElementEqual";
 export { default as ElementPlus } from "./ElementPlus";
 export { default as EmojiHappy } from "./EmojiHappy";
 export { default as EnjinCoinEnj } from "./EnjinCoinEnj";
-export { default as EntranceEft } from "./EntranceEft";
+export { default as EntranceLeft } from "./EntranceLeft";
 export { default as EntranceRight } from "./EntranceRight";
 export { default as Eraser } from "./Eraser";
 export { default as Euro } from "./Euro";
