@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { useApp } from "./app-provider";
+import { IResponse } from "@/core/_api";
 
 type AuthContextType = {
   session: ISession;
@@ -19,7 +20,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const AuthProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
-  const { setLoading } = useApp();
+  const { setLoading, showToast } = useApp();
 
   const [session, setSession] = useState<ISession>({
     jwt: null,
@@ -29,13 +30,23 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = async (userData: LoginBody) => {
     setLoading(true);
     try {
-      const res = await api.post<ISession>("/auth/local", {
+      const res = await api.post<IResponse<ISession>>("/auth/local", {
         identifier: userData.username,
         password: userData.password,
       });
+      if (!!res?.data?.data) setSession(res.data.data);
+    } catch (error: any) {
+      const message = error?.response?.data?.error?.message;
 
-      setSession(res.data);
-    } catch (error) {}
+      showToast({
+        title: "Error",
+        description:
+          typeof message === "string"
+            ? message
+            : "Invalid identifier or password",
+        status: "error",
+      });
+    }
     setLoading(false);
   };
 
@@ -50,25 +61,38 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const register = async (userData: RegisterBody) => {
     setLoading(true);
     try {
-      const res = await api.post<ISession>("/auth/local/register", {
+      const res = await api.post<IResponse<ISession>>("/auth/local/register", {
         username: userData.username,
         email: userData.email,
         password: userData.password,
       });
 
-      api.defaults.headers.Authorization = `Bearer ${res.data.jwt}`;
-      setSession(res.data);
+      if (res.data?.data) {
+        api.defaults.headers.Authorization = `Bearer ${res.data.data.jwt}`;
+        setSession(res.data.data);
 
-      const userRes = await api.put<IUser>(
-        `/users/${res.data.user?.id}`,
-        userData
-      );
-      setSession((prev) => ({
-        jwt: prev.jwt,
-        user: userRes.data,
-      }));
-      router.push("/");
-    } catch (error) {}
+        const userRes = await api.put<IResponse<IUser>>(
+          `/users/${res.data.data.user?.id}`,
+          userData
+        );
+        setSession((prev) => ({
+          jwt: prev.jwt,
+          user: userRes.data.data,
+        }));
+        router.push("/");
+      }
+    } catch (error: any) {
+      const message = error?.response?.data?.error?.message;
+
+      showToast({
+        title: "Error",
+        description:
+          typeof message === "string"
+            ? message
+            : "Invalid identifier or password",
+        status: "error",
+      });
+    }
     setLoading(false);
   };
 

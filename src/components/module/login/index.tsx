@@ -11,25 +11,26 @@ const Login = () => {
 
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("User name is required!"),
-    password: Yup.string().required("Password name is required!"),
+    password: Yup.string().required("Password is required!"),
   });
 
   const formik = useFormik({
-    validationSchema,
     initialValues: {
       username: "",
       password: "",
     },
+    validationSchema,
     onSubmit: login,
   });
 
   return (
-    <form className="flex flex-col gap-10" onSubmit={formik.handleSubmit}>
+    <form className="flex flex-col gap-5" onSubmit={formik.handleSubmit}>
       <Input
         label="User Name *"
         name="username"
         type="text"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.username}
         error={formik.errors.username}
       />
@@ -38,12 +39,13 @@ const Login = () => {
         name="password"
         type="password"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.password}
         error={formik.errors.password}
       />
       <Button
         className="justify-center"
-        label="Submit"
+        label="Login"
         suffixIcon="EntranceLeft"
         type="submit"
       />
