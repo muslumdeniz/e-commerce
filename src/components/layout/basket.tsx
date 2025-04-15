@@ -1,16 +1,16 @@
 "use client";
 
 import cn from "classnames";
-import { Button } from "../button";
-import { BasketProduct } from "./basket-product-card";
-import Icons from "../icons";
+import { Button } from "../ui/button";
+import { BasketProduct } from "../ui/cards/basket-product-card";
+import Icons from "../ui/icons";
 
 interface BasketCardProps {
   isOpen: boolean;
   setIsOpen: (val: boolean) => void;
 }
 
-export default function BasketCard({ isOpen, setIsOpen }: BasketCardProps) {
+export default function Basket({ isOpen, setIsOpen }: BasketCardProps) {
   return (
     <div
       className={cn(
@@ -71,4 +71,4 @@ export default function BasketCard({ isOpen, setIsOpen }: BasketCardProps) {
     </div>
   );
 }
-export { BasketCard };
+export { Basket };

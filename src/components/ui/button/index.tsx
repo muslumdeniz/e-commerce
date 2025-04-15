@@ -10,6 +10,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: "sm" | "base" | "lg";
   color?:
     | "primary"
+    | "primaryDark"
     | "secondary"
     | "tertiary"
     | "light"
@@ -62,6 +63,11 @@ const Button = ({
         primary: "bg-primary hover:bg-primary-400 active:bg-primary-600",
         outline:
           "text-primary border-primary hover:border-primary-400 active:border-primary-600",
+      },
+      primaryDark: {
+        primary: "bg-primary-800 hover:bg-primary-600 active:bg-primary-900",
+        outline:
+          "text-primary-800 border-primary-800 hover:border-primary-600 hover:text-primary-600 active:border-primary-900 active:text-primary-900",
       },
       secondary: {
         primary: "bg-secondary hover:bg-secondary-400 active:bg-secondary-600",

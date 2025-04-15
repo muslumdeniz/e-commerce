@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 import { Links } from "@/constants/links";
 import classNames from "classnames";
 import { useAuth } from "@/contexts/auth-provider";
-import BasketCard from "../ui/cards/basket-card";
+import Basket from "./basket";
 
 export const Nav = () => {
   const { session, logout } = useAuth();
@@ -104,7 +104,7 @@ export const Nav = () => {
       )}
 
       {/* Sepet Paneli */}
-      <BasketCard isOpen={isBasketOpen} setIsOpen={setIsBasketOpen} />
+      <Basket isOpen={isBasketOpen} setIsOpen={setIsBasketOpen} />
     </nav>
   );
 };

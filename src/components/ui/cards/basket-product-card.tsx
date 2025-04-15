@@ -21,7 +21,7 @@ const BasketProduct = ({}: Props) => {
           <div className="flex items-center gap-1.5">
             <Icons
               className="text-primary hover:text-primary-700 hover:bg-primary-100 rounded-full transition-colors cursor-pointer p-1"
-              name="Basket"
+              name="Trush"
               size={26}
             />
             <span className="text-xl text-primary">1</span>

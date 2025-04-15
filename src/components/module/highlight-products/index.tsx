@@ -30,7 +30,7 @@ const HighlightProducts = ({}: Props) => {
       }
     } catch (error) {}
   };
-  console.log("state: ", products);
+
   return (
     <section className="section-lg">
       <div className="container">
@@ -45,7 +45,7 @@ const HighlightProducts = ({}: Props) => {
         </div>
         <div className="row ">
           {products.map((product) => (
-            <div key={product.id} className="col-span-2">
+            <div key={product.id} className="col-span-3">
               <ProductCard
                 img={getThumbnailPath(product.images?.[0])}
                 alt={product.name}
