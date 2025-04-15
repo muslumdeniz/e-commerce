@@ -5,10 +5,11 @@ type Props = {
   img: string;
   alt: string;
   title: string;
+  subTitle: string;
   className?: string;
 };
 
-const ProductCard = ({ img, alt, title, className }: Props) => {
+const ProductCard = ({ img, alt, title, subTitle, className }: Props) => {
   return (
     <div className={classNames("flex flex-col", className)}>
       <Image className=" h-60 w-48" src={img} alt={alt} />
@@ -16,7 +17,7 @@ const ProductCard = ({ img, alt, title, className }: Props) => {
         {title}
       </h4>
       <span className=" text-text-secondary font-bold text-center mt-6">
-        English Department
+        {subTitle}
       </span>
       <label className=" text-text-muted  font-bold mt-6 text-center ">
         $16.48

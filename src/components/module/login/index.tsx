@@ -1,13 +1,15 @@
 "use client";
 
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useAuth } from "@/contexts/auth-provider";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+import { useRouter } from "next/navigation"; // useRouter ekleniyor
 
 const Login = () => {
   const { login } = useAuth();
+  const router = useRouter(); // Router hook'u
 
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("User name is required!"),
@@ -20,7 +22,14 @@ const Login = () => {
       password: "",
     },
     validationSchema,
-    onSubmit: login,
+    onSubmit: async (values) => {
+      try {
+        await login(values); // Giriş işlemi
+        router.push("/"); // Ana sayfaya yönlendir
+      } catch (error) {
+        console.error("Login failed:", error);
+      }
+    },
   });
 
   return (
@@ -30,7 +39,6 @@ const Login = () => {
         name="username"
         type="text"
         onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
         value={formik.values.username}
         error={formik.errors.username}
       />
@@ -39,7 +47,6 @@ const Login = () => {
         name="password"
         type="password"
         onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
         value={formik.values.password}
         error={formik.errors.password}
       />

@@ -1,14 +1,36 @@
+"use client";
+
 import api from "@/api";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ui/cards/product-card";
+import { IResponsePaginate } from "@/core/_api";
+import { IProduct } from "@/core/_product";
+import { getThumbnailPath } from "@/utils/getThumbnailPath";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
 const HighlightProducts = ({}: Props) => {
+  const [products, setProducts] = useState<IProduct[]>([]);
+
+  useEffect(() => {
+    getProduct();
+  }, []);
+
   const getProduct = async () => {
-    const res = await api.get("/auth/local");
+    try {
+      const res = await api.get<IResponsePaginate<IProduct>>("/products", {
+        params: {
+          populate: "*",
+        },
+      });
+      if (res.data.data) {
+        setProducts(res.data.data.data);
+      }
+    } catch (error) {}
   };
+  console.log("state: ", products);
   return (
     <section className="section-lg">
       <div className="container">
@@ -22,159 +44,17 @@ const HighlightProducts = ({}: Props) => {
           </p>
         </div>
         <div className="row ">
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Product 1"
-              title="Graphic Design"
-              className="h-full "
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-4.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-3.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-3.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Product 1"
-              title="Graphic Design"
-              className="h-full "
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-4.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-3.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-3.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Product 1"
-              title="Graphic Design"
-              className="h-full "
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-4.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-3.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-3.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-2">
-            <ProductCard
-              img="/media/products/product-5.png"
-              alt="Highlight 1"
-              title="Top Product Of the Week"
-              className="h-full"
-            />
-          </div>
-          <div className="col-span-12">
-            <Link href="/products">
-              <Button
-                variant="outline"
-                label="Load More Products"
-                className="uppercase mx-auto mt-22"
+          {products.map((product) => (
+            <div key={product.id} className="col-span-2">
+              <ProductCard
+                img={getThumbnailPath(product.images?.[0])}
+                alt={product.name}
+                title={product.name}
+                subTitle={product.subTitle}
+                className="h-full "
               />
-            </Link>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

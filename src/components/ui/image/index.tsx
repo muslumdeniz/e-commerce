@@ -9,7 +9,7 @@ type Props = DetailedHTMLProps<
 > & {
   src: string | StaticImport;
   alt: string;
-  objectFit?: "cover" | "contain";
+  objectFit?: "cover" | "contain" | "none";
   imageClass?: string;
 };
 export const Image: React.FC<Props> = ({
