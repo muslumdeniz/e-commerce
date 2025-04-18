@@ -1,4 +1,5 @@
 import { IMedia } from "./_media";
+import { Gender } from "./_user";
 
 export interface IProduct {
   id: number;
@@ -10,6 +11,7 @@ export interface IProduct {
   slug: string;
   images?: IMedia[];
   discount?: number;
+  gender: "men" | "women" | "children";
   createdAt: string;
   updatedAt: string;
   publishedAt: string;

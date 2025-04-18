@@ -4,6 +4,7 @@ import cn from "classnames";
 import { Button } from "../ui/button";
 import { BasketProduct } from "../ui/cards/basket-product-card";
 import Icons from "../ui/icons";
+import { useUser } from "@/contexts/user-provider";
 
 interface BasketCardProps {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface BasketCardProps {
 }
 
 export default function Basket({ isOpen, setIsOpen }: BasketCardProps) {
+  const { basketProducts } = useUser();
   return (
     <div
       className={cn(
@@ -30,14 +32,9 @@ export default function Basket({ isOpen, setIsOpen }: BasketCardProps) {
           />
         </div>
         <div className="border-t border-gray-200 w-full" />
-        <BasketProduct />
-        <BasketProduct />
-        <BasketProduct />
-        <BasketProduct />
-        <BasketProduct />
-        <BasketProduct />
-        <BasketProduct />
-        <BasketProduct />
+        {basketProducts.map((product) => (
+          <BasketProduct key={product.id} product={product} />
+        ))}
         <div className="border-t border-gray-200 w-full" />
         <div className=" flex flex-col gap-4">
           <div className="flex justify-between">

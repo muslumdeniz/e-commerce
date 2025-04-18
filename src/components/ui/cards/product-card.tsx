@@ -3,16 +3,21 @@ import { Image } from "../image";
 import { Price } from "../price";
 import Icons from "../icons";
 import { Button } from "../button";
+import { IProduct } from "@/core/_product";
+import { useUser } from "@/contexts/user-provider";
+import { getThumbnailPath } from "@/utils/getThumbnailPath";
 
 type Props = {
-  img: string;
-  alt: string;
-  title: string;
-  subTitle: string;
+  product: IProduct;
   className?: string;
 };
 
-const ProductCard = ({ img, alt, title, subTitle, className }: Props) => {
+const ProductCard = ({ product, className }: Props) => {
+  const { basketProducts, addBasket, removeBasket, addSaved, removeSaved } =
+    useUser();
+  const isAddedBasket: boolean = basketProducts.some(
+    (i) => i.id === product.id
+  );
   return (
     <div className={classNames("relative flex flex-col", className)}>
       <Icons
@@ -22,29 +27,44 @@ const ProductCard = ({ img, alt, title, subTitle, className }: Props) => {
         )}
         name="Save2"
         size={32}
+        onClick={() => addSaved(product)}
       />
       <Image
         className="w-full !aspect-[4/6] rounded-md overflow-hidden"
         objectFit="cover"
-        src={img}
-        alt={alt}
+        src={getThumbnailPath(product.images?.[0])}
+        alt={product.name}
       />
       <div className="flex flex-col gap-1.5 py-4">
-        <h4 className="text-text-primary font-bold">{title}</h4>
+        <h4 className="text-text-primary font-bold">{product.name}</h4>
         <span className="text-sm text-text-secondary font-light">
-          {subTitle}
+          {product.subTitle}
         </span>
         <div className="flex justify-between items-center">
           <Price />
-          <Button
-            variant="outline"
-            size="sm"
-            isIconButton
-            color="primaryDark"
-            label="Add Basket"
-            suffixIcon="BasketOk"
-            iconSize={24}
-          />
+          {isAddedBasket ? (
+            <Button
+              variant="outline"
+              size="sm"
+              isIconButton
+              color="primaryDark"
+              label="Remove Basket"
+              suffixIcon="Trush"
+              iconSize={24}
+              onClick={() => removeBasket(product)}
+            />
+          ) : (
+            <Button
+              variant="outline"
+              size="sm"
+              isIconButton
+              color="primaryDark"
+              label="Add Basket"
+              suffixIcon="BasketOk"
+              iconSize={24}
+              onClick={() => addBasket(product)}
+            />
+          )}
         </div>
       </div>
     </div>

@@ -9,10 +9,12 @@ import { Links } from "@/constants/links";
 import classNames from "classnames";
 import { useAuth } from "@/contexts/auth-provider";
 import Basket from "./basket";
+import Saved from "./saved";
 
 export const Nav = () => {
   const { session, logout } = useAuth();
   const [isBasketOpen, setIsBasketOpen] = useState(false);
+  const [isSavedOpen, setIsSavedOpen] = useState(false);
 
   return (
     <nav className="container relative z-50">
@@ -90,6 +92,7 @@ export const Nav = () => {
               prefixIcon="Heart"
               variant="outline"
               isIconButton
+              onClick={() => setIsSavedOpen(true)}
             />
           </div>
         </div>
@@ -102,9 +105,16 @@ export const Nav = () => {
           onClick={() => setIsBasketOpen(false)}
         />
       )}
+      {isSavedOpen && (
+        <div
+          className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm transition-opacity duration-300"
+          onClick={() => setIsSavedOpen(false)}
+        />
+      )}
 
       {/* Sepet Paneli */}
       <Basket isOpen={isBasketOpen} setIsOpen={setIsBasketOpen} />
+      <Saved isOpen={isSavedOpen} setIsOpen={setIsSavedOpen} />
     </nav>
   );
 };

@@ -1,10 +1,35 @@
+"use client";
+
 import { ProductCard } from "@/components/ui/cards/product-card";
 import { Button } from "@/components/ui/button";
 import { Select } from "@/components/ui/select";
+import { useEffect, useState } from "react";
+import { IProduct } from "@/core/_product";
+import api from "@/api";
+import { IResponsePaginate } from "@/core/_api";
 
 type Props = {};
 
 const Products = ({}: Props) => {
+  const [products, setProducts] = useState<IProduct[]>([]);
+
+  useEffect(() => {
+    getProduct();
+  }, []);
+
+  const getProduct = async () => {
+    try {
+      const res = await api.get<IResponsePaginate<IProduct>>("/products", {
+        params: {
+          populate: "*",
+        },
+      });
+      if (res.data.data) {
+        setProducts(res.data.data.data);
+      }
+    } catch (error) {}
+  };
+
   return (
     <section className="section-md">
       <div className="container">
@@ -36,102 +61,11 @@ const Products = ({}: Props) => {
         </div>
         <div className="my-14">
           <div className="row">
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-5.png"
-                alt="Product 1"
-                title="Graphic Design"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-4.png"
-                alt="Product 2"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-3.png"
-                alt="Product 3"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-5.png"
-                alt="Product 4"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-3.png"
-                alt="Product 5"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-5.png"
-                alt="Product 6"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-5.png"
-                alt="Product 7"
-                title="Graphic Design"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-4.png"
-                alt="Product 8"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-3.png"
-                alt="Product 9"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-5.png"
-                alt="Product 10"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-3.png"
-                alt="Product 11"
-                title="Top Product Of the Week"
-                className="h-full"
-              />
-            </div>
-            <div className="col-span-2">
-              <ProductCard
-                img="/media/products/product-5.png"
-                alt="Product 12"
-                title="Graphic Design"
-                className="h-full"
-              />
-            </div>
+            {products.map((product) => (
+              <div key={product.id} className="col-span-3">
+                <ProductCard product={product} className="h-full " />
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex  justify-center items-center">

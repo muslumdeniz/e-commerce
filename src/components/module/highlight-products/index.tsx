@@ -46,13 +46,7 @@ const HighlightProducts = ({}: Props) => {
         <div className="row ">
           {products.map((product) => (
             <div key={product.id} className="col-span-3">
-              <ProductCard
-                img={getThumbnailPath(product.images?.[0])}
-                alt={product.name}
-                title={product.name}
-                subTitle={product.subTitle}
-                className="h-full "
-              />
+              <ProductCard product={product} className="h-full " />
             </div>
           ))}
         </div>
