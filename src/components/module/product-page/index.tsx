@@ -1,11 +1,27 @@
+"use client";
+
+import { getProduct } from "@/api/services/product";
 import { Button } from "@/components/ui/button";
 import { Image } from "@/components/ui/image";
 import { Range } from "@/components/ui/range";
-import { section } from "framer-motion/client";
+import { IProduct } from "@/core/_product";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
 const ProductPage = ({}: Props) => {
+  const [product, setProduct] = useState<IProduct>();
+  const params = useParams<{
+    id: string;
+  }>();
+
+  useEffect(() => {
+    if (params?.id) {
+      getProduct(params?.id).then((list) => setProduct(list));
+    }
+  }, [params]);
+
   return (
     <section className="lg">
       <div className="container">

@@ -8,6 +8,8 @@ import { useRouter } from "next/navigation";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { useApp } from "./app-provider";
 import { IResponse } from "@/core/_api";
+import { getLogin, getRegister } from "@/api/services/auth";
+import { getUser } from "@/api/services/user";
 
 type AuthContextType = {
   session: ISession;
@@ -30,11 +32,8 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = async (userData: LoginBody) => {
     setLoading(true);
     try {
-      const res = await api.post<IResponse<ISession>>("/auth/local", {
-        identifier: userData.username,
-        password: userData.password,
-      });
-      if (!!res?.data?.data) setSession(res.data.data);
+      const res = await getLogin(userData);
+      setSession(res);
     } catch (error: any) {
       const message = error?.response?.data?.error?.message;
 
@@ -61,23 +60,15 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const register = async (userData: RegisterBody) => {
     setLoading(true);
     try {
-      const res = await api.post<IResponse<ISession>>("/auth/local/register", {
-        username: userData.username,
-        email: userData.email,
-        password: userData.password,
-      });
+      const res = await getRegister(userData);
 
-      if (res.data?.data) {
-        api.defaults.headers.Authorization = `Bearer ${res.data.data.jwt}`;
-        setSession(res.data.data);
+      setSession(res);
 
-        const userRes = await api.put<IResponse<IUser>>(
-          `/users/${res.data.data.user?.id}`,
-          userData
-        );
+      if (res.user?.id) {
+        const userRes = await getUser(res.user.id);
         setSession((prev) => ({
           jwt: prev.jwt,
-          user: userRes.data.data,
+          user: userRes,
         }));
         router.push("/");
       }

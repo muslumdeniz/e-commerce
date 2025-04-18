@@ -1,5 +1,4 @@
 import { IMedia } from "./_media";
-import { Gender } from "./_user";
 
 export interface IProduct {
   id: number;
@@ -7,11 +6,11 @@ export interface IProduct {
   name: string;
   subTitle: string;
   description: Description[];
-  price: number;
   slug: string;
   images?: IMedia[];
-  discount?: number;
   gender: "men" | "women" | "children";
+  highlight: boolean;
+  variants?: Variant[];
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
@@ -25,4 +24,14 @@ interface Description {
 interface Child {
   text: string;
   type: string;
+}
+
+interface Variant {
+  id: number;
+  documentId: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  stock: string;
+  priceOverride: string;
 }

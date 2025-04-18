@@ -1,12 +1,8 @@
 "use client";
 
-import api from "@/api";
-import { Button } from "@/components/ui/button";
+import { getProducts } from "@/api/services/product";
 import { ProductCard } from "@/components/ui/cards/product-card";
-import { IResponsePaginate } from "@/core/_api";
 import { IProduct } from "@/core/_product";
-import { getThumbnailPath } from "@/utils/getThumbnailPath";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type Props = {};
@@ -15,21 +11,8 @@ const HighlightProducts = ({}: Props) => {
   const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    getProduct();
+    getProducts().then((list) => setProducts(list));
   }, []);
-
-  const getProduct = async () => {
-    try {
-      const res = await api.get<IResponsePaginate<IProduct>>("/products", {
-        params: {
-          populate: "*",
-        },
-      });
-      if (res.data.data) {
-        setProducts(res.data.data.data);
-      }
-    } catch (error) {}
-  };
 
   return (
     <section className="section-lg">

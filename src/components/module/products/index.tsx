@@ -5,8 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Select } from "@/components/ui/select";
 import { useEffect, useState } from "react";
 import { IProduct } from "@/core/_product";
-import api from "@/api";
-import { IResponsePaginate } from "@/core/_api";
+import { getProducts } from "@/api/services/product";
 
 type Props = {};
 
@@ -14,21 +13,8 @@ const Products = ({}: Props) => {
   const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    getProduct();
+    getProducts().then((list) => setProducts(list));
   }, []);
-
-  const getProduct = async () => {
-    try {
-      const res = await api.get<IResponsePaginate<IProduct>>("/products", {
-        params: {
-          populate: "*",
-        },
-      });
-      if (res.data.data) {
-        setProducts(res.data.data.data);
-      }
-    } catch (error) {}
-  };
 
   return (
     <section className="section-md">
