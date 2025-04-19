@@ -5,7 +5,13 @@ import { ISession, LoginBody, RegisterBody } from "@/core/_auth";
 import { IUser } from "@/core/_user";
 import { useRouter } from "next/navigation";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 import { useApp } from "./app-provider";
 import { IResponse } from "@/core/_api";
 import { getLogin, getRegister } from "@/api/services/auth";
@@ -29,11 +35,26 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     user: null,
   });
 
+  const addSession = (data: ISession) => {
+    setSession(data);
+    localStorage.setItem("session", JSON.stringify(data));
+  };
+
+  useEffect(() => {
+    const temsSession = localStorage.getItem("session");
+
+    if (temsSession) {
+      const parsedSession = JSON.parse(temsSession) as ISession;
+      setSession(parsedSession);
+      api.defaults.headers.Authorization = `Bearer ${parsedSession.jwt}`;
+    }
+  }, []);
+
   const login = async (userData: LoginBody) => {
     setLoading(true);
     try {
       const res = await getLogin(userData);
-      setSession(res);
+      addSession(res);
     } catch (error: any) {
       const message = error?.response?.data?.error?.message;
 
@@ -51,7 +72,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const logout = () => {
     api.defaults.headers.Authorization = null;
-    setSession({
+    addSession({
       jwt: null,
       user: null,
     });
@@ -62,14 +83,14 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     try {
       const res = await getRegister(userData);
 
-      setSession(res);
+      addSession(res);
 
       if (res.user?.id) {
         const userRes = await getUser(res.user.id);
-        setSession((prev) => ({
-          jwt: prev.jwt,
+        addSession({
+          jwt: session.jwt,
           user: userRes,
-        }));
+        });
         router.push("/");
       }
     } catch (error: any) {

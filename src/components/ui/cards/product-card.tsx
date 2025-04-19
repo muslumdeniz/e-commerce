@@ -38,7 +38,10 @@ const ProductCard = ({ product, className }: Props) => {
           )}
           name="Save2"
           size={32}
-          onClick={() => addSaved(product)}
+          onClick={(e) => {
+            e.preventDefault();
+            addSaved(product);
+          }}
         />
         <Image
           className="w-full !aspect-[4/6] rounded-md overflow-hidden"
@@ -62,7 +65,10 @@ const ProductCard = ({ product, className }: Props) => {
                 label="Remove Basket"
                 suffixIcon="Trush"
                 iconSize={24}
-                onClick={() => removeBasket(product)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  removeBasket(product);
+                }}
               />
             ) : (
               <Button
@@ -73,7 +79,10 @@ const ProductCard = ({ product, className }: Props) => {
                 label="Add Basket"
                 suffixIcon="BasketOk"
                 iconSize={24}
-                onClick={() => addBasket(product)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  addBasket(product);
+                }}
               />
             )}
           </div>

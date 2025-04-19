@@ -1,108 +1,123 @@
 "use client";
 
 import { getProduct } from "@/api/services/product";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Image } from "@/components/ui/image";
 import { Range } from "@/components/ui/range";
+import { Select } from "@/components/ui/select";
+import { IBreadcrumb } from "@/core/_breadcrumb";
 import { IProduct } from "@/core/_product";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Props = {};
+type Props = {
+  breadcrumb: IBreadcrumb[];
+};
 
-const ProductPage = ({}: Props) => {
+const ProductPage = ({ breadcrumb }: Props) => {
   const [product, setProduct] = useState<IProduct>();
-  const params = useParams<{
-    id: string;
-  }>();
+  const params = useParams<{ slug: string }>();
 
   useEffect(() => {
-    if (params?.id) {
-      getProduct(params?.id).then((list) => setProduct(list));
+    if (params?.slug) {
+      getProduct(params?.slug).then((list) => setProduct(list.data[0]));
     }
   }, [params]);
 
   return (
     <section className="lg">
       <div className="container">
-        <div className="flex gap-8 col-span-6">
-          <div className="flex flex-col gap-5">
-            <div>
-              <Image
-                src="/media/products/product-page-1.png"
-                alt="Product-1"
-                className="w-lg h-[450px] "
-                objectFit="cover"
-              />
-            </div>
-            <div className="flex gap-5">
-              <Image
-                src="/media/products/product-page-2.jpg"
-                alt="Product-2"
-                className="w-24 h-20"
-              />
-              <Image
-                src="/media/products/product-page-3.png"
-                alt="Product 3"
-                className="w-24 h-20"
-              />
-            </div>
+        <Breadcrumb list={breadcrumb} className="!ml-0 mt-6 mb-10" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col gap-3">
+            <Image
+              src="/media/products/product-page-1.png"
+              alt="Product-1"
+              className="w-full h-auto"
+              objectFit="cover"
+            />
+            <Image
+              src="/media/products/product-page-2.png"
+              alt="Product-2"
+              className="w-full h-auto"
+              objectFit="cover"
+            />
           </div>
-          <div className="flex flex-col gap-4 ml-6 mr-40">
+          <div className="flex flex-col gap-3">
+            <Image
+              src="/media/products/product-page-3.png"
+              alt="Product-3"
+              className="w-full h-auto"
+              objectFit="cover"
+            />
+            <Image
+              src="/media/products/product-page-4.png"
+              alt="Product-4"
+              className="w-full h-auto"
+              objectFit="cover"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
             <h4 className="font-light text-xl text-text-primary">
-              Floating Phone
+              {product?.name}
             </h4>
-            <span className="flex gap-2.5">
+
+            <span className="flex items-center gap-2.5">
               <Range />
               <h6 className="font-bold text-base text-text-secondary">
                 10 Reviews
               </h6>
+              <Button
+                className="!rounded-full !p-3 transition-transform transform hover:scale-110 hover:opacity-80"
+                prefixIcon="Heart"
+                color="light"
+                size="sm"
+                iconSize={18}
+                isIconButton
+              />
+              <Button
+                className="!rounded-full !p-3 transition-transform transform hover:scale-110 hover:opacity-80"
+                prefixIcon="ExitUp"
+                color="light"
+                size="sm"
+                iconSize={18}
+                isIconButton
+              />
             </span>
+
             <p className="font-bold text-2xl text-text-primary">$1,139.33</p>
+
             <div className="flex gap-1.5">
               <h6 className="font-bold text-sm text-text-secondary">
                 Availability :
               </h6>
-              <h6 className="font-bold text-sm text-primary">In Stock </h6>
+              <h6 className="font-bold text-sm text-primary">In Stock</h6>
             </div>
+
             <p className="font-normal text-sm text-text-secondary">
-              Met minim Mollie non desert Alamo est sit cliquey dolor do met
-              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
-              venial consequent sent nostrum met.
+              Sadeliğin özen ve kaliteyle buluştuğu Mavi Edition koleksiyonundan
+              Brad Edition İndigo Mavisi Jean Gömlek. Bu ürün aynı zamanda Mavi
+              nin sürdürülebilir All Blue koleksiyonunun da bir parçasıdır. Bu
+              ürünün üretiminde TENCEL TM sertifikalı kumaş kullanılmıştır. Ürün
+              Kodu: 0210921-90592 Fiyat Geçerlilik Tarihi: 20.12.2024 Kumaş
+              Bilgileri %50 Pamuk %40 Lyocell Tencel TM %10 Modal Tencel TM
+              Manken Ölçüleri Jean: Bel: 31 / Boy: 31, Üst: L Boy: 189.5 cm /
+              Bel: 80 cm / Göğüs: 98 cm / Kalça: 98 cm
             </p>
+
             <div className="border-t border-gray-200 w-full" />
+
             <div className="flex gap-2.5 py-8">
               <div className="bg-primary w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
               <div className="bg-secondary w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
               <div className="bg-warning w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
               <div className="bg-text-primary w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
             </div>
-            <div className="flex gap-2.5">
-              <Button label="Select Options" />
-              <Button
-                className="!rounded-full !p-3 transition-transform transform hover:scale-110 hover:opacity-80"
-                prefixIcon="Heart"
-                color="light"
-                size="sm"
-                iconSize={16}
-                isIconButton
-              />
-              <Button
-                className="!rounded-full !p-3 transition-transform transform hover:scale-110 hover:opacity-80"
-                prefixIcon="Handcart"
-                color="light"
-                iconSize={16}
-                size="sm"
-                isIconButton
-              />
-              <Button
-                className="!rounded-full !p-3 transition-transform transform hover:scale-110 hover:opacity-80"
-                prefixIcon="Eye"
-                color="light"
-                size="sm"
-                iconSize={16}
-                isIconButton
-              />
+
+            <div className="flex flex-col gap-5">
+              <Select info="Choose Size" />
+              <Button label="Select Options" className=" justify-center" />
             </div>
           </div>
         </div>

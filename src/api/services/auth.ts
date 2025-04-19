@@ -9,6 +9,7 @@ export const getLogin = async (userData: LoginBody) => {
       password: userData.password,
     });
     if (!!res?.data?.data) {
+      api.defaults.headers.Authorization = `Bearer ${res.data.data.jwt}`;
       return res.data.data;
     } else throw new Error("Product not found");
   } catch (error) {

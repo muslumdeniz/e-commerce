@@ -1,4 +1,4 @@
-import { IResponse, IResponsePaginate } from "@/core/_api";
+import { IResponsePaginate } from "@/core/_api";
 import api from "..";
 import { IProduct } from "@/core/_product";
 
@@ -17,9 +17,13 @@ export const getProducts = async () => {
   }
 };
 
-export const getProduct = async (id: number | string) => {
+export const getProduct = async (slug: string) => {
   try {
-    const res = await api.put<IResponse<IProduct>>(`/products/${id}`);
+    const res = await api.get<IResponsePaginate<IProduct>>(`/products`, {
+      params: {
+        "filters[slug][$eq]": slug,
+      },
+    });
 
     if (res.data?.data) {
       return res.data.data;
