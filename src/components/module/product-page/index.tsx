@@ -8,6 +8,7 @@ import { Range } from "@/components/ui/range";
 import { Select } from "@/components/ui/select";
 import { IBreadcrumb } from "@/core/_breadcrumb";
 import { IProduct } from "@/core/_product";
+import { getThumbnailPath } from "@/utils/getThumbnailPath";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -30,41 +31,20 @@ const ProductPage = ({ breadcrumb }: Props) => {
       <div className="container">
         <Breadcrumb list={breadcrumb} className="!ml-0 mt-6 mb-10" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Sol Fotoğraf Grubu */}
-          <div className="flex flex-col aspect-[3/4] w-full gap-3">
-            <Image
-              src="/media/products/product-page-1.png"
-              alt="Product-1"
-              className="w-full h-full"
-              objectFit="cover"
-            />
-            <Image
-              src="/media/products/product-page-2.png"
-              alt="Product-2"
-              className="w-full h-full"
-              objectFit="cover"
-            />
+        <div className="row">
+          <div className="row col-span-8">
+            {product?.images?.map((image, key) => (
+              <Image
+                key={key}
+                src={getThumbnailPath(image)}
+                alt={product?.name || ""}
+                className="w-full h-full col-span-6 !aspect-[3/4]"
+                objectFit="cover"
+              />
+            ))}
           </div>
 
-          {/* Orta Fotoğraf Grubu */}
-          <div className="flex flex-col aspect-[3/4] w-full gap-3">
-            <Image
-              src="/media/products/product-page-3.png"
-              alt="Product-3"
-              className="w-full h-full"
-              objectFit="cover"
-            />
-            <Image
-              src="/media/products/product-page-4.png"
-              alt="Product-4"
-              className="w-full h-full"
-              objectFit="cover"
-            />
-          </div>
-
-          {/* Ürün Bilgi Bölümü */}
-          <div className="flex flex-col gap-5">
+          <div className="col-span-4 flex flex-col gap-5">
             <h4 className="font-light text-xl text-text-primary">
               {product?.name}
             </h4>

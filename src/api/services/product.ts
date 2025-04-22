@@ -21,6 +21,7 @@ export const getProduct = async (slug: string) => {
   try {
     const res = await api.get<IResponsePaginate<IProduct>>(`/products`, {
       params: {
+        populate: "*",
         "filters[slug][$eq]": slug,
       },
     });
