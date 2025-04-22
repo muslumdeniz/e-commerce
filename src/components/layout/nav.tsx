@@ -17,7 +17,7 @@ export const Nav = () => {
   const [isSavedOpen, setIsSavedOpen] = useState(false);
 
   return (
-    <nav className="container relative z-50">
+    <nav className="container  sticky top-0  bg-white z-50">
       <div className="flex items-center gap-18 min-h-19.5">
         <Image
           src="https://www.mavi.com/medias/logoyeni120.svg?context=bWFzdGVyfG1hdmljZG5pbWFnZXN8MTM2NXxpbWFnZS9zdmcreG1sfGFEWXlMMmhrWVM4eE1USXhNakF3TmprME9EZzVOQzlzYjJkdmVXVnVhVEV5TUM1emRtY3wyYTA5OGI4ZDRhZGFiZDhkODQzZDg0ZDUxM2FhYjY4NGUwZDRhZThiZmRhYjZmN2VkYjg4Mzc1NGU0YmViNjUw"
