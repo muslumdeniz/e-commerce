@@ -1,3 +1,4 @@
+import { Brands } from "@/components/module/brands";
 import { FeedBackSection } from "@/components/module/feedbacksection/inex";
 import { InnerCard } from "@/components/module/inner-cards";
 import { InnerHero } from "@/components/module/inner-hero";
@@ -23,6 +24,7 @@ export default function Home() {
       <Post />
       <ProductDescription />
       <FeedBackSection />
+      <Brands />
     </>
   );
 }

@@ -13,7 +13,6 @@ import React, {
   useEffect,
 } from "react";
 import { useApp } from "./app-provider";
-import { IResponse } from "@/core/_api";
 import { getLogin, getRegister } from "@/api/services/auth";
 import { getUser } from "@/api/services/user";
 
@@ -46,7 +45,6 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     if (temsSession) {
       const parsedSession = JSON.parse(temsSession) as ISession;
       setSession(parsedSession);
-      api.defaults.headers.Authorization = `Bearer ${parsedSession.jwt}`;
     }
   }, []);
 
@@ -71,7 +69,6 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const logout = () => {
-    api.defaults.headers.Authorization = null;
     addSession({
       jwt: null,
       user: null,

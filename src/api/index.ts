@@ -8,16 +8,19 @@ const api = axios.create({
   },
 });
 
-// api.interceptors.request.use(
-//   (config) => {
-//     const token = localStorage.getItem('token'); // ya da cookie, session vs.
-//     if (token) {
-//       config.headers.Authorization = `Bearer ${token}`;
-//     }
-//     return config;
-//   },
-//   (error) => Promise.reject(error)
-// );
+api.interceptors.request.use(
+  (config) => {
+    const storage = localStorage.getItem("session"); // ya da cookie, session vs.
+    const temp = JSON.parse(storage || "");
+    const token = temp?.jwt;
+
+    if (typeof token === "string") {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
 api.interceptors.response.use((response: AxiosResponse<any, any>) => {
   const temp = {

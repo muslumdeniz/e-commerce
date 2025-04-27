@@ -59,31 +59,31 @@ const Products = ({}: Props) => {
             color="light-gray"
             variant="outline"
             label="First"
-            className="rounded-none rounded-l-md"
+            className="rounded-none rounded-l-md shadow"
           />
           <Button
             color="light-gray"
             variant="outline"
             label="1"
-            className="rounded-none border-l-0"
+            className="rounded-none border-l-0 shadow"
           />
           <Button
             color="light-gray"
             variant="outline"
             label="2"
-            className="rounded-none border-l-0"
+            className="rounded-none border-l-0 shadow"
           />
           <Button
             color="light-gray"
             variant="outline"
             label="3"
-            className="rounded-none border-l-0 border-r-0"
+            className="rounded-none border-l-0 border-r-0 shadow"
           />
           <Button
             color="light-gray"
             variant="outline"
             label="Next"
-            className="rounded-none rounded-r-md"
+            className="rounded-none rounded-r-md shadow"
           />
         </div>
       </div>

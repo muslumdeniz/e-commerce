@@ -30,7 +30,7 @@ const ProductCard = ({ product, className }: Props) => {
           : ""
       }/${product.slug}`}
     >
-      <div className={classNames("relative flex flex-col", className)}>
+      <div className={classNames("relative flex flex-col ", className)}>
         <Icons
           className={classNames(
             "text-gray-300 hover:text-primary-700 hover:bg-primary-100 rounded-full transition-colors cursor-pointer p-1",
