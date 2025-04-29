@@ -18,7 +18,7 @@ export default function Saved({ isOpen, setIsOpen }: BasketCardProps) {
     <div
       className={cn(
         "fixed top-0 right-0 z-40 transform transition-transform duration-300",
-        "w-lg bg-white shadow-lg p-6 flex flex-col", // flex düzeni
+        "w-lg bg-white shadow-lg p-6 flex flex-col min-h-screen", // flex düzeni
         isOpen ? "translate-x-0" : "translate-x-full"
       )}
     >

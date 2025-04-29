@@ -18,7 +18,7 @@ export default function Basket({ isOpen, setIsOpen }: BasketCardProps) {
     <div
       className={cn(
         "fixed top-0 right-0 z-40 transform transition-transform duration-300", // top-16 ile biraz aşağıya inmesini sağladık
-        "w-lg bg-white shadow-lg p-6 flex flex-col", // flex olarak düzenledik
+        "w-lg bg-white shadow-lg p-6 flex flex-col min-h-screen", // flex olarak düzenledik
         isOpen ? "translate-x-0" : "translate-x-full"
       )}
     >

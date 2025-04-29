@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Image } from "../ui/image";
 import Icons from "../ui/icons";
@@ -10,6 +10,7 @@ import classNames from "classnames";
 import { useAuth } from "@/contexts/auth-provider";
 import Basket from "./basket";
 import Saved from "./saved";
+import { usePathname } from "next/navigation";
 
 export const Nav = () => {
   const { session, logout } = useAuth();
@@ -18,6 +19,12 @@ export const Nav = () => {
 
   const toggleBasket = () => setIsBasketOpen((prev) => !prev);
   const toggleSaved = () => setIsSavedOpen((prev) => !prev);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsBasketOpen(false);
+    setIsSavedOpen(false);
+  }, [pathname]);
 
   return (
     <nav

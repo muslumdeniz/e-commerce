@@ -1,13 +1,13 @@
 "use client";
 
 import React, { createContext, useContext, ReactNode, useState } from "react";
-import api from "@/api";
 import { IProduct } from "@/core/_product";
+import { IBasketProduct } from "@/core/_basket";
 
 type UserContextType = {
-  basketProducts: IProduct[];
+  basketProducts: IBasketProduct[];
   addBasket: (product: IProduct) => void;
-  removeBasket: (product: IProduct) => void;
+  removeBasket: (product: IBasketProduct) => void;
   savedProducts: IProduct[];
   addSaved: (product: IProduct) => void;
   removeSaved: (product: IProduct) => void;
@@ -16,15 +16,27 @@ type UserContextType = {
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 const UserProvider = ({ children }: { children: ReactNode }) => {
-  const [basketProducts, setBasketProducts] = useState<IProduct[]>([]);
+  const [basketProducts, setBasketProducts] = useState<IBasketProduct[]>([]);
   const [savedProducts, setSavedProducts] = useState<IProduct[]>([]);
 
   const addBasket = (product: IProduct) => {
-    setBasketProducts((prev) => [...prev, product]);
+    const isProduct = basketProducts.some((i) => i.id === product.id);
+    const newState = isProduct
+      ? basketProducts.map((i) =>
+          i.id === product.id ? { ...i, count: i.count + 1 } : i
+        )
+      : [...basketProducts, { id: product.id, product, count: 1 }];
+    setBasketProducts(newState);
   };
 
-  const removeBasket = (product: IProduct) => {
-    setBasketProducts((prev) => prev.filter((i) => i.id !== product.id));
+  const removeBasket = (product: IBasketProduct) => {
+    setBasketProducts((prev) =>
+      product.count === 1
+        ? prev.filter((i) => i.id !== product.id)
+        : prev.map((i) =>
+            i.id === product.id ? { ...i, count: i.count - 1 } : i
+          )
+    );
   };
   const addSaved = (product: IProduct) => {
     setSavedProducts((prev) => [...prev, product]);
