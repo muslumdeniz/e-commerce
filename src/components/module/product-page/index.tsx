@@ -1,5 +1,6 @@
 "use client";
 
+import { getOptions } from "@/api/services/option";
 import { getProduct } from "@/api/services/product";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,7 @@ import { Image } from "@/components/ui/image";
 import { Range } from "@/components/ui/range";
 import { Select } from "@/components/ui/select";
 import { IBreadcrumb } from "@/core/_breadcrumb";
+import { IOption } from "@/core/_option";
 import { IProduct } from "@/core/_product";
 import { getThumbnailPath } from "@/utils/getThumbnailPath";
 import { useParams } from "next/navigation";
@@ -17,12 +19,14 @@ type Props = {
 };
 
 const ProductPage = ({ breadcrumb }: Props) => {
-  const [product, setProduct] = useState<IProduct>();
   const params = useParams<{ slug: string }>();
+  const [product, setProduct] = useState<IProduct>();
+  const [options, setOptions] = useState<IOption[]>([]);
 
   useEffect(() => {
     if (params?.slug) {
       getProduct(params?.slug).then((list) => setProduct(list.data[0]));
+      getOptions().then((list) => setOptions(list));
     }
   }, [params]);
 
@@ -82,14 +86,27 @@ const ProductPage = ({ breadcrumb }: Props) => {
             </div>
 
             <div className="flex gap-2.5 py-8">
-              <div className="bg-primary w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
-              <div className="bg-secondary w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
-              <div className="bg-warning w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
-              <div className="bg-text-primary w-8 h-8 flex items-center cursor-pointer rounded-full"></div>
+              {options
+                .filter((i) => i.option_type.type === "color")
+                .map((i, key) => (
+                  <div
+                    key={key}
+                    style={{ backgroundColor: i.value }}
+                    className="w-8 h-8 flex items-center cursor-pointer rounded-full"
+                  />
+                ))}
             </div>
 
             <div className="flex flex-col gap-12">
-              <Select info="Choose Size" />
+              <Select
+                info="Choose Size"
+                options={options
+                  .filter((i) => i.option_type.type === "size")
+                  .map((i) => ({
+                    value: i.id.toString(),
+                    label: i.label,
+                  }))}
+              />
               <Button label="Select Options" className=" justify-center" />
               <div className="border-t border-gray-200 w-full" />
               <h2 className="font-medium text-base text-text-primary">
