@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Image } from "@/components/ui/image";
+import Link from "next/link"; // Link bileşenini import et
 
 type Props = {};
 
@@ -21,7 +22,10 @@ const Hero = ({}: Props) => {
                 voluptate aliquip. Exercitation non laboris fugiat officia.
                 Occaecat ex cillum qui mollit minim.
               </p>
-              <Button size="lg" label="SHOP NOW" className="w-fit" />
+              {/* Link bileşeni ile yönlendirme */}
+              <Link href="/new-collection">
+                <Button size="lg" label="SHOP NOW" className="w-fit" />
+              </Link>
             </div>
           </div>
           <div className="col-span-6">

@@ -34,4 +34,10 @@ interface Variant {
   publishedAt: string;
   stock: string;
   priceOverride: string;
+  option_values?: OptionValue[];
+}
+
+interface OptionValue {
+  id: number;
+  value: string;
 }

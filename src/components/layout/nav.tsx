@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Image } from "../ui/image";
-import Icons from "../ui/icons";
 import { Button } from "../ui/button";
 import { Links } from "@/constants/links";
 import classNames from "classnames";
@@ -13,7 +12,7 @@ import Saved from "./saved";
 import { usePathname } from "next/navigation";
 
 export const Nav = () => {
-  const { session, logout } = useAuth();
+  const { session } = useAuth();
   const [isBasketOpen, setIsBasketOpen] = useState(false);
   const [isSavedOpen, setIsSavedOpen] = useState(false);
 
@@ -66,29 +65,20 @@ export const Nav = () => {
         {/* Sağ Butonlar */}
         <div className="flex items-center gap-2">
           {session.jwt ? (
-            <>
+            <Link href="/profile">
               <Button
                 variant="outline"
                 isIconButton
                 prefixIcon="User"
                 className="bg-transparent text-primary hover:underline shadow-none px-3 py-2 text-sm font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-80"
               />
-              <Button
-                onClick={logout}
-                className="bg-transparent text-warning-500 hover:underline shadow-none px-3 py-2 text-sm font-medium transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-80"
-                label="logout"
-                isIconButton
-                prefixIcon="ExitRight"
-                variant="outline"
-              />
-            </>
+            </Link>
           ) : (
             <div className="flex items-center gap-1.5">
               <Link
                 href="/login"
                 className="flex items-center gap-1.5 text-sm font-bold text-primary"
               >
-                <Icons name="User" size={16} />
                 Login
               </Link>
               <span className="text-sm font-bold text-primary">/</span>

@@ -14,13 +14,14 @@ import React, {
 } from "react";
 import { useApp } from "./app-provider";
 import { getLogin, getRegister } from "@/api/services/auth";
-import { getUser } from "@/api/services/user";
+import { getUser, setUser } from "@/api/services/user";
 
 type AuthContextType = {
   session: ISession;
   login: (userData: LoginBody) => void;
   register: (userData: RegisterBody) => void;
   logout: () => void;
+  updateUser: (data: Partial<RegisterBody>) => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -41,9 +42,9 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const temsSession = localStorage.getItem("session");
-
     if (temsSession) {
       const parsedSession = JSON.parse(temsSession) as ISession;
+      console.log("parsed: ", parsedSession);
       setSession(parsedSession);
     }
   }, []);
@@ -105,8 +106,32 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoading(false);
   };
 
+  const updateUser = async (data: Partial<RegisterBody>) => {
+    if (!session.user) return;
+    setLoading(true);
+    try {
+      const res = await setUser(session.user.id, data);
+
+      addSession({
+        jwt: session.jwt,
+        user: res,
+      });
+    } catch (error: any) {
+      const message = error?.response?.data?.error?.message;
+
+      showToast({
+        title: "Error",
+        description: typeof message === "string" ? message : "Services error",
+        status: "error",
+      });
+    }
+    setLoading(false);
+  };
+
   return (
-    <AuthContext.Provider value={{ session, login, logout, register }}>
+    <AuthContext.Provider
+      value={{ session, login, logout, register, updateUser }}
+    >
       {children}
     </AuthContext.Provider>
   );

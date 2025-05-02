@@ -1,4 +1,5 @@
 import { IconTypes } from "@/components/ui/icons/_model";
+import { label } from "framer-motion/client";
 
 type SocialLinkType = {
   icon: IconTypes;
@@ -30,6 +31,22 @@ export const Socials: SocialLinkType[] = [
   {
     icon: "Youtube",
     href: "#",
+  },
+];
+
+export const ProfileLinks = [
+  {
+    href: "/profile",
+    label: "My Profile",
+  },
+
+  {
+    href: "/basket",
+    label: "My Basket",
+  },
+  {
+    href: "/saved",
+    label: "My Saved",
   },
 ];
 
